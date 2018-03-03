@@ -5,12 +5,12 @@
     "main": "main.js",
     "scripts": {
         "start": "electron .",
-        "pack:osx": "electron-packager ./app test --out=dist --asar --platform=darwin --arch=x64 --overwrite --ignore=.sass-cache --ignore=sass --ignore=.rb --icon=app/images/icon.icns",
-        "pack:win32": "electron-packager ./app test --out=dist --asar --platform=win32 --arch=ia32 --overwrite --ignore=.sass-cache --ignore=sass --ignore=.rb --icon=app/images/icon.ico",
-        "pack:win64": "electron-packager ./app test --out=dist --platform=win32 --arch=x64 --overwrite --ignore=.sass-cache --ignore=sass --ignore=.rb --icon=app/images/icon.ico",
+        "pack:osx": "electron-packager . test --out=dist --asar --platform=darwin --arch=x64 --overwrite --ignore=.sass-cache --ignore=app/sass --ignore=.rb --ignore=.md --ignore=.gitignore --icon=images/icon.icns",
+        "pack:win32": "electron-packager . test --out=dist --asar --platform=win32 --arch=ia32 --overwrite --ignore=.sass-cache --ignore=app/sass --ignore=.rb --ignore=.md --ignore=.gitignore --icon=images/icon.ico",
+        "pack:win64": "electron-packager . test --out=dist --platform=win32 --arch=x64 --overwrite --ignore=.sass-cache --ignore=sass --ignore=.rb --ignore=.md --ignore=.gitignore --icon=images/icon.ico",
         "build": "npm run pack:osx && npm run pack:win32 && npm run pack:win64"
     },
-    "repository": "hhttps://github.com/guoyu19961004/norway",
+    "repository": "https://github.com/guoyu19961004/norway",
     "keywords": [
         "Norway",
         "project"
@@ -20,5 +20,9 @@
     "devDependencies": {
         "electron": "~1.7.8",
         "electron-packager": "^10.1.0"
+    },
+    "dependencies": {
+        "jquery": "^3.3.1",
+        "xml2js": "^0.4.19"
     }
 }
