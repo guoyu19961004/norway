@@ -13,6 +13,12 @@ const MenuItem = electron.MenuItem
 
 const path = require('path')
 const url = require('url')
+const fs = require('fs')
+const xml2js = require('xml2js')
+
+const jsonParser = new xml2js.Parser({
+    explicitArray: false //一个子节点直接访问不生成数组
+})
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -87,26 +93,6 @@ const program_menuIteam = new MenuItem({
     label: "项目",
     submenu: [{
             //创建一个新的窗口
-            label: "登录",
-            accelerator: "CmdOrCtrl+Shift+L",
-            role: "",
-            click() {
-                let newwindow = new BrowserWindow({
-                    width: 500,
-                    height: 400,
-                    resizable: false
-                })
-                newwindow.loadURL(url.format({
-                    pathname: path.join(__dirname, 'app/login.html'),
-                    protocol: 'file:',
-                    slashes: true
-                }))
-                newwindow.on("closed", function() {
-                    newwindow = null
-                })
-            }
-        }, {
-            //创建一个新的窗口
             label: "设置",
             accelerator: "CmdOrCtrl+Shift+S",
             role: "",
@@ -130,7 +116,6 @@ const program_menuIteam = new MenuItem({
             //可以调用role默认的同时重写一些需要的内容
             label: "退出",
             role: "quit"
-            // accelerator: "CmdOrCtrl+Q"
         }
     ]
 });
@@ -216,6 +201,23 @@ const tray_menu_template = [{
         })
         newwindow.loadURL(url.format({
             pathname: path.join(__dirname, 'app/settings.html'),
+            protocol: 'file:',
+            slashes: true
+        }))
+        newwindow.on("closed", function() {
+            newwindow = null
+        })
+    }
+}, {
+    label: "帮助",
+    click() {
+        let newwindow = new BrowserWindow({
+            width: 500,
+            height: 400,
+            resizable: false
+        })
+        newwindow.loadURL(url.format({
+            pathname: path.join(__dirname, 'app/index.html'),
             protocol: 'file:',
             slashes: true
         }))

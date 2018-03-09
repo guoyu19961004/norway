@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<UrlTransformation>5</UrlTransformation>
+	<ThreadTransformation>6</ThreadTransformation>
+	<DateFormat>MM dd yyyy HH mm ss</DateFormat>
+	<DateLocale>en</DateLocale>
+	<SpecificInputEncoding>utf-8</SpecificInputEncoding>
+	<PageProcessingLimit>2</PageProcessingLimit>
+	<StripUrlParameters>false</StripUrlParameters>
+	<RequestDelayMin>1</RequestDelayMin>
+	<RequestDelayMax>2</RequestDelayMax>
+	<HtmlCleanup>tagsoup</HtmlCleanup>
+	<UriValidatePattern>http://stackoverflow.com/${integer}/${integer}</UriValidatePattern>
+	<RootValidatePattern>http://stackoverflow.com/${integer}</RootValidatePattern>
+	<AuthorValidatePattern>http://stackoverflow.com/user/${string}</AuthorValidatePattern>
+	<RequestDistribution>
+		<HttpProxyDistribution>
+			<Enabled>false</Enabled>
+		</HttpProxyDistribution>
+	</RequestDistribution>
+</configuration>

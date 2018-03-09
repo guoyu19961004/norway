@@ -3,3 +3,10 @@
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+html {
+	font-family: "Microsoft YaHei";
+}
+em.error{
+	color: red;
+	font-size: 12px;
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validate>
+	<check>
+		<field>author</field>
+		<item>
+			<description>author is too long.</description>
+			<stringLength>20</stringLength>
+		</item>
+		<item>
+			<description>time and place information in author.</description>
+			<keyword>\s[iIoO][nN]\s</keyword>
+		</item>
+		<item>
+			<description>bracket is in author</description>
+			<keyword>\(|\)</keyword>
+		</item>
+	</check>
+	<check>
+		<field>subject</field>
+		<item>
+			<description>subject is too long.</description>
+			<stringLength>100</stringLength>
+		</item>
+	</check>
+    <check>
+        <field>uri</field>
+        <item>
+            <description>duplicate uri.</description>
+            <duplicate/>
+        </item>
+    </check>
+    <check>
+        <field>link</field>
+        <item>
+            <description>connect 10 random link.</description>
+            <connect>10</connect>
+        </item>
+    </check>
+	<check>
+		<field>message</field>\
+		<item>
+			<description>script node.</description>
+			<node>
+				<name>^script$</name>
+			</node>
+		</item>
+        <item>
+            <description>attachment node.</description>
+            <node>
+                <name>^fieldset$</name>
+            </node>
+        </item>
+		<item>
+			<description>signature line.</description>
+			<node>
+				<text>^\s*-{10}-*</text>
+			</node>
+		</item>
+		<item>
+			<description>related information.</description>
+			<node>
+				<text>^[rR]elated</text>
+			</node>
+		</item>
+		<item>
+			<description>ads node.</description>
+			<node>
+				<attr>
+					<name>^(id|class)$</name>
+					<value>[aA][dD][sS]</value>
+				</attr>
+			</node>
+		</item>
+		<item>
+			<description>download node.</description>
+			<node>
+                <name>^div$</name>
+				<attr>
+					<name>^class$</name>
+					<value>^download$</value>
+				</attr>
+			</node>
+		</item>
+	</check>
+</validate>

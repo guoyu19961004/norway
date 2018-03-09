@@ -65,3 +65,14 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+/* line 6, ../sass/settings.scss */
+html {
+  font-family: "Microsoft YaHei";
+}
+
+/* line 9, ../sass/settings.scss */
+em.error {
+  color: red;
+  font-size: 12px;
+}

@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>设置</title>
-	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <meta charset="UTF-8">
+    <title>设置</title>
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/material-icons.css">
     <link rel="stylesheet" type="text/css" href="css/settings.css">
 </head>
+
 <body>
-	<script type="text/javascript">require('./js/renderer.js')</script>
+    <div class="container">
+        <div class="row">
+            <form class="col s12" id="settingForm">
+                <div class="row">
+                    <div class="input-field col s6 m6">
+                        <input id="username" type="text" class="validate" required>
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="input-field col s6 m6">
+                        <input id="password" type="text" class="validate" required>
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="host" type="url" required class="{validate:{ required:true,url:true }}">
+                        <label for="host">Tmonkey网址</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="source" type="text" class="validate" required>
+                        <label for="source">Source路径</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="finish" type="text" class="validate" required>
+                        <label for="finish">Finish路径</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light col s6 offset-s3" type="submit" name="action" id="saveConf">保存</button>
+            </form>
+            <!-- <div class="col s6 offset-s3"><a class="waves-effect waves-light btn" style="display: block;" id="saveConf">保存</a></div> -->
+        </div>
+    </div>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/hammer.min.js"></script>
+    <script type="text/javascript" src="./js/materialize.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="./js/messages_zh.min.js"></script>
+    <script type="text/javascript" src="./js/base.js"></script>
+    <script>if (window.module) module = window.module;</script>
+    <script type="text/javascript">require('./js/settings.js')</script>
 </body>
+
 </html>

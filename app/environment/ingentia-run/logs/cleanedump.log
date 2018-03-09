@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"></meta><meta name="baidu-site-verification" content="O5DO1n0DYd"></meta><meta name="google-site-verification" content="JpblxCnu30QFTXwwVV3BFBDP9ObDXUOXlhFWiVIYsOo"></meta><meta name="apple-mobile-web-app-capable" content="yes"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="description" content="在Node.js中，操作文件和目录使用&lt;code&gt;fs&lt;/code&gt;模块，但在这个模块并没有直接提供文件或目录复制的方法。要实现文件和目录的复制，我们可以借助&lt;code&gt;fs&lt;/code&gt;中的一些方法实现。"></meta><title>Node.js 复制文件/文件夹的实现 - IT笔录</title><link rel="canonical" href="//itbilu.com/nodejs/core/41cswxaTx.html"></link><link rel="icon" href="/img/logo_32X32.ico" type="image/x-icon"></link><link href="//cdn.itbilu.com/css/main-min.css" rel="stylesheet" type="text/css"></link></head><body>
+<header>
+     <div class="container">
+          <div class="navbar navbar-default" role="navigation">
+               <div class="navbar-header">
+                    <a shape="rect" class="navbar-brand" href="/"> 
+                         <img src="/img/logo.png" alt="optional logo" height="90" width="90"></img> 
+                         <span class="logo_title"><strong>IT笔录</strong></span> 
+                         <span class="logo_subtitle">学习，记录，整理</span> 
+                    </a>
+                    <a shape="rect" class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="nb_left pull-left"> 
+                              <span class="fa fa-reorder"></span>
+                         </span>
+                         <span class="nb_right pull-right">menu</span>
+                    </a>
+               </div>
+               <div class="collapse navbar-collapse">
+                    <ul class="nav pull-right navbar-nav"><li><a shape="rect" href="/">首页</a></li><li class="active"><a shape="rect" href="/nodejs">Nodejs</a></li><li><a shape="rect" href="/javascript">javaScript</a></li><li><a shape="rect" href="/database">数据库</a></li><li><a shape="rect" href="/linux">Linux</a></li><li><a shape="rect" href="/tools">工具</a></li><li><a shape="rect" href="/other">其它</a></li></ul>
+               </div>
+          </div>
+     </div>
+</header>
+<div class="main">
+<div class="container">
+    <section>
+         <div class="row breadcrumb-row">
+      <ul class="breadcrumb"><li><a shape="rect" href="/">首页</a></li><li><a shape="rect" href="/nodejs">Node.js</a></li><li><a shape="rect" href="/nodejs/core">基础、核心、API</a></li></ul>
+ </div>
+         <div class="row">
+              <div class="col-sm-8 col-md-8" id="leftcol">
+                 <h1>Node.js 复制文件/文件夹的实现</h1>
+                   <p><i class="fa fa-clock-o" title="发布时间"></i> 2016年03月24日
+                     
+                   <i class="fa fa-eye" title="阅读"></i>
+                   2334
+                     
+                   <span data-toggle="tooltip" title="声明：本站文章及示例基于特定的环境或软件版本，本站不为因参考本站文章引起的错误或损失负责。在使用前请自行验证是否可用于实际环境。如有纰漏或错误，欢迎进群指正、交流。"><i class="fa fa-exclamation-circle"></i> 声明</span>
+                  </p>
+                   <article class="post">
+                        <div class="post_content">
+                        
+                        <p><br clear="none"></br></p>
+<p>在Node.js中，操作文件和目录使用<a shape="rect" href="http://itbilu.com/nodejs/core/4y-N3wJS.html" target="_blank"><code>fs</code></a>模块，但在这个模块并没有直接提供文件或目录复制的方法。要实现文件和目录的复制，我们可以借助<code>fs</code>中的一些方法实现。</p>
+<p><br clear="none"></br></p>
+<ol><li><a shape="rect" href="#file">文件的复制</a></li><li><a shape="rect" href="#dir">文件夹的复制</a></li><li><a shape="rect" href="#linux">使用Linux命令复制</a></li></ol>
+<h3 id="file">1. 文件的复制</h3>
+<p>文件的复制我们可以通过<a shape="rect" href="http://itbilu.com/nodejs/core/4kSWXYWGg.html" target="_blank"><code>fs.readFile()</code></a>方法读取文件，再通过<a shape="rect" href="http://itbilu.com/nodejs/core/N19sCNGfe.html" target="_blank"><code>fs.writeFile()</code></a>方法写入到一个新文件实现：</p>
+<pre>var fs = require('fs');
+
+function copyFile(src, dist) {
+  fs.writeFileSync(dist, fs.readFileSync(src));
+}</pre>
+<p>如，将当前文件夹下的<code>a.txt</code>复制为<code>aa.txt</code>：</p>
+<pre>copyFile('./a.txt', './aa.txt')</pre>
+<p><br clear="none"></br></p>
+<p><strong>大文件的复制</strong></p>
+<p><code>fs.readFile()</code>方法（<code>fs.readFileSync()</code>为其同步版本的方法）会整体将文件读取到内存中。当文件较大时，会对系统资源造成一定压力，这时我们可能以通过文件<a shape="rect" href="http://itbilu.com/nodejs/core/VkE2Y0GQl.html" target="_blank">流</a>来进行操作。<code>fs</code>模块同样提供了基于文件流的操作方法，<a shape="rect" href="http://itbilu.com/nodejs/core/Eyg7MCMMe.html" target="_blank">fs.createReadStream()和fs.createWriteStream()</a>，可以<code>copyFile()</code>方法修改如下：</p>
+<pre>function copyFile(src, dist) {
+  fs.createReadStream(src).pipe(fs.createWriteStream(dist));
+}
+</pre>
+<p><br clear="none"></br></p>
+<h3 id="dir">2. 文件夹的复制</h3>
+<p>文件夹（目录）的复制不同于文件的复制，文件夹操作时还要考虑操作对象是否存在及操作对象的类型（文件或目录）。在早期的Node.js版本中，可以使用<code>fs.exists()</code>判断文件或文件夹是否存在，但在<code>v4.0+</code>之后，这个方法已经被废弃，判断文件或目录是否存在需要使用<a shape="rect" href="http://itbilu.com/nodejs/core/4JGAlesbl.html" target="_blank"><code>fs.stat()</code>或<code>fs.access()</code></a>方法。下面是一个复制目录的方法：</p>
+<pre>var fs = require( 'fs' );
+
+/*
+ * 复制目录、子目录，及其中的文件
+ * @param src {String} 要复制的目录
+ * @param dist {String} 复制到目标目录
+ */
+function copyDir(src, dist, callback) {
+  fs.access(dist, function(err){
+    if(err){
+      // 目录不存在时创建目录
+      fs.mkdirSync(dist);
+    }
+    _copy(null, src, dist);
+  });
+
+  function _copy(err, src, dist) {
+    if(err){
+      callback(err);
+    } else {
+      fs.readdir(src, function(err, paths) {
+        if(err){
+          callback(err)
+        } else {
+          paths.forEach(function(path) {
+            var _src = src + '/' +path;
+            var _dist = dist + '/' +path;
+            fs.stat(_src, function(err, stat) {
+              if(err){
+                callback(err);
+              } else {
+                // 判断是文件还是目录
+                if(stat.isFile()) {
+                  fs.writeFileSync(_dist, fs.readFileSync(_src));
+                } else if(stat.isDirectory()) {
+                  // 当是目录是，递归复制
+                  copyDir(_src, _dist, callback)
+                }
+              }
+            })
+          })
+        }
+      })
+    }
+  }
+}</pre>
+<p>如，复制<code>./test</code>目录到<code>./new</code>目录：</p>
+<pre>copyDir('./test', './new', function(err){
+  if(err){
+    console.log(err);
+  }
+})</pre>
+<p><strong>注意</strong>：上面这个对目录处理的方式比较简单，在实际操作目录时，如果上级目录不存在会出现错误，这时应该结合<a shape="rect" href="http://itbilu.com/nodejs/core/NJHZjdRN.html" target="_blank"><code>path</code></a>模块逐级判断目录是否存在。</p>
+<p><br clear="none"></br></p>
+<h3 id="linux">3. 使用Linux命令复制</h3>
+<p>使用Linux命令复制目录非常简单，复制一个目录可以使用<code>cp -r 源目录 目标目录</code>实现。Node.js的<a shape="rect" href="http://itbilu.com/nodejs/core/E1kBYnPH.html"><code>child_process</code></a>使我们可以执行外部命令。</p>
+<p>下面是使用<code>child_process</code>模块实现文件复制的示例：</p>
+<pre>var child_process = require('child_process');
+
+function copyDir(src, dist) {
+  child_process.spawn('cp', ['-r', src, dist]);	
+}</pre>
+<p>如，使用这个方法复制<code>./test</code>目录到<code>./new</code>目录：</p>
+<pre>copyDir('./test', './new');</pre>
+<p><strong>注意</strong>：使用<code>child_process</code>复制目录时，同样需要判断目标目录，应该结合<a shape="rect" href="http://itbilu.com/nodejs/core/NJHZjdRN.html" target="_blank"><code>path</code></a>模块逐级判断目录是否存在。</p>
+                        </div>
+                   </article>
+                   <div>
+
+	<p>下一篇：<a shape="rect" href="/nodejs/core/EJ-W1Bv1Z.html">Node.js 事件循环（Event Loop）介绍</a>
+
+
+	</p><p>上一篇：<a shape="rect" href="/nodejs/core/4yiw2Zq6x.html">基于环境变量的Node.js 开发模式、生产模式设置</a>
+
+</p></div>
+              </div>
+
+              <div class="col-sm-4 col-md-4" id="sidebar">
+                  <aside class="widget">
+    <form enctype="application/x-www-form-urlencoded" method="post" class="form-horizontal" action="/search">
+    <div class="form-group">
+        <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="关键字" name="keyword"></input>
+        </div>
+        <div class="col-sm-3">
+            <button type="submit" class="btn btn-default">  搜索  </button>
+        </div>
+    </div>
+    </form>
+</aside>
+                  
+<aside class="widget">
+    <h4>文章分类</h4>
+    <ul class="grove-list"><li class="active"><a shape="rect" href="#">基础、核心、API</a></li><li><a shape="rect" href="/nodejs/npm">包、应用</a></li></ul>
+</aside>
+
+                  
+<aside class="widget">
+    <h4>阅读排行</h4>
+    <ul class="grove-list"><li> <h5 class="media-heading"><a shape="rect" href="/nodejs/npm/VkYIaRPz-.html">Sequelize 中文API文档－1. 快速入门、Seq...</a> (73632)</h5>
+         </li><li> <h5 class="media-heading"><a shape="rect" href="/nodejs/npm/V1PExztfb.html">Sequelize 中文API文档－2. Model 的定...</a> (69136)</h5>
+         </li><li> <h5 class="media-heading"><a shape="rect" href="/linux/management/NymXRUieg.html">解决类似 /usr/lib64/libstdc++.so....</a> (23539)</h5>
+         </li><li> <h5 class="media-heading"><a shape="rect" href="/nodejs/npm/41qaV3czb.html">Sequelize 中文API文档－3. 模型（表）之间的...</a> (21142)</h5>
+         </li><li> <h5 class="media-heading"><a shape="rect" href="/nodejs/npm/VJIR1CjMb.html">Sequelize 中文API文档－4. 查询与原始查询</a> (20810)</h5>
+         </li><li> <h5 class="media-heading"><a shape="rect" href="/other/relate/EkwKysXIl.html">HTTP请求方法：GET、HEAD、POST、PUT、DE...</a> (10569)</h5>
+         </li><li> <h5 class="media-heading"><a shape="rect" href="/linux/management/V1vdnt9ll.html">Linux升级安装GCC</a> (8308)</h5>
+         </li><li> <h5 class="media-heading"><a shape="rect" href="/other/relate/4kHBsx_Pg.html">MQTT协议－MQTT协议简介及协议原理</a> (8299)</h5>
+         </li><li> <h5 class="media-heading"><a shape="rect" href="/nodejs/npm/N1sdaHTzb.html">Sequelize 中文API文档－5. 实例的使用、In...</a> (7789)</h5>
+         </li><li> <h5 class="media-heading"><a shape="rect" href="/javascript/js/41KMSZ9a.html">［ES6］Promise对象Promise.all()方法...</a> (7658)</h5>
+         </li></ul>
+</aside>
+
+                  <aside class="widget">
+    <h4>最新文章</h4>
+    <ul class="grove-list"><li> <h5 class="media-heading"><a shape="rect" href="/nodejs/npm/By7L5p3ff.html">gyp 文件输入格式参考</a></h5>
+              <p><code>GYP</code>（node-gyp）基于<code>.gyp</code>文件构建...</p>
+         </li><li> <h5 class="media-heading"><a shape="rect" href="/nodejs/npm/Hy7CrXe-f.html">Pomelo 前端服务器与客户端的通讯</a></h5>
+              <p>处理和响应客户端请求是 Pomelo 核心任务之一，客户端请求处理过程中会涉及很多组件，包括
+         </p></li><li> <h5 class="media-heading"><a shape="rect" href="/nodejs/npm/Hklq5OweM.html">node-gyp 编译 addon 时使用的 .gyp 文...</a></h5>
+              <p>Node.js基于GYP（Generate Your Projects）构建C\C++插件，在编译...</p>
+         </li><li> <h5 class="media-heading"><a shape="rect" href="/other/relate/Vy1iDBcJE.html">Mac及CentOS下安装OpenCV</a></h5>
+              <p>OpenCV是一个开源跨平台计算机视觉库，其基于BSD开源许可发布。它提供了C++、C、Pytho...</p>
+         </li><li> <h5 class="media-heading"><a shape="rect" href="/nodejs/npm/EJPGKV-o7.html">Pomelo 应用程序配置</a></h5>
+              <p>创建Pomelo应用后，可以在"game-server/app.js"文件中对应用做一些配置。包括...</p>
+         </li></ul>
+</aside>
+                  
+                  
+
+                  <aside class="widget">
+    <h4>交流群：564850876</h4>
+    <p><img src="/img/qq-group.png" alt="交流群：564850876"></img></p>
+</aside>
+                  
+              </div>
+         </div>
+    </section>
+</div>
+<script type="text/javascript">
+var xhr = new XMLHttpRequest();
+xhr.open("put", "/nodejs/core/41cswxaTx.html", true);
+// xhr.onreadystatechange = function() { if (xhr.readyState == 4) {console.log(xhr.responseText);}}
+xhr.send();
+</script>
+<footer>
+<div class="container">
+    
+    <div class="row credits">
+        <div class="col-md-12">
+            <div class="row copyright">
+                <div class="col-md-12">
+                 Copyright ©2015-2017 www.itbilu.com all rights reserved<a shape="rect" href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备11014171号-3</a>
+                </div>
+            </div>
+        </div>            
+    </div>
+</div>
+</footer>
+</div>
+<script type="text/javascript" src="//cdn.itbilu.com/js/main-min.js"></script>
+<script type="text/javascript">
+	$(function () { $("[data-toggle='tooltip']").tooltip(); });
+	
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?2249745ad1ce80c1744fc6aede553fc1";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	 
+	(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+	})();
+</script>
+</body></html>
+

@@ -10,25 +10,67 @@
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="input-field col s12 m6">
+                    <input id="source_id" type="text" class="validate" required>
+                    <label for="source_id">Source_id</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <a id="get_source_id" class="btn waves-effect waves-teal">下载文件</a>
+                </div>
+                <div class="input-field col s12 m12">
+                    <a id="get_source_by_path" class="btn waves-effect waves-teal">选择已下载Source目录</a>
+                </div>
+            </div>
+            <ul class="collection with-header col s12 m6">
+                <li class="collection-item">Source Name: <span id="source_name"></span></li>
+                <li class="collection-item">Source Type: <span id="source_type"></span></li>
+                <li class="collection-item">Source Path: <span id="source_path"></span></li>
+            </ul>
+        </div>
+        <ul id="tabs-swipe-demo" class="tabs">
+            <li class="tab col s6 m6"><a href="#blog-wrap" class="active">BLOG</a></li>
+            <li class="tab col s6 m6"><a href="#forum-wrap">FORUM</a></li>
+        </ul>
+        <div id="blog-wrap" class=" row col s12">
+            <div class="input-field col s12 m6">
+                <input id="download_link" type="text" class="validate" required value="http://www.jsdaxue.com/archives/253.html ">
+                <label for="download_link">下载链接</label>
+            </div>
+            <div class="input-field col s12 m3">
+                <select id="web_encoding">
+                    <option value="UTF-8" selected>UTF-8</option>
+                    <option value="ISO-8859-1">ISO-8859-1</option>
+                    <option value="gb2312">gb2312</option>
+                    <option value="windows-1251">windows-1251</option>
+                    <option value="ISO-8859-2">ISO-8859-2</option>
+                    <option value="gbk">gbk</option>
+                </select>
+                <label>网页编码</label>
+            </div>
+            <div class="input-field col s12 m3">
+                <a id="download_link_button" class="btn waves-effect waves-teal">下载</a>
+            </div>
+            <div class="input-field col s12 m12">保存至<span id="download_save_path"></span></div>
+        </div>
+        <div id="forum-wrap" class="col s12">Test 2</div>
+    </div>
     <script>
-    document.write(process.versions.node)
-    </script>, Chromium
-    <script>
-    document.write(process.versions.chrome)
-    </script>, and Electron
-    <script>
-    document.write(process.versions.electron)
-    </script>.
-    <script>window.$ = window.jQuery = require("./js/jquery.min.js");</script>
+    if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }
+    </script>
     <script type="text/javascript" src="./js/hammer.min.js"></script>
     <script type="text/javascript" src="./js/materialize.min.js"></script>
-    <script type="text/javascript">require('./js/index.js')</script>
+    <script type="text/javascript" src="./js/base.js"></script>
     <script>
-    // You can also require other files to run in this process
-    require('./js/renderer.js')
+    if (window.module) module = window.module;
+    </script>
+    <script type="text/javascript">
+    require('./js/index.js')
     </script>
 </body>
 
