@@ -36,7 +36,7 @@
         </ul>
         <div id="blog-wrap" class=" row col s12">
             <div class="input-field col s12 m6">
-                <input id="download_link" type="text" class="validate" required value="http://www.jsdaxue.com/archives/253.html ">
+                <input id="download_link" type="text" class="validate" required value="">
                 <label for="download_link">下载链接</label>
             </div>
             <div class="input-field col s12 m3">
@@ -51,13 +51,18 @@
                 <label>网页编码</label>
             </div>
             <div class="input-field col s12 m3">
-                <a id="download_link_button" class="btn waves-effect waves-teal">下载</a>
+                <a id="download_link_button" class="btn waves-effect waves-teal">下载网页</a>
             </div>
             <div class="input-field col s12 m9">
-                <p>保存至<span id="download_save_path"></span></p>
-                
+                <p>文件已保存至<span id="download_save_path"></span></p>
+                <div id="shell_info" style="margin-top: 20px; height: 200px; max-height: 200px; overflow: auto; word-wrap: break-word; word-break: break-word; font-size: 14px;"></div>
             </div>
-             <div class="col s12 m3"></div>
+             <div class="col s12 m3">
+                 <a id="blog_run_button" class="btn waves-effect waves-teal" style="margin-bottom: 20px;">开始测试</a>
+                 <a id="blog_stop_button" class="btn waves-effect waves-teal" style="margin-bottom: 20px; display: none;">停止测试</a>
+                 <a id="check_result" class="btn waves-effect waves-teal" style="margin-bottom: 20px; display: none;">查看结果</a>
+                 <a id="check_error" class="btn waves-effect waves-teal" style="margin-bottom: 20px; display: none;">查看报错</a>
+             </div>
         </div>
         <div id="forum-wrap" class="col s12">Test 2</div>
     </div>

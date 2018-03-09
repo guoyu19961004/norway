@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2017-11-23 18:09:20
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-03-09 14:27:36
+ * @Last Modified time: 2018-03-09 22:58:14
  */
 const electron = require('electron')
 const fs = require('fs')
@@ -37,7 +37,7 @@ menu.append(new MenuItem({
     click() {
         let newwindow = new BrowserWindow({
             width: 500,
-            height: 400,
+            height: 600,
             resizable: false
         })
         newwindow.loadURL(url.format({
@@ -82,34 +82,28 @@ window.addEventListener('contextmenu', (e) => {
     menu.popup(remote.getCurrentWindow())
 }, false)
 
-
-
-// judge_settings()
-
-// console.log(dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']}))
-// console.log(dialog.showMessageBox({
-//     type: 'none',
-//     title: 'test',
-//     message: 'gengxin',
-//     detail: 'author:guoyu',
-//     checkboxLabel: 'asjkhdfj'
-// }, function(response, checkboxChecked) {
-//     console.log(response)
-//     console.log(checkboxChecked)
-// }))
+judge_settings()
 
 $(document).ready(function() {
+    //初始化
     $('ul.tabs').tabs();
     $('select').material_select();
+    if (fs.existsSync(path.join(ingentia_path, 'logs/transformed.log'))) {
+        $('#check_result').css('display', 'inline-block');
+    }
+    if (fs.existsSync(path.join(ingentia_path, "logs/errors.log"))) {
+        $('#check_error').css('display', 'inline-block');
+    }
+    /*根据sourceID获取source按钮事件*/
     $('#get_source_id').on('click', function(event) {
         event.preventDefault();
         /* Act on the event */
         let source_id = $('#source_id').val()
-        console.log(source_id)
-        if (source_id) {
+        if (/^\d+$/.test(source_id)){
             get_source_content(confData, source_id)
-        } else alert('请输入Source ID！')
+        } else alert('请输入正确的Source ID！')
     });
+    /*访问目录获取source路劲按钮事件*/
     $('#get_source_by_path').on('click', function(event) {
         event.preventDefault();
         /* Act on the event */
@@ -117,70 +111,102 @@ $(document).ready(function() {
             title: '选择Source',
             properties: ['openDirectory']
         }, function(filePaths) {
-            if (fs.existsSync(path.join(filePaths[0], 'globalConfig.xml'))) {
-                let global_config = fs.readFileSync(path.join(filePaths[0], 'globalConfig.xml'))
-                if (global_config) {
-                    jsonParser.parseString(global_config, function(err, result) {
-                        let whetherJs = result['no.integrasco.ingentia.news.config.BlogNewsGlobalCustomCrawlerConfig'].javaScriptTransform
-                        if (result['no.integrasco.ingentia.news.config.BlogNewsGlobalCustomCrawlerConfig'].javaScriptTransform == 'true') {
-                            $('#source_type').text('JS BLOG')
-                        } else $('#source_type').text('BLOG')
-                        $('ul.tabs').tabs('select_tab', 'blog-wrap')
-                    });
+            if (filePaths) {
+                if (fs.existsSync(path.join(filePaths[0], 'globalConfig.xml'))) {
+                    console.log(judge_blog_type(filePaths[0]));
+                    $('#source_type').text(judge_blog_type(filePaths[0]))
+                    $('ul.tabs').tabs('select_tab', 'blog-wrap')
                 } else {
-                    alert('globalConfig.xml为空!');
+                    $('#source_type').text('FORUM')
+                    $('ul.tabs').tabs('select_tab', 'forum-wrap')
                 }
-            } else {
-                $('#source_type').text('FORUM')
-                $('ul.tabs').tabs('select_tab', 'forum-wrap')
+                $('#source_name').text(path.basename(filePaths[0]))
+                $('#source_path').text(filePaths[0])
             }
-            $('#source_name').text(path.basename(filePaths[0]))
-            $('#source_path').text(filePaths[0])
         })
     });
+    /*下载链接按钮点击事件*/
     $('#download_link_button').on('click', function(event) {
         event.preventDefault();
         /* Act on the event */
         let download_link = $('#download_link').val()
         let web_encoding = $("#web_encoding").val()
         if (IsURL(download_link)) {
-            console.log(download_link, web_encoding)
             let cli = 'java -jar ingentia-test-crawler-3.0.1-SNAPSHOT-jar-with-dependencies.jar -c clean tagsoup ' + download_link + ' ' + web_encoding
             let PythonCli = 'python ' + path.join(Tmonkey_path, 'tmonkey.py') + ' sc'
-            console.log(`This platform is ${process.platform}`)
+            // console.log(`This platform is ${process.platform}`)
             /*JAVA下载链接*/
             download_url(download_link, web_encoding, function() {
+                $('#shell_info').append("<p>------------------------------</p>");
                 let source_save_path = '';
                 if ($('#source_path').text() != '') {
                     source_save_path = path.join($('#source_path').text(), '../..', 'download.xml')
                     $('#download_save_path').text(source_save_path)
-                    if (fs.existsSync(source_save_path)) {
-                        fs.unlink(source_save_path)
-                    }
-                    fs.linkSync(path.join(ingentia_path, 'logs/cleanedump.log'), source_save_path)
+                    link_file(path.join(ingentia_path, 'logs/cleanedump.log'), source_save_path)
                 } else if (confData.source != '') {
                     source_save_path = path.join(confData.source, '../', 'download.xml')
                     $('#download_save_path').text(source_save_path)
-                    if (fs.existsSync(source_save_path)) {
-                        fs.unlinkSync(source_save_path)
-                    }
-                    fs.linkSync(path.join(ingentia_path, 'logs/cleanedump.log'), source_save_path)
+                    link_file(path.join(ingentia_path, 'logs/cleanedump.log'), source_save_path)
                 } else {
                     dialog.showOpenDialog({
                         title: '选择Download存放目录',
                         properties: ['openDirectory']
                     }, function(filePaths) {
-                        source_save_path = path.join(filePaths[0], 'download.xml')
-                        $('#download_save_path').text(source_save_path)
-                        console.log(path.join(ingentia_path, 'logs/cleanedump.log'));
-                        if (fs.existsSync(source_save_path)) {
-                            fs.unlinkSync(source_save_path)
+                        if (filePaths) {
+                            source_save_path = path.join(filePaths[0], 'download.xml')
+                            $('#download_save_path').text(source_save_path)
+                            link_file(path.join(ingentia_path, 'logs/cleanedump.log'), source_save_path)
                         }
-                        fs.linkSync(path.join(ingentia_path, 'logs/cleanedump.log'), source_save_path)
                     })
                 }
             })
         } else alert('请输入正确的网页下载链接！')
+    });
+    $('#blog_run_button').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        if ($('#source_path').text()) {
+            let source_save_path = $('#source_path').text()
+            link_blog_file(source_save_path)
+            blog_run(function() {
+                console.log('________________________');
+            })
+        } else {
+            dialog.showOpenDialog({
+                title: '选择Source',
+                properties: ['openDirectory']
+            }, function(filePaths) {
+                if (filePaths) {
+                    if (fs.existsSync(path.join(filePaths[0], 'globalConfig.xml'))) {
+                        $('#source_type').text(judge_blog_type(filePaths[0]))
+                        link_blog_file(filePaths[0])
+                        blog_run(function() {
+                            console.log('________________________');
+                        })
+                    } else {
+                        alert('请选择一个Blog Source！');
+                    }
+                    $('#source_name').text(path.basename(filePaths[0]))
+                    $('#source_path').text(filePaths[0])
+                }
+            })
+        }
+    });
+    $('#check_result').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        let newwindow = new BrowserWindow({
+            width: 800,
+            height: 600
+        })
+        newwindow.loadURL(url.format({
+            pathname: path.join(root_path, 'transformed.html'),
+            protocol: 'file:',
+            slashes: true
+        }))
+        newwindow.on("closed", function() {
+            newwindow = null
+        })
     });
 });
 
@@ -252,6 +278,7 @@ function saveConf(argument) {
 
 //根据sourceid拿到对应source的JSON对象
 function get_source_by_id(argument, source_id, source) {
+    console.log('get_source_by_id')
     $.each(argument, function(index, val) {
         /* iterate through array or object */
         if (val.source_id == source_id) {
@@ -319,13 +346,19 @@ function get_source_content(argument, source_id) {
 
 /*下载source内容*/
 function download_source(source_obj, host_url) {
-    console.log('download_source')
-    if (!checkDirExist(confData.source)) fs.mkdirSync(confData.source)
-    if (source_obj.type == "FORUM") {
-        /*论坛*/
-        download_forum_file(path.join(host_url, 'api/source/submit/file/'), source_obj, confData.source)
+    if($.isEmptyObject(source_obj)) {
+        alert('source id 不存在！')
     } else {
-        download_blog_file(path.join(host_url, 'api/source/submit/file/'), source_obj, confData.source)
+        console.log('download_source')
+        if (!checkDirExist(confData.source)) {
+            fs.mkdirSync(confData.source)
+        }
+        if (source_obj.type == "FORUM") {
+            /*论坛*/
+            download_forum_file(path.join(host_url, 'api/source/submit/file/'), source_obj, confData.source)
+        } else {
+            download_blog_file(path.join(host_url, 'api/source/submit/file/'), source_obj, confData.source)
+        }
     }
 }
 
@@ -402,4 +435,29 @@ function download_forum_file(url, source_obj, source_path) {
     download(url, source_obj.source_id, "url_transformation", path.join(single_source_path, source_name + '-url.xq'))
     download(url, source_obj.source_id, "config", path.join(single_source_path, 'webForumConfiguration.xml'))
     $('#source_path').text(single_source_path)
+}
+
+/*链接BLOG source file*/
+function link_blog_file(source_save_path) {
+    link_file(path.join(source_save_path, "config.xml"), path.join(ingentia_path, "conf/configuration/config.xml"))
+    link_file(path.join(source_save_path, "globalConfig.xml"), path.join(ingentia_path, "conf/configuration/globalConfig.xml"))
+    link_file(path.join(source_save_path, "subSourceConfig.xml"), path.join(ingentia_path, "conf/configuration/subSourceConfig.xml"))
+    link_file(path.join(source_save_path, "TestTransformation.xq"), path.join(ingentia_path, "conf/transformation/TestTransformation.xq"))
+}
+
+/*判断是否JS BLOG*/
+function judge_blog_type(source_path) {
+    let global_config = fs.readFileSync(path.join(source_path, 'globalConfig.xml'))
+    let type = 'BLOG'
+    if (global_config) {
+        jsonParser.parseString(global_config, function(err, result) {
+            let whetherJs = result['no.integrasco.ingentia.news.config.BlogNewsGlobalCustomCrawlerConfig'].javaScriptTransform
+            if (whetherJs == 'true') {
+                type = 'JS BLOG'
+            }
+        });
+    } else {
+        alert('globalConfig.xml为空!');
+    }
+    return type
 }

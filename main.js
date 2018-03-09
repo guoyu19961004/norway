@@ -28,7 +28,7 @@ let menu
 
 function createWindow() {
     // Create the browser window.
-    mainWindow = new BrowserWindow({ width: 800, height: 600 })
+    mainWindow = new BrowserWindow({ width: 1000, height: 700 })
     menu = new Menu()
     let tray_menu = new Menu()
     let image = nativeImage.createFromPath('app/images/icon.ico')

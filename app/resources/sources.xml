@@ -401,7 +401,7 @@
         <enable>1</enable>
         <errors>
             <source_id>459</source_id>
-            <errors>4</errors>
+            <errors>5</errors>
         </errors>
         <source_id>459</source_id>
         <source_name>hotukdeals.com</source_name>
@@ -445,7 +445,7 @@
         <enable>1</enable>
         <errors>
             <source_id>501</source_id>
-            <errors>1169</errors>
+            <errors>1172</errors>
         </errors>
         <source_id>501</source_id>
         <source_name>kharkovforum.com</source_name>
@@ -996,7 +996,7 @@
         <enable>1</enable>
         <errors>
             <source_id>793</source_id>
-            <errors>399</errors>
+            <errors>414</errors>
         </errors>
         <source_id>793</source_id>
         <source_name>psfk.com</source_name>
@@ -1040,7 +1040,7 @@
         <enable>1</enable>
         <errors>
             <source_id>803</source_id>
-            <errors>116</errors>
+            <errors>117</errors>
         </errors>
         <source_id>803</source_id>
         <source_name>smallbiztrends.com</source_name>
@@ -1282,7 +1282,7 @@
         <enable>1</enable>
         <errors>
             <source_id>859</source_id>
-            <errors>71</errors>
+            <errors>2</errors>
         </errors>
         <source_id>859</source_id>
         <source_name>crackberry.com</source_name>
@@ -1656,7 +1656,7 @@
         <enable>1</enable>
         <errors>
             <source_id>1009</source_id>
-            <errors>18</errors>
+            <errors>19</errors>
         </errors>
         <source_id>1009</source_id>
         <source_name>msftkitchen.com</source_name>
@@ -1678,7 +1678,7 @@
         <enable>1</enable>
         <errors>
             <source_id>1011</source_id>
-            <errors>0</errors>
+            <errors>1</errors>
         </errors>
         <source_id>1011</source_id>
         <source_name>businessinsider.com</source_name>
@@ -2162,7 +2162,7 @@
         <enable>1</enable>
         <errors>
             <source_id>1188</source_id>
-            <errors>41</errors>
+            <errors>46</errors>
         </errors>
         <source_id>1188</source_id>
         <source_name>thinkvitamin.com</source_name>
@@ -2800,7 +2800,7 @@
         <enable>1</enable>
         <errors>
             <source_id>1322</source_id>
-            <errors>1</errors>
+            <errors>2</errors>
         </errors>
         <source_id>1322</source_id>
         <source_name>dmwmedia.com</source_name>
@@ -2998,7 +2998,7 @@
         <enable>1</enable>
         <errors>
             <source_id>1378</source_id>
-            <errors>50</errors>
+            <errors>38</errors>
         </errors>
         <source_id>1378</source_id>
         <source_name>tis-dialog.ru</source_name>
@@ -3416,7 +3416,7 @@
         <enable>1</enable>
         <errors>
             <source_id>1477</source_id>
-            <errors>0</errors>
+            <errors>51</errors>
         </errors>
         <source_id>1477</source_id>
         <source_name>forum.cyclingnews.com</source_name>
@@ -3647,11 +3647,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1543</source_id>
-            <time>2018-03-07 15:03:24</time>
-            <status>Fixing</status>
-            <message># Transformation does not work at all.</message>
+            <time>2018-03-09 10:11:19</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>72</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3724,7 +3724,7 @@
         <enable>1</enable>
         <errors>
             <source_id>1573</source_id>
-            <errors>211</errors>
+            <errors>218</errors>
         </errors>
         <source_id>1573</source_id>
         <source_name>sluggerotoole.com</source_name>
@@ -4549,11 +4549,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1805</source_id>
-            <time>2018-03-07 08:48:40</time>
-            <status>Fixing</status>
-            <message># Transformation does not work at all.</message>
+            <time>2018-03-09 10:11:35</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>68</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5264,7 +5264,7 @@
         <enable>1</enable>
         <errors>
             <source_id>1989</source_id>
-            <errors>67</errors>
+            <errors>70</errors>
         </errors>
         <source_id>1989</source_id>
         <source_name>spaldingtoday.co.uk</source_name>
@@ -5858,7 +5858,7 @@
         <enable>1</enable>
         <errors>
             <source_id>2149</source_id>
-            <errors>722</errors>
+            <errors>752</errors>
         </errors>
         <source_id>2149</source_id>
         <source_name>thisisbristol.co.uk</source_name>
@@ -5946,7 +5946,7 @@
         <enable>1</enable>
         <errors>
             <source_id>2170</source_id>
-            <errors>60</errors>
+            <errors>62</errors>
         </errors>
         <source_id>2170</source_id>
         <source_name>womensfootball.eu</source_name>
@@ -6133,11 +6133,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2207</source_id>
-            <time>2018-03-07 09:27:08</time>
-            <status>Fixing</status>
-            <message># Transformation does not work at all.</message>
+            <time>2018-03-09 10:13:58</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>68</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6320,7 +6320,7 @@
         <enable>1</enable>
         <errors>
             <source_id>2249</source_id>
-            <errors>10</errors>
+            <errors>12</errors>
         </errors>
         <source_id>2249</source_id>
         <source_name>speedcommunications.com</source_name>
@@ -6364,7 +6364,7 @@
         <enable>1</enable>
         <errors>
             <source_id>2258</source_id>
-            <errors>757</errors>
+            <errors>797</errors>
         </errors>
         <source_id>2258</source_id>
         <source_name>youreable.com</source_name>
@@ -6474,7 +6474,7 @@
         <enable>1</enable>
         <errors>
             <source_id>2280</source_id>
-            <errors>16</errors>
+            <errors>17</errors>
         </errors>
         <source_id>2280</source_id>
         <source_name>forum-3dcenter.org</source_name>
@@ -6606,7 +6606,7 @@
         <enable>1</enable>
         <errors>
             <source_id>2307</source_id>
-            <errors>0</errors>
+            <errors>1</errors>
         </errors>
         <source_id>2307</source_id>
         <source_name>eventmanagerblog.com</source_name>
@@ -7431,11 +7431,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2475</source_id>
-            <time>2018-02-07 16:13:46</time>
-            <status>Fixing</status>
-            <message># Transformation does not work at all.</message>
+            <time>2018-03-09 10:11:43</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>68</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7992,7 +7992,7 @@
         <enable>1</enable>
         <errors>
             <source_id>2601</source_id>
-            <errors>2912</errors>
+            <errors>3008</errors>
         </errors>
         <source_id>2601</source_id>
         <source_name>latimesblogs.latimes.com</source_name>
@@ -8113,11 +8113,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2612</source_id>
-            <time>2018-03-07 11:45:42</time>
-            <status>Fixing</status>
-            <message># Transformation does not work at all.</message>
+            <time>2018-03-09 10:11:50</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>68</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9378,7 +9378,7 @@
         <enable>1</enable>
         <errors>
             <source_id>2852</source_id>
-            <errors>122</errors>
+            <errors>148</errors>
         </errors>
         <source_id>2852</source_id>
         <source_name>sarbc.ru</source_name>
@@ -9950,7 +9950,7 @@
         <enable>1</enable>
         <errors>
             <source_id>2978</source_id>
-            <errors>1</errors>
+            <errors>0</errors>
         </errors>
         <source_id>2978</source_id>
         <source_name>lesocial.fr</source_name>
@@ -9961,11 +9961,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2978</source_id>
-            <time>2018-03-07 13:34:32</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-09 10:12:57</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>75</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10368,7 +10368,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3101</source_id>
-            <errors>0</errors>
+            <errors>2</errors>
         </errors>
         <source_id>3101</source_id>
         <source_name>advanced-web-metrics.com</source_name>
@@ -10962,7 +10962,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3268</source_id>
-            <errors>0</errors>
+            <errors>1</errors>
         </errors>
         <source_id>3268</source_id>
         <source_name>livestrong.com</source_name>
@@ -10995,11 +10995,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3276</source_id>
-            <time>2018-03-08 05:33:05</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-09 10:12:29</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>77</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -11072,7 +11072,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3321</source_id>
-            <errors>91</errors>
+            <errors>92</errors>
         </errors>
         <source_id>3321</source_id>
         <source_name>forum.iculture.nl</source_name>
@@ -11226,7 +11226,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3392</source_id>
-            <errors>474</errors>
+            <errors>487</errors>
         </errors>
         <source_id>3392</source_id>
         <source_name>motorfans.com.cn</source_name>
@@ -11314,7 +11314,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3397</source_id>
-            <errors>30</errors>
+            <errors>50</errors>
         </errors>
         <source_id>3397</source_id>
         <source_name>blog.163.com</source_name>
@@ -11336,7 +11336,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3399</source_id>
-            <errors>111</errors>
+            <errors>113</errors>
         </errors>
         <source_id>3399</source_id>
         <source_name>bbs.pcauto.com.cn</source_name>
@@ -11490,7 +11490,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3419</source_id>
-            <errors>860</errors>
+            <errors>898</errors>
         </errors>
         <source_id>3419</source_id>
         <source_name>bbs.taobao.com</source_name>
@@ -11886,7 +11886,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3507</source_id>
-            <errors>1</errors>
+            <errors>8</errors>
         </errors>
         <source_id>3507</source_id>
         <source_name>blog.drive.ru</source_name>
@@ -12040,7 +12040,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3540</source_id>
-            <errors>9</errors>
+            <errors>12</errors>
         </errors>
         <source_id>3540</source_id>
         <source_name>getrichslowly.org</source_name>
@@ -12216,7 +12216,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3570</source_id>
-            <errors>3078</errors>
+            <errors>3415</errors>
         </errors>
         <source_id>3570</source_id>
         <source_name>stackoverflow.com</source_name>
@@ -12260,7 +12260,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3580</source_id>
-            <errors>264</errors>
+            <errors>302</errors>
         </errors>
         <source_id>3580</source_id>
         <source_name>android.stackexchange.com</source_name>
@@ -12348,7 +12348,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3596</source_id>
-            <errors>542</errors>
+            <errors>603</errors>
         </errors>
         <source_id>3596</source_id>
         <source_name>apple.stackexchange.com</source_name>
@@ -12370,7 +12370,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3597</source_id>
-            <errors>12</errors>
+            <errors>14</errors>
         </errors>
         <source_id>3597</source_id>
         <source_name>windowsphone.stackexchange.com</source_name>
@@ -12612,7 +12612,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3636</source_id>
-            <errors>944</errors>
+            <errors>957</errors>
         </errors>
         <source_id>3636</source_id>
         <source_name>ferra.ru</source_name>
@@ -12766,7 +12766,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3701</source_id>
-            <errors>11</errors>
+            <errors>12</errors>
         </errors>
         <source_id>3701</source_id>
         <source_name>forums.anandtech.com</source_name>
@@ -12788,7 +12788,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3706</source_id>
-            <errors>2117</errors>
+            <errors>2163</errors>
         </errors>
         <source_id>3706</source_id>
         <source_name>alriyadh.com</source_name>
@@ -12832,7 +12832,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3732</source_id>
-            <errors>183</errors>
+            <errors>188</errors>
         </errors>
         <source_id>3732</source_id>
         <source_name>ps3dominater.com</source_name>
@@ -13008,7 +13008,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3770</source_id>
-            <errors>26</errors>
+            <errors>32</errors>
         </errors>
         <source_id>3770</source_id>
         <source_name>ziggi.uol.com.br</source_name>
@@ -13030,7 +13030,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3797</source_id>
-            <errors>182</errors>
+            <errors>210</errors>
         </errors>
         <source_id>3797</source_id>
         <source_name>instyle.de</source_name>
@@ -13184,7 +13184,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3831</source_id>
-            <errors>978</errors>
+            <errors>981</errors>
         </errors>
         <source_id>3831</source_id>
         <source_name>maximonline.ru</source_name>
@@ -13206,7 +13206,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3834</source_id>
-            <errors>44</errors>
+            <errors>45</errors>
         </errors>
         <source_id>3834</source_id>
         <source_name>modernweekly.com</source_name>
@@ -13338,7 +13338,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3874</source_id>
-            <errors>704</errors>
+            <errors>728</errors>
         </errors>
         <source_id>3874</source_id>
         <source_name>trendmagazin.ch</source_name>
@@ -13437,11 +13437,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3889</source_id>
-            <time>2018-03-07 14:42:24</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-09 10:13:18</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>75</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>precise</comment>
@@ -13954,7 +13954,7 @@
         <enable>1</enable>
         <errors>
             <source_id>4013</source_id>
-            <errors>40</errors>
+            <errors>44</errors>
         </errors>
         <source_id>4013</source_id>
         <source_name>searchstorage.techtarget.com</source_name>

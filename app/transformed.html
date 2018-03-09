@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transfromed</title>
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/material-icons.css">
+</head>
+
+<body>
+    <div class="container">
+        <ul class="collection" id="content-wrap"></ul>
+    </div>
+    <script>
+    if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }
+    </script>
+    <script type="text/javascript" src="./js/hammer.min.js"></script>
+    <script type="text/javascript" src="./js/materialize.min.js"></script>
+    <script type="text/javascript" src="./js/base.js"></script>
+    <script>
+    if (window.module) module = window.module;
+    </script>
+    <script type="text/javascript">
+    require('./js/transformed.js')
+    </script>
+</body>
+
+</html>

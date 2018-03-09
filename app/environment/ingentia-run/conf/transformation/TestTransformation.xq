@@ -1,4 +1,4 @@
-(:TEMPLATE-BLOG-v2.3:)
+(:TEMPLATE-BLOG-v2.2.2:)
 xquery version "1.0";
 declare namespace h = "http://www.w3.org/1999/xhtml";
 declare namespace ig = "http://www.integrasco.no/";
@@ -6,6 +6,7 @@ declare namespace xqf = "http://www.xqueryfunctions.com" ;
 declare namespace t = "http://www.integrasco.no/transform" ;
 declare namespace zf = "http://www.integrasco.no/blogtemplate";
 declare namespace d = "http://www.dian.org.cn/";
+declare namespace functx = "http://www.functx.com"; 
 
 (: Static variables - should NOT be changed :)
 declare variable $documentUri as xs:string external;
@@ -13,10 +14,10 @@ declare variable $gmtOffset as xs:string external;
 declare variable $rootNode := //h:html;
 
 (: Global variables :)
-declare variable $validateUri := "mybusiness.com.au";
+declare variable $validateUri := "nevillehobson.com";
 declare variable $anonymousAuthorName := "guest";
 declare variable $isPostAuthorDefaulted := false();
-declare variable $useTimeLimitationOnBlogPost := true();
+declare variable $useTimeLimitationOnBlogPost := false();
 declare variable $useTimeLimitationOnComment := false();
 
 (:
@@ -761,6 +762,36 @@ declare function t:translateMonth($timestamp as xs:string, $lang as node() )  as
            then $timestamp
            else $translated    
 };
+declare function functx:day-of-week( $date as xs:anyAtomicType? )  as xs:integer? {
+       
+  if (empty($date))
+  then ()
+  else xs:integer((xs:date($date) - xs:date('1901-01-06'))
+          div xs:dayTimeDuration('P1D')) mod 7
+ } ;
+declare function t:translateDayOfWeek($timestamp as xs:string) as xs:string
+{
+    let $lang := t:getLanguage()
+    let $ts := lower-case($timestamp)
+    
+    let $current-time := ig:current-dateTime-adjusted()
+    let $currentTofwd := functx:day-of-week($current-time)
+    
+    let $tOfwd := string-join(
+    for $mNode in $lang/dayofweek
+    let $m := lower-case($mNode/text())
+    return if(matches($ts, $m))
+                    then string($mNode/@value)
+                    else '','')
+
+    let $rawtimestamp := if(string-length(ig:nsj($tOfwd)) < 1)
+                            then $timestamp
+                            else if(xs:integer(ig:nsj($tOfwd)) >= $currentTofwd)
+                                    then replace('n days ago','n',xs:string($currentTofwd +7-xs:integer(ig:nsj($tOfwd))))
+                                    else replace('n days ago','n',xs:string($currentTofwd - xs:integer(ig:nsj($tOfwd))))
+    return $rawtimestamp
+
+};
 
 declare function t:generateCommentTime($blogInfo as node()*) as xs:string
 {
@@ -814,12 +845,12 @@ declare function zf:timestampToDateTime($timestamp as xs:string) as xs:dateTime
 };
 
 (: skip posts by valid timestamp for the case of id changed :)
-declare function zf:isPostSkipped( $timestamp as xs:string, $isBlogPost as xs:boolean) as xs:boolean
+declare function zf:isPostSkipped( $timestamp as xs:string ) as xs:boolean
 {
     let $validBlogPostTimestamp := t:validBlogPostTimePoint()
     let $validCommentTimestamp := t:validCommentTimePoint()
     let $timestamp := zf:timestampToDateTime($timestamp)
-    let $skipPost := if ($useTimeLimitationOnBlogPost and $isBlogPost)
+    let $skipPost := if ($useTimeLimitationOnBlogPost)
                      then if ($timestamp > zf:timestampToDateTime($validBlogPostTimestamp)) 
                           then
                               false()
@@ -899,8 +930,8 @@ declare function zf:blogpostTransientMeta($pageType as node()) as node()
     </tMeta>
 };
 
-declare function zf:commentTransientMeta($blogPost as node()*) as node()
-{
+declare function zf:commentTransientMeta($blogPost as node()*) as node() {
+
     <tMeta>  
         <entry>
             <string>allowEmptySubjectInComment</string>
@@ -909,10 +940,8 @@ declare function zf:commentTransientMeta($blogPost as node()*) as node()
             </list>
         </entry>
         {
-          if (string(node-name(t:getPageType())) != "COMMENTS" and not(exists($blogPost)))
-          then () 
-          else if (not(empty(t:getVisitLinks())) and not(string-length(ig:nsj(t:getVisitLinks())) = 0))
-               then
+            if(exists($blogPost) and not(empty(t:getVisitLinks())) and not(string-length(ig:nsj(t:getVisitLinks())) = 0)) 
+                then
                     <entry>
                      <string>visit</string>
                          <list>
@@ -921,23 +950,26 @@ declare function zf:commentTransientMeta($blogPost as node()*) as node()
                                 for $visitLink in $visitLinks return
                                     let $visitLink := ig:nsj($visitLink)
                                     return
-                                        if (string-length($visitLink) = 0) then
+                                        if(string-length($visitLink) = 0) then
                                             ()
-                                        else if (matches($visitLink, $ignoreBlogPostParameters)) then
+                                        else
+                                            if(matches($visitLink,$ignoreBlogPostParameters)) then
                                                 <string>{replace($visitLink, $ignoreBlogPostParameters, "")}</string>
-                                             else                                                 
-                                                 let $blogInfo := zf:getBlogInfo($blogPost)
-                                                 return
-                                                       if (matches($visitLink,"\?")) then
-                                                           <string>{$visitLink}&amp;bpid={$blogInfo/id/text()}&amp;bptimestamp={replace($blogInfo/timestamp/text(),"\D","-")}</string>
-                                                       else
-                                                           <string>{$visitLink}?bpid={$blogInfo/id/text()}&amp;bptimestamp={replace($blogInfo/timestamp/text(),"\D","-")}</string>
+                                            else 
+                                                let $blogInfo := zf:getBlogInfo($blogPost)
+                                                return
+                                                if(matches($visitLink,"\?")) then
+                                                    <string>{$visitLink}&amp;bpid={$blogInfo/id/text()}&amp;bptimestamp={replace($blogInfo/timestamp/text(),"\D","-")}</string>
+                                                else
+                                                    <string>{$visitLink}?bpid={$blogInfo/id/text()}&amp;bptimestamp={replace($blogInfo/timestamp/text(),"\D","-")}</string>
                             }
                         </list>
                     </entry>
-                else ()                  
+                else
+                    ()
         }
-    </tMeta>   
+    </tMeta>
+    
 };
 
 declare function zf:generateAuthorId($author as xs:string) as xs:string
@@ -1019,25 +1051,18 @@ declare function zf:getBlogPost() as node()*
         let $timestamp      := zf:parseTimestamp($rawTimestamp, $timestampRegex)
         
         let $blogPostId     := t:getBlogPostId($blogPostNode, $timestamp, $subject)
-        let $dateOfIdChange := t:getDateOfBlogPostIdChange()
-        let $numberOfChange := t:getNumberOfBlogPostIdChange()
-        let $blogPostUri    := if (string-length($blogPostId) = 0)
-                               then
-                                  ""
-                               else
-                                  concat("blog://", $validateUri, "/", $dateOfIdChange, "-", $numberOfChange, "_", $blogPostId)   
  
         let $permLink := ig:removeParamValueFromQuery($documentUri, "bpid")
         let $permLink := ig:removeParamValueFromQuery($permLink, "bptimestamp")
         let $permLink := ig:removeParamValueFromQuery($permLink, "jsstate")
 
-        return if (($useTimeLimitationOnBlogPost and not(zf:isPostSkipped($timestamp, true()))) or not($useTimeLimitationOnBlogPost)) then
+        return if (($useTimeLimitationOnBlogPost and not(zf:isPostSkipped($timestamp))) or not($useTimeLimitationOnBlogPost)) then
             <blogPostContent>
                 <author>{$author}</author>
                 <authorUri>user://{$validateUri}/{$authorId}</authorUri>
                 <authorLink>{$authorLink}</authorLink>
                 <subject>{$subject}</subject>
-                <uri>{$blogPostUri}</uri> 
+                <uri>blog://{$validateUri}/{$blogPostId}</uri> 
                 <link>{$permLink}</link>       
                 <timestamp>{$timestamp}</timestamp>
                 <message>{$message}</message>
@@ -1084,16 +1109,9 @@ declare function zf:parseComment( $commentNode as node()*, $blogInfo as node()) 
         let $timestampRegex := t:getCommentTimestampRegex()
         let $rawTimestamp   := t:getCommentRawTimestamp($commentNode, $authorNode, $blogInfo)
         let $rawTimestamp   := zf:translateInformalDateDescripion($rawTimestamp, $timestampRegex)
-        let $timestamp      := zf:parseTimestamp($rawTimestamp, $timestampRegex)
+        let $timestamp := zf:parseTimestamp($rawTimestamp, $timestampRegex)
          
-        let $commentId      := t:getCommentId($commentNode, $author, $authorLink, $timestamp, $blogInfo)
-        let $dateOfIdChange := t:getDateOfCommentIdChange()
-        let $numberOfChange := t:getNumberOfCommentIdChange()
-        let $commentUri     := if (string-length($commentId) = 0)
-                               then
-                                   ""
-                               else
-                                   concat("blog://", $validateUri, "/comment/", $dateOfIdChange, "-", $numberOfChange, "_", $commentId)    
+        let $commentId := t:getCommentId($commentNode, $author, $authorLink, $timestamp, $blogInfo)
         
         let $permLink := t:getCommentPermLink($commentNode, $commentId)
         let $bookMark := if(matches($permLink, "#"))
@@ -1108,20 +1126,20 @@ declare function zf:parseComment( $commentNode as node()*, $blogInfo as node()) 
         let $permLink := concat($permLink, $bookMark)
         
         
-        let $parentPostId  := t:getCommentParentId($commentNode)
-        let $parentPostUri := if (string-length($parentPostId) = 0)
-                              then
-                                 ""
-                              else
-                                 concat("blog://", $validateUri, "/comment/", $dateOfIdChange, "-", $numberOfChange, "_", $parentPostId)    
+        let $parentPostId := t:getCommentParentId($commentNode)
+        let $parentPostUri := if(string-length($parentPostId) = 0)
+                                  then
+                                      ""
+                                  else
+                                      concat("blog://", $validateUri, "/comment/", $parentPostId)    
                                           
-        return if (($useTimeLimitationOnComment and not(zf:isPostSkipped($timestamp, false()))) or not($useTimeLimitationOnComment)) then
+        return if (($useTimeLimitationOnComment and not(zf:isPostSkipped($timestamp))) or not($useTimeLimitationOnComment)) then
                 <no.integrasco.domain.xml.generalthread.GeneralThreadComment>
                     <author>{$author}</author>
                     <authorLink>{$authorLink}</authorLink>
                     <authorUri>user://{$validateUri}/{$authorId}</authorUri>
                     <rootPostUri>blog://{$validateUri}/{$rootPostId}</rootPostUri>
-                    <uri>{$commentUri}</uri>
+                    <uri>blog://{$validateUri}/comment/{$commentId}</uri>
                     <link>{$permLink}</link>
                     <parentPostUri>{$parentPostUri}</parentPostUri>
                     <sequenceNumber>{$blogInfo/index/text()}</sequenceNumber>
@@ -1298,7 +1316,7 @@ declare function t:getLanguage() as node() {
             <value>PT $1 M</value>
         </duration>
         <duration>
-            <key>(\d+)\s+hours?\s+ago</key>
+            <key>(\d+)\s+hours?(\s+ago)?</key>
             <value>PT $1 H</value>
         </duration>
         <duration>
@@ -1330,7 +1348,7 @@ declare function t:getLanguage() as node() {
         </duration>
 
         <!--        Months          -->
-        <!-- Remember that the text actually support regex.. -->        
+        <!-- Remember that the text actually support regex.. -->
         <month value="01">january</month>
         <month value="02">february</month>
         <month value="03">march</month>
@@ -1356,17 +1374,6 @@ declare function t:getLanguage() as node() {
         <month value="10">oct</month>
         <month value="11">nov</month>
         <month value="12">dec</month>
-        
-        <nonNumeric value =" 1 " >((^\s*)|(\s+))en\s+</nonNumeric>
-        <nonNumeric value =" 2 " >((^\s*)|(\s+))to\s+</nonNumeric>
-        <nonNumeric value =" 3 " >((^\s*)|(\s+))tre\s+</nonNumeric>
-        <nonNumeric value =" 4 " >((^\s*)|(\s+))fire\s+</nonNumeric>
-        <nonNumeric value =" 5 " >((^\s*)|(\s+))fem\s+</nonNumeric>
-        <nonNumeric value =" 6 " >((^\s*)|(\s+))seks\s+</nonNumeric>
-        <nonNumeric value =" 7 " >((^\s*)|(\s+))syv\s+</nonNumeric>
-        <nonNumeric value =" 8 " >((^\s*)|(\s+))åtte\s+</nonNumeric>
-        <nonNumeric value =" 9 " >((^\s*)|(\s+))ni\s+</nonNumeric>
-        <nonNumeric value =" 10 ">((^\s*)|(\s+))ti\s+</nonNumeric>
 
         <nonNumeric value =" 1 " >one</nonNumeric>
         <nonNumeric value =" 2 " >two</nonNumeric>
@@ -1378,6 +1385,14 @@ declare function t:getLanguage() as node() {
         <nonNumeric value =" 8 " >eight</nonNumeric>
         <nonNumeric value =" 9 " >nine</nonNumeric>
         <nonNumeric value =" 10 ">ten</nonNumeric>
+        
+        <dayofweek value =" 1 " >monday</dayofweek>
+        <dayofweek value =" 2 " >tuesday</dayofweek>
+        <dayofweek value =" 3 " >wednesday</dayofweek>
+        <dayofweek value =" 4 " >thursday</dayofweek>
+        <dayofweek value =" 5 " >friday</dayofweek>
+        <dayofweek value =" 6 " >saturday</dayofweek>
+        <dayofweek value =" 7 " >sunday</dayofweek>
     </language>
 };
 
@@ -1388,10 +1403,9 @@ declare function t:getLanguage() as node() {
      depending on what kind of output you want. Be carefull when using the <TRANSIENTMETA-ONLY/> tag.:)
 declare function t:getPageType() as node()
 {
-   (:if(matches($documentUri,"https://www.mybusiness.com.au/\S+/\d+-\S+"))
-   then <BLOGPOST/>
-   else <GENERATEURL-ONLY/>:)
-   <BLOGPOST/>
+    let $pageType := <BLOGPOST-WITH-COMMENTS/>
+    return
+        $pageType
 };
 
 (:2 - Generate visit links here. blog post id and blog post timestamp are both
@@ -1400,82 +1414,30 @@ declare function t:getPageType() as node()
 declare function t:getVisitLinks() as xs:string*
 {
     ""
+    
 };
 
 (:3 Just use to generate blogPostUrl , especially for the timestamp must be got from archive:)
 declare function t:getBlogpostLinks() as xs:string*
 {    
-    let $base := "https://www.mybusiness.com.au/"
-    let $a := $rootNode//h:a[@href]
-    let $links := for $link in $a/@href
-                  return if(matches($link,"#") or matches($link,"start=\d+"))
-                         then ""
-                         else if(matches($link,$base))
-                              then $link
-                              else if(matches($link,"^/") or matches($link,"^//") or matches($link,"^./"))
-                                   then resolve-uri($link,$base)
-                                   else ""
-    
-    let $links := for $link in $links
-                  return if(matches($link,"^https://www.mybusiness.com.au/\S+/\d+-\S+") or matches($link,"^https://www.mybusiness.com.au/\S+"))
-                         then $link
-                         else ""
-    let $links := for $link in $links
-                  where $link !=""
-                  return $link
-    let $lastPageNode := ($rootNode//h:ul[@class="pagination"])[1]/h:li[last()]
-    let $lastPge := if($lastPageNode)
-                    then ig:getParamValueFromQuery($lastPageNode//h:a/@href,"start","0")
-                    else "0"
-    let $lastPge := if(floor(xs:integer($lastPge) div 12) > 10)
-                      then 10
-                      else floor(xs:integer($lastPge) div 12)
-    let $pageLinks := if($lastPge and not(ig:getParamValueFromQuery($documentUri,"start","")))
-                      then for $x in (1 to xs:integer($lastPge))
-                           return ig:setParamValueFromQuery($documentUri,"start",xs:string($x*12))
-                      else ""
-    return (distinct-values($links),$pageLinks)
+    ""   
 };
 
 (:4 Use time to skip old blogPosts for the case that id changed, remember the pattern should be either MM dd yyyy HH mm ss 
-or yyyy-MM-dd HH:mm:ss and please remember to let it empty if no use :)
+or yyyy-MM-dd HH:mm:ss  please remember to let it empty if no use :)
 declare function t:validBlogPostTimePoint() as xs:string*
 {
-   "05 02 2016 16 15 01"
+    ""
 };
 
-(:5 Use the date on which you changed blog post id, the pattern should be yyyyMMdd and DO NOT change it if id doesn't change' :)
-declare function t:getDateOfBlogPostIdChange() as xs:integer
-{
-    20160518
-};
-
-(:6 Number of times for changing blog post id, if this is a new source transformation, please give "0" and DO NOT change it if id doesn't change :)
-declare function t:getNumberOfBlogPostIdChange() as xs:integer
-{
-    1
-};
-
-(:7 Use time to skip old comments for the case that id changed, remember the pattern should be either MM dd yyyy HH mm ss 
-or yyyy-MM-dd HH:mm:ss and please remember to let it empty if no use :)
+(:5 Use time to skip old comments for the case that id changed, remember the pattern should be either MM dd yyyy HH mm ss 
+or yyyy-MM-dd HH:mm:ss  please remember to let it empty if no use :)
 declare function t:validCommentTimePoint() as xs:string*
 {
     ""
 };
 
-(:8 Use the date on which you changed comment id, the pattern should be yyyyMMdd and DO NOT change it if id doesn't change :)
-declare function t:getDateOfCommentIdChange() as xs:integer
-{
-   20160518
-};
-
-(:9 Number of times for changing comment id, if this is a new source transformation, please give "0" and DO NOT change it if id doesn't change :)
-declare function t:getNumberOfCommentIdChange() as xs:integer
-{
-    1
-};
-
-(:10 - the found specail character contains '\', 'å', if find more please add them here:)
+(:6 - the found specail character contains '\', 'å', if find more please add them here:)
 declare function t:getSpecialCharacterRegex() as xs:string
 {
     '\\|å'
@@ -1487,13 +1449,13 @@ declare function t:getSpecialCharacterRegex() as xs:string
 (:1 - Fetch the node containing all the tag links.:)
 declare function t:getTagsRoot($blogPost as node()*) as node()*
 {
-()
+    $rootNode//h:footer[@class="entry-meta"]
 };
 
 (:2 - Enter href pattern to recognize tag links.:)
 declare function t:getTagUriPattern() as xs:string
 {
-     ""
+    "/category/"
 };
 (:TAGS - END:)
 
@@ -1502,53 +1464,78 @@ declare function t:getTagUriPattern() as xs:string
 (:1 - Fetch the node containing the blog post.:)
 declare function t:getBlogPostRootNode() as node()*
 {
-     let $root := ($rootNode//h:article[matches(@class, "article-id-\d+")])[1]
-     return if(exists($root))
-            then $root
-            else $rootNode//h:div[@id="component-body"]
+    (:let $postRootNode := $rootNode//h:article[matches(@class, "post-\d+")]:)
+    let $postRootNode := $rootNode//h:article[matches(@class, "post-\d+")]
+    return
+        $postRootNode 
 };
 
 (:2 - Find the blog post subject:)
 declare function t:getBlogPostSubject($blogPost as node()*) as xs:string
 {
-    ig:nsj(($blogPost//h:h1)[1])
+    let $subject := ig:nsj( ($blogPost//h:h1)[1]/text() )
+    return
+        $subject
+    (:let $subject := ig:nsj( ($blogPost//h:div[@class = "entry-title"]/h:h2)[1]/text() )
+    return
+        $subject:)
 };
 
 (:3 - Fetch the node containing blog post author information:)
 declare function t:getBlogPostAuthorNode($blogPost as node()*) as node()*
 {
-    ($blogPost//h:div[@class="b-article__article-info__author"])
+    let $authorNode := ($rootNode//h:*[@class = "author-box-title"])[1]
+    return
+        $authorNode
+    (:let $authorNode := ($blogPost//h:span[@class = "vcard author"])[1]
+    return
+        $authorNode:)
 };
 
 (:4 - Fetch the node containing the blog post author url:)
 declare function t:getBlogPostAuthorUrlNode($blogPost as node()*, $authorNode as node()*) as node()*
 {
-   ()
+    let $authorLinkNode := ($authorNode//h:a[matches(@href, "/author/")])[1]
+                           
+    return
+        $authorLinkNode
 };
 
 (:5 - Find the blog post author url:)
 declare function t:getBlogPostAuthorUrl($authorUrlNode as node()*) as xs:string
 {
-    ""
+    let $authorUrl := ig:nsj($authorUrlNode/@href)
+    
+    return
+        $authorUrl
 };
 
 (:6 - Find the blog post author name:)
 declare function t:getBlogPostAuthor($blogPost as node()*, $authorNode as node()*, $authorLinkNode as node()*, $authorUrl as xs:string) as xs:string
 {
-   let $author := ig:nsj($authorNode//text())
-   return if($author)
-           then $author
-           else $validateUri
+    let $author := if ($authorNode)
+                   then substring-after( ig:nsj( $authorNode//text()), "About "  )
+                   else $validateUri
+                   
+    return
+        $author    
 };
 
 (:7 - Find the blog post timestamp:)
 declare function t:getBlogPostRawTimestamp($blogPost as node()*, $authorNode as node()*) as xs:string
 {
-    let $time := ($blogPost//h:time[@class="b-article__article-info__publish-date"])[1]/@datetime
-    let $time := if($time)
-                  then $time
-                  else ig:nsj(($rootNode//h:meta[@property="article:published_time"])/@content)
-    return $time
+    let $datetime := $blogPost//h:time[matches(@class, "entry-time")]/@datetime
+    let $datetime := ig:subBefore($datetime, "+")
+    let $datetime := ig:nsj($datetime)
+    
+    return
+        $datetime
+    (:let $datetime := ($blogPost//h:span[@class = "posted-on-date"])[1]//h:time[@class = "entry-date published"]/@datetime
+    let $datetime := ig:subBefore($datetime, "+")
+    let $datetime := ig:nsj($datetime)
+    
+    return
+        $datetime:)
 };
 
 (:8 - Regex expression describing the current timestamp sequence.
@@ -1561,26 +1548,34 @@ declare function t:getBlogPostTimestampRegex() as xs:string
 (:9 - Find unique id for the blog post:)
 declare function t:getBlogPostId($blogPost as node()*, $timestamp as xs:string, $subject as xs:string) as xs:string
 {
-    ig:extractEx($documentUri,"\S+/(\d+)-\S+")    
+    let $postId := ig:extractEx($blogPost/@class, "post-(\d+)" )
+    
+    return $postId
+    (:let $postId := ig:extractEx( $blogPost/@id, "post-(\d+)" )
+    
+    return $postId:)
 };
 
 (:10 - Fetch the blog post message and refine it:)
 declare function t:getBlogPostMessage($blogPost as node()*) as node()*
 {
-    let $messageNode := $rootNode//h:div[@class="b-article__content"]//h:div[matches(@class, "b-article__content__right")]
-    let $messageNode := ig:removeTagByAttribute($messageNode,"class","b-module module_container")
-    let $messageNode := ig:removeTagByAttribute($messageNode,"class","in-article-after")
-    let $messageNode := ig:removeTagByAttribute($messageNode,"class","jwDisqusForm")
-    let $messageNode := ig:removeTagByAttribute($messageNode,"id","jwDisqusFormFooter")
-    let $messageNode := ig:removeTagByName($messageNode,"noscript")
-    let $messageNode := ig:removeTagByName($messageNode,"script")
-    let $messageNode := ig:removeTagByNodes($messageNode, $messageNode//h:a[matches(@href, '#cc.*\d+')])
-    let $messageNode := ig:removeTagByNodes($messageNode, $messageNode/descendant-or-self::h:object)
+    let $messageNode := ($blogPost//h:div[matches(@class, "entry-content")])
+    let $messageNode := ig:removeTagByAttribute($messageNode, "class", "printfriendly pf-alignleft")
+    let $messageNode := ig:removeTagByNodes($messageNode, $messageNode//h:div[@class = "crp_related"])
+    let $messageNode := ig:removeTagByNodes($messageNode, $messageNode//h:div[matches(@class, "sd-sharing-enabled")])
+    let $messageNode := ig:removeTagByNodes($messageNode, $messageNode//h:div[@class = "sharedaddy sd-block sd-social sd-gplus"])
+	let $messageNode := ig:removeTagByNodes($messageNode, $messageNode//h:div[@id = "jp-relatedposts"])
+	let $messageNode := ig:removeTagByNodes($messageNode, $messageNode//h:strong/text()[matches(lower-case(.), "^related\s*posts:$")]/(following::node() | .))
+	
+	
+	(: Remove useless node from message :)
     let $messageNode := ig:removeTagByNodes($messageNode, $messageNode/descendant-or-self::h:style)
     let $messageNode := ig:removeTagByNodes($messageNode, $messageNode/descendant-or-self::h:script)
     let $messageNode := ig:removeTagByNodes($messageNode, $messageNode/descendant-or-self::h:ins)
-    let $messageNode := ig:removeTagByNodes($messageNode,$messageNode//node()[ig:isEmptyNode(.)])
+    let $messageNode := ig:removeTagByNodes($messageNode, $messageNode/descendant-or-self::node()[ig:isEmptyNode(.)])
+	
     return $messageNode
+    
 };
 (:BLOGPOST - END:)
 
@@ -1593,50 +1588,73 @@ declare function t:getBlogPostMessage($blogPost as node()*) as node()*
   1 + 20 = 21. Set it to return 0 if there is no pagination.:)
 declare function t:getIndexOffset() as xs:integer
 {
-   0
+    0
 };
 
 (:2 - Fetch the nodes containing the comments:)
 declare function t:getCommentRootNodes() as node()*
 {
-   ()
+    let $commentRootNodes := ($rootNode//h:ol[@class = "comment-list"])[1]//h:li[matches(@id, "comment-\d+")]
+
+    return
+        $commentRootNodes
 };
 
 (:3 - If the comment got a parent, return the parent's id. 
       Else return empty string:)
 declare function t:getCommentParentId($comment as node()*) as xs:string 
 {
-   ""
+    let $parentId := $comment//parent::h:ul[@class = "children"]/parent::h:li[matches(@id,"comment-\d+")]
+    let $parentId := if($parentId)
+                     then ig:extractEx($parentId/@id, "comment-(\d+)")
+                     else ""
+    return
+        $parentId
 };
 
 (:4 - Fetch the node containing comment author information:)
 declare function t:getCommentAuthorNode($comment as node()*) as node()*
 {
-    ()
+    let $commentAuthorNode := ($comment//h:p[@class="comment-author"]/h:span[@itemprop="name"])
+    return
+        $commentAuthorNode
 };
 
 (:5 - Fetch the node containing the author link:)
 declare function t:getCommentAuthorLinkNode($comment as node()*, $authorNode as node()*) as node()*
 {
-    ()
+    let $commentAuthorLinkNode := $authorNode/h:a[@href]
+    return
+        $commentAuthorLinkNode
 };
 
 (:6 - Find the comment author url:)
 declare function t:getCommentAuthorUrl($authorLinkNode as node()*) as xs:string
 {
-   ""
+    let $commentAuthorUrl := ig:nsj($authorLinkNode/@href)
+    return
+        $commentAuthorUrl
 };
 
 (:7 - Find the comment author name:)
 declare function t:getCommentAuthor($comment as node()*, $authorNode as node()*, $authorLinkNode as node()*, $authorUrl as xs:string) as xs:string
 {
-     ""
+    let $commentAuthor := if($authorLinkNode)
+                          then let $author := ig:nsj($authorLinkNode/text())
+                               let $author := replace($author, "^@", "")
+                               return
+                                   $author
+                          else ig:nsj($authorNode//text())
+    return
+        $commentAuthor
 };
 
 (:8 - Find the raw comment timestamp:)
 declare function t:getCommentRawTimestamp($comment as node()*, $authorNode as node()*, $blogInfo as node()*) as xs:string
 {
-    ""
+    let $commentRawTimestamp := ig:nsj( ($comment//h:time[@class="comment-time"])/@datetime )
+    return
+        $commentRawTimestamp
 };
 
 (:9 - Regex expression describing the current timestamp sequence.
@@ -1650,21 +1668,27 @@ declare function t:getCommentTimestampRegex() as xs:string
        To fetch the comment-index, enter $blogInfo/index/text():)
 declare function t:getCommentId($comment as node()*, $author as xs:string, $authorUrl as xs:string, $timestamp as xs:string, $blogInfo as node()*) as xs:string
 {
-    ""
+    let $commentId := ig:extractEx($comment/@id, "comment-(\d+)")
+    return
+        $commentId
 };
 
 (:11 - Find/generate the comment perm link:)
 declare function t:getCommentPermLink($comment as node()*, $commentId as xs:string)as xs:string
 {
-    ""
+    let $commentPermLink := concat($documentUri,"#comment-",$commentId)
+    return
+        $commentPermLink
 };
 
 (:12 Find and refine the comment message:)
 declare function t:getCommentMessage($comment as node()*) as node()*
 {
-  ()
+    let $commentMessage := ($comment//h:div[@class="comment-content"])
+    return
+        $commentMessage
 };
-(: COMMENTS - END :)
+(: COMMENTS - END:)
 
 (: CODE TO UPDATE - END :)
 
