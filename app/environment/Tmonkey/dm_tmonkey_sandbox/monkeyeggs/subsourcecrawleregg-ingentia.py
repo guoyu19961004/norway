@@ -348,7 +348,7 @@ Usage:
             self.print_detail('Failed to dump link: {0}'.format(link))
 
     def dump_page_ingentia(self, link, encoding, fp , user_agent=None):
-        ingentia_root_path = "D:/Dian/Norway/ingentia-run"
+        ingentia_root_path = "D:/biyesheji/norway-project/app/environment/ingentia-run"
         cleanedump = os.path.join(ingentia_root_path, "logs", "cleanedump.log")
         try:
             os.remove(cleanedump)

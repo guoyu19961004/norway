@@ -7,7 +7,7 @@ import os.path
 # section you need to change
 
 #BASE_DIR = os.path.dirname(os.getcwd())
-BASE_DIR = "D:/Dian/Norway/forumtest"
+BASE_DIR = "D:/biyesheji/norway-project/app/environment/forumtest"
 THREAD_COUNT = 5
 
 # The google talk notifier has not been implemented yet, so please just leave it alone

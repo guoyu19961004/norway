@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <!-- <UrlTransformation>6304</UrlTransformation>
+  <ThreadTransformation>6303</ThreadTransformation> -->
+  <UrlTransformation>5</UrlTransformation>
+  <ThreadTransformation>6</ThreadTransformation>
+  <DateFormat>MM dd yyyy HH mm ss</DateFormat>
+  <DateLocale>en</DateLocale>
+  <SpecificInputEncoding>gb2312</SpecificInputEncoding>
+  <PageProcessingLimit>10</PageProcessingLimit>
+  <StripUrlParameters>false</StripUrlParameters>
+  <UserAgent/>
+  <RequestDelayMin>2</RequestDelayMin>
+  <RequestDelayMax>5</RequestDelayMax>
+  <HtmlCleanup>tagsoup</HtmlCleanup>
+  <UriValidatePattern>http://bbs.zol.com.cn/${integer}/${integer}</UriValidatePattern>
+  <RootValidatePattern>http://bbs.zol.com.cn/${integer}</RootValidatePattern>
+  <AuthorValidatePattern>http://bbs.zol.com.cn/user/${string}</AuthorValidatePattern>
+  <RequestDistribution>
+    <HttpProxyDistribution>
+      <Enabled>false</Enabled>
+    </HttpProxyDistribution>
+  </RequestDistribution>
+</configuration>

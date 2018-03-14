@@ -77,3 +77,19 @@ li.collection-item span {
   word-wrap: break-word;
   word-break: break-word;
 }
+
+/* line 18, ../sass/screen.scss */
+em.error {
+  color: red;
+  font-size: 12px;
+}
+
+/* line 23, ../sass/screen.scss */
+#shell_info {
+  height: 220px;
+  max-height: 220px;
+  overflow: auto;
+  word-wrap: break-word;
+  word-break: break-word;
+  font-size: 14px;
+}

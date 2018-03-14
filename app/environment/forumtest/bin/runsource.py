@@ -290,8 +290,10 @@ if __name__ == '__main__':
 
     #输入本次的配置
     src_dir = read_srcdir(last)
-    flag = read_runcrawler(last)
-    thread_num = read_threadnum(last)
+    # flag = read_runcrawler(last)
+    # thread_num = read_threadnum(last)
+    flag = 'n'
+    thread_num = 5
     src_name = get_srcname(src_dir)
 
     #保存本次的配置

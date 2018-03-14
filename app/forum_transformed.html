@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forum-Transfromed</title>
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/material-icons.css">
+</head>
+
+<body>
+    <div class="container">
+        <ul class="collapsible" id="content-wrap" data-collapsible="accordion"></ul>
+    </div>
+    <script>
+    if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }
+    </script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/materialize.min.js"></script>
+    <script type="text/javascript" src="./js/base.js"></script>
+    <script>
+    if (window.module) module = window.module;
+    </script>
+    <script type="text/javascript">
+    const transform = require('./js/transformed.js')
+    if (fs.existsSync(path.join(resource_path, 'settings.xml'))) {
+        //读取settings.xml
+        let conf = fs.readFileSync(path.join(resource_path, 'settings.xml'));
+        if (conf) {
+            jsonParser.parseString(conf, function(err, result) {
+                saveConf(result.norway)
+            })
+        } else {
+            alert('settings.xml为空!')
+        }
+    } else {
+        let newwindow = new BrowserWindow({
+            width: 500,
+            height: 400,
+            resizable: false
+        })
+        newwindow.loadURL(url.format({
+            pathname: path.join(root_path, 'settings.html'),
+            protocol: 'file:',
+            slashes: true
+        }))
+        newwindow.on("closed", function() {
+            change_env_path()
+            newwindow = null
+        })
+    }
+    $(document).ready(function() {
+        transform.ForumTransfomed()
+    });
+    </script>
+</body>
+
+</html>

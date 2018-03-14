@@ -12,59 +12,79 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col s12 m6">
-                <div class="input-field col s12 m6">
+            <div class="col s12 m3">
+                <div class="input-field col s12 m12">
                     <input id="source_id" type="text" class="validate" required>
-                    <label for="source_id">Source_id</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <a id="get_source_id" class="btn waves-effect waves-teal">下载文件</a>
+                    <label for="source_id">Source Id</label>
                 </div>
                 <div class="input-field col s12 m12">
-                    <a id="get_source_by_path" class="btn waves-effect waves-teal">选择已下载Source目录</a>
+                    <a id="get_source_id" class="btn waves-effect waves-teal">下载Source</a>
+                </div>
+                <div class="input-field col s12 m12">
+                    <a id="get_source_by_path" class="btn waves-effect waves-teal">选择Source</a>
                 </div>
             </div>
-            <ul class="collection with-header col s12 m6">
+            <ul class="collection col s12 m9">
                 <li class="collection-item">Source Name: <span id="source_name"></span></li>
                 <li class="collection-item">Source Type: <span id="source_type"></span></li>
                 <li class="collection-item">Source Path: <span id="source_path"></span></li>
             </ul>
         </div>
+        <form class="col s12" id="downloadForm">
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input id="download_link" type="url" class="validate" name="link" required>
+                    <label for="download_link">下载链接</label>
+                </div>
+                <div class="input-field col s12 m3">
+                    <select id="web_encoding" name="encoding" required>
+                        <option value="UTF-8" selected>UTF-8</option>
+                        <option value="ISO-8859-1">ISO-8859-1</option>
+                        <option value="gb2312">gb2312</option>
+                        <option value="windows-1251">windows-1251</option>
+                        <option value="ISO-8859-2">ISO-8859-2</option>
+                        <option value="gbk">gbk</option>
+                    </select>
+                    <label>网页编码</label>
+                </div>
+                <div class="input-field col s12 m3">
+                    <select id="web_encoding" name="download_type" required>
+                        <option value="blog" selected>Blog</option>
+                        <option value="thread">Thread</option>
+                        <option value="url">Url</option>
+                    </select>
+                    <label>下载类型</label>
+                </div>
+                <div class="input-field col s12 m9">
+                    <p>文件已保存至<span id="download_save_path"></span></p>
+                </div>
+                <div class="input-field col s12 m3">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">下载网页</button>
+                </div>
+            </div>
+        </form>
         <ul id="tabs-swipe-demo" class="tabs">
             <li class="tab col s6 m6"><a href="#blog-wrap" class="active">BLOG</a></li>
             <li class="tab col s6 m6"><a href="#forum-wrap">FORUM</a></li>
         </ul>
-        <div id="blog-wrap" class=" row col s12">
-            <div class="input-field col s12 m6">
-                <input id="download_link" type="text" class="validate" required value="">
-                <label for="download_link">下载链接</label>
+        <div id="blog-wrap" class="row col s12">
+            <div class="col s12 m12" style="margin:10px auto;">
+                <a id="blog_run_button" class="btn waves-effect waves-teal" style="margin-right: 20px;">开始测试</a>
+                <a id="blog_stop_button" class="btn waves-effect waves-teal" style="display: none; margin-right: 20px;">停止测试</a>
+                <a id="blog_check_result" class="btn waves-effect waves-teal" style="display: none; margin-right: 20px;">查看结果</a>
+                <a id="blog_check_error" class="btn waves-effect waves-teal" style="display: none;">查看报错</a>
             </div>
-            <div class="input-field col s12 m3">
-                <select id="web_encoding">
-                    <option value="UTF-8" selected>UTF-8</option>
-                    <option value="ISO-8859-1">ISO-8859-1</option>
-                    <option value="gb2312">gb2312</option>
-                    <option value="windows-1251">windows-1251</option>
-                    <option value="ISO-8859-2">ISO-8859-2</option>
-                    <option value="gbk">gbk</option>
-                </select>
-                <label>网页编码</label>
-            </div>
-            <div class="input-field col s12 m3">
-                <a id="download_link_button" class="btn waves-effect waves-teal">下载网页</a>
-            </div>
-            <div class="input-field col s12 m9">
-                <p>文件已保存至<span id="download_save_path"></span></p>
-                <div id="shell_info" style="margin-top: 20px; height: 200px; max-height: 200px; overflow: auto; word-wrap: break-word; word-break: break-word; font-size: 14px;"></div>
-            </div>
-             <div class="col s12 m3">
-                 <a id="blog_run_button" class="btn waves-effect waves-teal" style="margin-bottom: 20px;">开始测试</a>
-                 <a id="blog_stop_button" class="btn waves-effect waves-teal" style="margin-bottom: 20px; display: none;">停止测试</a>
-                 <a id="check_result" class="btn waves-effect waves-teal" style="margin-bottom: 20px; display: none;">查看结果</a>
-                 <a id="check_error" class="btn waves-effect waves-teal" style="margin-bottom: 20px; display: none;">查看报错</a>
-             </div>
         </div>
-        <div id="forum-wrap" class="col s12">Test 2</div>
+        <div id="forum-wrap" class="row col s12">
+            <div class="col s12 m12" style="margin:10px auto;">
+                <a id="url_run_button" class="btn waves-effect waves-teal" style="margin-right: 20px;">生成finish.xml</a>
+                <!-- <a id="forum_run_button" class="btn waves-effect waves-teal" style="margin-right: 20px;">整体测试</a> -->
+                <a id="forum_stop_button" class="btn waves-effect waves-teal" style="display: none; margin-right: 20px;">停止测试</a>
+                <a id="forum_check_result" class="btn waves-effect waves-teal" style="margin-right: 20px;">查看结果</a>
+                <a id="forum_check_error" class="btn waves-effect waves-teal" style="display: none;">查看报错</a>
+            </div>
+        </div>
+        <div id="shell_info" style=""></div>
     </div>
     <script>
     if (typeof module === 'object') {
@@ -72,8 +92,10 @@
         module = undefined;
     }
     </script>
-    <script type="text/javascript" src="./js/hammer.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/materialize.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="./js/messages_zh.min.js"></script>
     <script type="text/javascript" src="./js/base.js"></script>
     <script>
     if (window.module) module = window.module;

@@ -1,13 +1,13 @@
 {
     "name": "Norway-envrionment",
     "version": "1.0.0",
-    "description": "A Norway Project application",
+    "description": "A automated testing tool application for norway project",
     "main": "main.js",
     "scripts": {
         "start": "electron .",
-        "pack:osx": "electron-packager . test --out=dist --asar --platform=darwin --arch=x64 --overwrite --ignore=.sass-cache --ignore=app/sass --ignore=.rb --ignore=.md --ignore=.gitignore --icon=app/images/icon.icns",
-        "pack:win32": "electron-packager . test --out=dist --asar --platform=win32 --arch=ia32 --overwrite --ignore=.sass-cache --ignore=app/sass --ignore=.rb --ignore=.md --ignore=.gitignore --icon=app/images/icon.ico",
-        "pack:win64": "electron-packager . test --out=dist --platform=win32 --arch=x64 --overwrite --ignore=.sass-cache --ignore=sass --ignore=.rb --ignore=.md --ignore=.gitignore --icon=app/images/icon.ico",
+        "pack:osx": "electron-packager . norway --out=dist --asar --platform=darwin --arch=x64 --overwrite --ignore=.sass-cache --ignore=app/sass --ignore=.rb --ignore=.md --ignore=.gitignore --icon=app/images/icon.icns",
+        "pack:win32": "electron-packager . norway --out=dist --asar --platform=win32 --arch=ia32 --overwrite --ignore=.sass-cache --ignore=app/sass --ignore=.rb --ignore=.md --ignore=.gitignore --icon=app/images/icon.ico",
+        "pack:win64": "electron-packager . norway --out=dist --platform=win32 --arch=x64 --overwrite --ignore=.sass-cache --ignore=sass --ignore=.rb --ignore=.md --ignore=.gitignore --icon=app/images/icon.ico",
         "build": "npm run pack:osx && npm run pack:win32 && npm run pack:win64"
     },
     "repository": "https://github.com/guoyu19961004/norway",
@@ -22,10 +22,6 @@
         "electron-packager": "^10.1.0"
     },
     "dependencies": {
-        "fix-path": "^2.1.0",
-        "format-xml": "0.0.0-work-in-progress",
-        "jquery": "^3.3.1",
-        "jquery-validation": "^1.17.0",
         "xml2js": "^0.4.19"
     }
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans spring-beans-2.0.xsd">
+
+
+	
+	<bean id="errorRepository"
+		class="no.integrasco.ingentia.news.qaedition.mocks.SimpleMockErrorRepository">
+		<property name="errorMessageCreator" ref="errorMessageCreator" />		
+	</bean>
+	
+	<bean id="errorMessageCreator" class="no.integrasco.ingentia.news.error.utils.ErrorMessageCreator">
+		<property name="logVelocityTemplate" ref="logVelocityTemplate" />
+		<property name="velocityEngine" ref="velocityEngine" />
+	</bean>
+
+	<bean id="logVelocityTemplate"
+		class="no.integrasco.ingentia.core.crawler.error.log4j.eventhandler.LogVelocityTemplate">
+		<property name="templatePath">
+			<value>velocity-templates/error-templates/email-error.vm</value>
+		</property>
+		<property name="subjectTemplatePath">
+			<value>velocity-templates/error-templates/email-subject.vm</value>
+		</property>
+	</bean>
+
+</beans>

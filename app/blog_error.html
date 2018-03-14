@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Errors</title>
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/material-icons.css">
+</head>
+
+<body>
+    <div class="container">
+        <table class="bordered highlight">
+            <thead>
+                <tr>
+                    <th>ErrorInfo</th>
+                    <th>ErrorLink</th>
+                </tr>
+            </thead>
+            <tbody id="content-wrap">
+            	<tr></tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+    if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }
+    </script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/materialize.min.js"></script>
+    <script>
+    if (window.module) module = window.module;
+    </script>
+    <script type="text/javascript">
+    const transform = require('./js/transformed.js')
+    $(document).ready(function() {
+        $('.collapsible').collapsible();
+        transform.BlogError()
+    });
+    </script>
+</body>
+
+</html>

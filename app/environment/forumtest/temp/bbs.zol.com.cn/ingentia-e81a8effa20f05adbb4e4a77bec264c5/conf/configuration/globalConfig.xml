@@ -1,0 +1,36 @@
+<no.integrasco.ingentia.news.config.BlogNewsGlobalCustomCrawlerConfig>
+  <globalOutputEncoding>utf-8</globalOutputEncoding>
+  <globalInputEncoding>utf-8</globalInputEncoding>
+  <userAgent></userAgent>
+  <followRedirectsUsingHttpStandard>false</followRedirectsUsingHttpStandard>
+  <maximumJobRetries>25</maximumJobRetries>
+  <maximumRequestLimit>5</maximumRequestLimit>
+  <minimumRequestLimit>2</minimumRequestLimit>
+  <maxJobQueueSize>100000</maxJobQueueSize>
+  <siteLevelsToCrawl>15</siteLevelsToCrawl>  
+  <cookiePolicy>ignoreCookies</cookiePolicy>
+  <fastCrawlEnabled>false</fastCrawlEnabled>
+  <lastFullCrawl>1970-01-01 01:00:00.0</lastFullCrawl>
+  <daysBetweenFullCrawl>2</daysBetweenFullCrawl>
+  <fastCrawlLevel>5</fastCrawlLevel>
+  <harvestLevelsToCrawl>150</harvestLevelsToCrawl> 
+  <maxRetriesPerSourceToSendError>25</maxRetriesPerSourceToSendError>
+  <regularExpressionClasses>
+    <no.integrasco.ingentia.news.config.entity.RegularExpressionClass>
+      <classIdentifier>${integer}</classIdentifier>
+      <regularExpression>[0-9]+</regularExpression>
+    </no.integrasco.ingentia.news.config.entity.RegularExpressionClass>
+    <no.integrasco.ingentia.news.config.entity.RegularExpressionClass>
+      <classIdentifier>${string}</classIdentifier>
+      <regularExpression>[-A-Za-z_0-9.%]+</regularExpression>
+    </no.integrasco.ingentia.news.config.entity.RegularExpressionClass>
+    <no.integrasco.ingentia.news.config.entity.RegularExpressionClass>
+      <classIdentifier>${all}</classIdentifier>
+      <regularExpression>(.*?)</regularExpression>
+    </no.integrasco.ingentia.news.config.entity.RegularExpressionClass>
+  </regularExpressionClasses>
+  <httpTransLocation>http://transformation.integrasco.no/</httpTransLocation>
+  <estimatedAveragePostsPerDay>10</estimatedAveragePostsPerDay>
+  <harvestDaysBack>365</harvestDaysBack>
+  <harvestMarginInPercent>20.0</harvestMarginInPercent>
+</no.integrasco.ingentia.news.config.BlogNewsGlobalCustomCrawlerConfig>

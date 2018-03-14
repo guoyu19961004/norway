@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans spring-beans-2.0.xsd">
+
+
+	<import resource="/velocity-config.xml"/>
+
+	<bean id="errorHandler"
+		class="no.integrasco.ingentia.news.qaedition.errorhandlers.ConsoleErrorHandler">
+		<property name="velocityEngine" ref="velocityEngine" />
+		
+		<property name="logVelocityTemplates">
+						<map>
+							<entry>
+								<key>
+									<value>INFO</value>
+								</key>
+								<bean
+									class="no.integrasco.ingentia.core.crawler.error.log4j.eventhandler.LogVelocityTemplate" >
+									<property name="templatePath">
+										<value>velocity-templates/error-templates/info-template.vm</value>
+									</property>
+									<property name="subjectTemplatePath">
+										<value>velocity-templates/error-templates/email-subject.vm</value>
+									</property>
+								</bean>
+							</entry>
+							<entry>
+								<key>
+									<value>FATAL</value>
+								</key>
+								<bean
+									class="no.integrasco.ingentia.core.crawler.error.log4j.eventhandler.LogVelocityTemplate" >
+									<property name="templatePath">
+										<value>velocity-templates/error-templates/email-error.vm</value>
+									</property>
+									<property name="subjectTemplatePath">
+										<value>velocity-templates/error-templates/email-subject.vm</value>
+									</property>
+								</bean>
+							</entry>
+							<entry>
+								<key>
+									<value>ERROR</value>
+								</key>
+								<bean
+									class="no.integrasco.ingentia.core.crawler.error.log4j.eventhandler.LogVelocityTemplate" >
+									<property name="templatePath">
+										<value>velocity-templates/error-templates/email-error.vm</value>
+									</property>
+									<property name="subjectTemplatePath">
+										<value>velocity-templates/error-templates/email-subject.vm</value>
+									</property>
+								</bean>
+							</entry>
+							<entry>
+								<key>
+									<value>WARN</value>
+								</key>
+								<bean
+									class="no.integrasco.ingentia.core.crawler.error.log4j.eventhandler.LogVelocityTemplate" >
+									<property name="templatePath">
+										<value>velocity-templates/error-templates/email-error.vm</value>
+									</property>
+									<property name="subjectTemplatePath">
+										<value>velocity-templates/error-templates/email-subject.vm</value>
+									</property>
+								</bean>
+							</entry>
+						</map>
+					</property>
+	</bean>
+
+</beans>

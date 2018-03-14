@@ -76,8 +76,8 @@ elif USERNAME == 'dian':
     SOURCE_SVN_USERNAME = get_variable_value("lguujg", SOURCE_SVN_USERNAME)
     SOURCE_SVN_PASSWORD = get_variable_value("123456", SOURCE_SVN_PASSWORD)
 else:
-	SUBSOURCE_CRAWLER_ROOT_PATH = "D:/Dian/Norway/forumtest/finish"
-	SUBSOURCE_CRAWLER_CONFIG_FILE_PATH ="D:/Dian/Norway/forumtest/finish/SubSourceCrawlerConfig.xml"
+	SUBSOURCE_CRAWLER_ROOT_PATH = "D:/biyesheji/Norway/finish"
+	SUBSOURCE_CRAWLER_CONFIG_FILE_PATH ="D:/biyesheji/Norway/finish/SubSourceCrawlerConfig.xml"
 
 ######################################################################################
 #

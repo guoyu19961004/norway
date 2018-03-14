@@ -14,3 +14,17 @@ li.collection-item {
         word-break: break-word;
     }
 }
+
+em.error {
+    color: red;
+    font-size: 12px;
+}
+
+#shell_info {
+    height: 220px;
+    max-height: 220px;
+    overflow: auto;
+    word-wrap: break-word;
+    word-break: break-word;
+    font-size: 14px;
+}
