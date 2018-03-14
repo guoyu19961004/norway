@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2017-11-23 18:09:20
  * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-14 15:30:09
+ * @Last Modified time: 2018-03-14 20:03:23
  */
 const electron = require('electron')
 const fs = require('fs')
@@ -303,6 +303,30 @@ $(document).ready(function() {
                         $('#source_name').text(path.basename(filePaths[0]))
                         $('#source_path').text(filePaths[0])
                         collect_forum(path.basename(filePaths[0]),'transformed')
+                    }
+                }
+            })
+        }
+    });
+    $('#forum_check_error').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        if ($('#source_path').text()) {
+            let source_save_path = $('#source_path').text()
+            collect_forum(path.basename(source_save_path),'errors')
+        } else {
+            dialog.showOpenDialog({
+                title: '选择Source',
+                properties: ['openDirectory']
+            }, function(filePaths) {
+                if (filePaths) {
+                    if (fs.existsSync(path.join(filePaths[0], 'globalConfig.xml'))) {
+                        alert('请选择一个Forum Source！');
+                    } else {
+                        $('#source_type').text('FORUM')
+                        $('#source_name').text(path.basename(filePaths[0]))
+                        $('#source_path').text(filePaths[0])
+                        collect_forum(path.basename(filePaths[0]),'errors')
                     }
                 }
             })

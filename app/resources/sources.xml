@@ -16,11 +16,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>34</source_id>
-            <time>2018-03-14 02:08:27</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 08:18:13</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -38,11 +38,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>42</source_id>
-            <time>2018-03-14 02:29:50</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 08:18:24</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -60,11 +60,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>56</source_id>
-            <time>2018-03-14 02:03:09</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 08:17:56</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -104,11 +104,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>69</source_id>
-            <time>2018-03-14 02:11:22</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 08:19:57</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -148,11 +148,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>94</source_id>
-            <time>2018-03-14 02:27:29</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 08:21:33</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -170,11 +170,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>110</source_id>
-            <time>2018-03-14 02:35:44</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 08:56:18</time>
+            <status>Checked</status>
+            <message># None deliver in system, but deliver well on website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -214,11 +214,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>157</source_id>
-            <time>2018-03-14 02:25:23</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 08:57:52</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -236,11 +236,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>177</source_id>
-            <time>2018-03-14 02:14:51</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 08:58:34</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -258,11 +258,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>212</source_id>
-            <time>2018-03-14 02:24:57</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 08:59:47</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -280,11 +280,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>231</source_id>
-            <time>2018-03-14 02:16:46</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:00:32</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -324,11 +324,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>271</source_id>
-            <time>2018-03-14 02:16:10</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:01:26</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -346,11 +346,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>272</source_id>
-            <time>2018-03-14 02:36:26</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:02:00</time>
+            <status>Checked</status>
+            <message># Website does not exist.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -368,11 +368,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>297</source_id>
-            <time>2018-03-14 02:35:25</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:02:53</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -390,11 +390,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>312</source_id>
-            <time>2018-03-14 02:14:34</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:04:01</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -412,11 +412,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>326</source_id>
-            <time>2018-03-14 02:25:18</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:08:49</time>
+            <status>Checked</status>
+            <message># None deliver in system, but deliver well on website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -434,11 +434,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>334</source_id>
-            <time>2018-03-14 02:32:40</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:10:33</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -456,11 +456,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>402</source_id>
-            <time>2018-03-14 02:13:57</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:11:21</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -478,11 +478,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>424</source_id>
-            <time>2018-03-14 02:36:38</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:12:31</time>
+            <status>Checked</status>
+            <message># Website does not exist.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -500,11 +500,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>442</source_id>
-            <time>2018-03-14 02:19:02</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:12:58</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>77</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -522,11 +522,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>458</source_id>
-            <time>2018-03-14 02:27:34</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:11:20</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -544,18 +544,18 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>493</source_id>
-            <time>2018-03-14 02:17:35</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:11:36</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
         <enable>1</enable>
         <errors>
             <source_id>501</source_id>
-            <errors>1224</errors>
+            <errors>1225</errors>
         </errors>
         <source_id>501</source_id>
         <source_name>kharkovforum.com</source_name>
@@ -588,11 +588,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>526</source_id>
-            <time>2018-03-09 17:13:54</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-14 10:18:51</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>72</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -610,11 +610,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>543</source_id>
-            <time>2018-03-14 02:03:00</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:12:05</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -632,11 +632,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>554</source_id>
-            <time>2018-03-14 02:09:27</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:12:18</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -654,11 +654,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>569</source_id>
-            <time>2018-03-14 02:36:18</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:12:50</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -676,11 +676,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>573</source_id>
-            <time>2018-03-14 02:17:21</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:14:02</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -720,11 +720,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>614</source_id>
-            <time>2018-03-14 02:09:15</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:14:16</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -984,11 +984,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>750</source_id>
-            <time>2018-03-14 02:37:13</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:14:36</time>
+            <status>Checked</status>
+            <message># Connecting Issue.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1006,11 +1006,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>752</source_id>
-            <time>2018-03-14 02:31:06</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:27:14</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1172,7 +1172,7 @@
         <enable>1</enable>
         <errors>
             <source_id>803</source_id>
-            <errors>125</errors>
+            <errors>126</errors>
         </errors>
         <source_id>803</source_id>
         <source_name>smallbiztrends.com</source_name>
@@ -1216,7 +1216,7 @@
         <enable>1</enable>
         <errors>
             <source_id>813</source_id>
-            <errors>2</errors>
+            <errors>0</errors>
         </errors>
         <source_id>813</source_id>
         <source_name>myfootballforum.com</source_name>
@@ -1227,11 +1227,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>813</source_id>
-            <time>2018-03-12 12:24:46</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-14 10:19:02</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>75</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1370,7 +1370,7 @@
         <enable>1</enable>
         <errors>
             <source_id>859</source_id>
-            <errors>6</errors>
+            <errors>2</errors>
         </errors>
         <source_id>859</source_id>
         <source_name>crackberry.com</source_name>
@@ -1458,7 +1458,7 @@
         <enable>1</enable>
         <errors>
             <source_id>886</source_id>
-            <errors>26</errors>
+            <errors>0</errors>
         </errors>
         <source_id>886</source_id>
         <source_name>drjeffcornwall.com</source_name>
@@ -1469,11 +1469,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>886</source_id>
-            <time>2018-03-10 02:54:37</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-14 10:19:17</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>53</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1513,11 +1513,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>921</source_id>
-            <time>2018-03-14 02:25:45</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:19:26</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1535,11 +1535,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>927</source_id>
-            <time>2018-03-14 02:37:50</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:30:36</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1601,11 +1601,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>948</source_id>
-            <time>2018-03-14 02:25:06</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:33:02</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1623,11 +1623,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>950</source_id>
-            <time>2018-03-14 02:26:12</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:05:17</time>
+            <status>Submitted</status>
+            <message># Source Fixed, submitted for evaluation</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1645,11 +1645,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>951</source_id>
-            <time>2018-03-14 02:32:02</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:34:29</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1667,11 +1667,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>962</source_id>
-            <time>2018-03-14 02:17:13</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:34:42</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1689,11 +1689,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>965</source_id>
-            <time>2018-03-14 02:12:14</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:34:54</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1711,11 +1711,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>980</source_id>
-            <time>2018-03-14 02:15:08</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:35:24</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1733,11 +1733,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>984</source_id>
-            <time>2018-03-14 02:20:54</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:35:34</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1821,11 +1821,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1015</source_id>
-            <time>2018-03-14 02:11:28</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:35:45</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1843,11 +1843,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1021</source_id>
-            <time>2018-03-14 02:37:07</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:36:12</time>
+            <status>Checked</status>
+            <message># Website does not exist.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1865,11 +1865,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1023</source_id>
-            <time>2018-03-14 02:28:59</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:36:44</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1909,11 +1909,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1031</source_id>
-            <time>2018-03-14 02:21:20</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:39:41</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1931,11 +1931,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1034</source_id>
-            <time>2018-03-14 02:15:13</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:42:46</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -1997,11 +1997,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1046</source_id>
-            <time>2018-03-14 02:19:30</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:43:01</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2019,11 +2019,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1050</source_id>
-            <time>2018-03-14 02:20:36</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:44:28</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2041,18 +2041,18 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1064</source_id>
-            <time>2018-03-14 02:08:56</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:44:59</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
         <enable>1</enable>
         <errors>
             <source_id>1067</source_id>
-            <errors>47</errors>
+            <errors>48</errors>
         </errors>
         <source_id>1067</source_id>
         <source_name>apple-iphone.ru</source_name>
@@ -2063,11 +2063,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1067</source_id>
-            <time>2018-03-14 02:04:13</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:46:35</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2085,11 +2085,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1074</source_id>
-            <time>2018-03-14 02:25:13</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:47:02</time>
+            <status>Checked</status>
+            <message># Website does not exist.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2217,11 +2217,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1129</source_id>
-            <time>2018-03-14 02:24:52</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:47:35</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2239,11 +2239,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1140</source_id>
-            <time>2018-03-14 02:19:53</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:47:48</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2261,11 +2261,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1145</source_id>
-            <time>2018-03-14 02:22:10</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:48:00</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2283,11 +2283,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1150</source_id>
-            <time>2018-03-14 02:17:08</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:48:11</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2305,11 +2305,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1156</source_id>
-            <time>2018-03-14 02:36:34</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:49:00</time>
+            <status>Checked</status>
+            <message># Website does not exist.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2327,11 +2327,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1169</source_id>
-            <time>2018-03-14 02:19:58</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:49:26</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2415,11 +2415,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1179</source_id>
-            <time>2018-03-14 02:10:40</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:49:41</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2591,11 +2591,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1218</source_id>
-            <time>2018-03-14 02:26:43</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:50:13</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2613,11 +2613,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1219</source_id>
-            <time>2018-03-14 02:17:27</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:50:25</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2657,11 +2657,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1224</source_id>
-            <time>2018-03-14 02:15:41</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:50:37</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2723,11 +2723,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1230</source_id>
-            <time>2018-03-14 02:05:32</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:51:25</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2745,11 +2745,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1243</source_id>
-            <time>2018-03-14 02:14:28</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:53:02</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2767,11 +2767,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1247</source_id>
-            <time>2018-03-14 02:21:12</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:53:13</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2789,11 +2789,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1249</source_id>
-            <time>2018-03-14 02:09:42</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:53:29</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2811,11 +2811,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1250</source_id>
-            <time>2018-03-14 02:08:50</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:53:40</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2921,11 +2921,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1261</source_id>
-            <time>2018-03-14 02:22:34</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:54:19</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -2943,11 +2943,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1284</source_id>
-            <time>2018-03-14 02:26:08</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:55:46</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3119,11 +3119,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1329</source_id>
-            <time>2018-03-14 02:22:21</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:56:29</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3273,11 +3273,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1356</source_id>
-            <time>2018-03-14 02:32:28</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:57:42</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3295,11 +3295,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1378</source_id>
-            <time>2018-03-14 02:03:14</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:57:55</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3383,11 +3383,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1404</source_id>
-            <time>2018-03-14 02:09:56</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:58:05</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3427,11 +3427,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1408</source_id>
-            <time>2018-03-14 02:32:07</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:58:37</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3449,11 +3449,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1413</source_id>
-            <time>2018-03-14 02:28:19</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:59:09</time>
+            <status>Checked</status>
+            <message># Website does no update in a year.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3691,11 +3691,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1477</source_id>
-            <time>2018-03-14 02:22:05</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:59:21</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3713,11 +3713,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1487</source_id>
-            <time>2018-03-14 02:20:31</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:59:49</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3735,11 +3735,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1497</source_id>
-            <time>2018-03-14 02:09:11</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:59:59</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3757,11 +3757,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1499</source_id>
-            <time>2018-03-14 02:12:41</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:00:11</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3889,11 +3889,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1526</source_id>
-            <time>2018-03-14 02:10:25</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:00:23</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3911,11 +3911,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1537</source_id>
-            <time>2018-03-14 02:20:17</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:00:34</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3933,11 +3933,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1543</source_id>
-            <time>2018-03-14 02:25:33</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:01:41</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3955,11 +3955,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1549</source_id>
-            <time>2018-03-14 02:29:46</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:02:17</time>
+            <status>Checked</status>
+            <message># Website does no update in a year.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>52</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -3999,11 +3999,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1570</source_id>
-            <time>2018-03-14 02:36:14</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:47:23</time>
+            <status>Checked</status>
+            <message># None deliver in system, but deliver well on website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4043,11 +4043,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1577</source_id>
-            <time>2018-03-14 02:34:16</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:59:37</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4087,11 +4087,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1594</source_id>
-            <time>2018-03-14 02:30:52</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:59:56</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4241,11 +4241,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1639</source_id>
-            <time>2018-03-14 02:11:16</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:02:05</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4329,11 +4329,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1664</source_id>
-            <time>2018-03-14 02:22:00</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:02:20</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4351,11 +4351,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1667</source_id>
-            <time>2018-03-14 02:16:42</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:03:38</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4373,11 +4373,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1671</source_id>
-            <time>2018-03-14 02:17:18</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:04:33</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4395,11 +4395,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1676</source_id>
-            <time>2018-03-14 02:19:39</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:13:28</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4417,11 +4417,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1683</source_id>
-            <time>2018-03-14 02:14:47</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:07:37</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4549,11 +4549,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1708</source_id>
-            <time>2018-03-14 02:12:33</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:08:22</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4571,11 +4571,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1711</source_id>
-            <time>2018-03-14 02:37:00</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:09:13</time>
+            <status>Checked</status>
+            <message># Website does not exist.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4637,11 +4637,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1734</source_id>
-            <time>2018-03-14 02:20:12</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:09:58</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4703,11 +4703,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1779</source_id>
-            <time>2018-03-14 02:11:00</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:11:47</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -4879,11 +4879,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1815</source_id>
-            <time>2018-03-14 02:14:20</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:14:07</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5099,11 +5099,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1881</source_id>
-            <time>2018-03-14 02:13:01</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:25:08</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5121,11 +5121,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1887</source_id>
-            <time>2018-03-14 02:37:18</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:25:40</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5143,11 +5143,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1888</source_id>
-            <time>2018-03-14 02:04:56</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:26:30</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5165,11 +5165,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1892</source_id>
-            <time>2018-03-14 02:13:07</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:26:40</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5187,11 +5187,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1898</source_id>
-            <time>2018-03-14 02:30:00</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:27:11</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5209,11 +5209,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1903</source_id>
-            <time>2018-03-14 02:18:59</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:30:11</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5231,11 +5231,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1910</source_id>
-            <time>2018-03-14 02:11:11</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:30:56</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5253,11 +5253,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1917</source_id>
-            <time>2018-03-14 02:04:50</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:35:38</time>
+            <status>Checked</status>
+            <message># None deliver in system, but deliver well on website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5275,11 +5275,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1926</source_id>
-            <time>2018-03-14 02:10:15</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:36:02</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5319,18 +5319,18 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1944</source_id>
-            <time>2018-03-14 02:15:46</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:46:30</time>
+            <status>Submitted</status>
+            <message># Source Fixed, submitted for evaluation</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
         <enable>1</enable>
         <errors>
             <source_id>1950</source_id>
-            <errors>4</errors>
+            <errors>0</errors>
         </errors>
         <source_id>1950</source_id>
         <source_name>thisiscornwall.co.uk</source_name>
@@ -5341,11 +5341,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1950</source_id>
-            <time>2018-03-10 03:22:48</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-14 10:19:44</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>53</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5363,11 +5363,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1956</source_id>
-            <time>2018-03-14 02:19:49</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:48:33</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5385,11 +5385,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1966</source_id>
-            <time>2018-03-14 02:15:51</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:48:43</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5429,11 +5429,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1981</source_id>
-            <time>2018-03-14 02:26:36</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:50:20</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5451,11 +5451,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1989</source_id>
-            <time>2018-03-14 02:18:25</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:50:35</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5473,11 +5473,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1993</source_id>
-            <time>2018-03-14 02:19:07</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:51:49</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5495,11 +5495,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>1998</source_id>
-            <time>2018-03-14 02:29:16</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:51:59</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5517,18 +5517,18 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2002</source_id>
-            <time>2018-03-14 02:36:31</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:15:01</time>
+            <status>Checked</status>
+            <message># Website does not exist.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
         <enable>1</enable>
         <errors>
             <source_id>2009</source_id>
-            <errors>74</errors>
+            <errors>76</errors>
         </errors>
         <source_id>2009</source_id>
         <source_name>fillarifoorumi.fi</source_name>
@@ -5561,11 +5561,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2022</source_id>
-            <time>2018-03-14 02:10:05</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:15:28</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5605,11 +5605,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2027</source_id>
-            <time>2018-03-14 02:20:51</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:15:45</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5649,11 +5649,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2033</source_id>
-            <time>2018-03-14 02:15:19</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:15:58</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5671,11 +5671,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2037</source_id>
-            <time>2018-03-14 02:10:55</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:18:46</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5693,11 +5693,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2049</source_id>
-            <time>2018-03-14 02:10:30</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:19:02</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5715,11 +5715,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2056</source_id>
-            <time>2018-03-14 02:34:31</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:52:23</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5737,11 +5737,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2059</source_id>
-            <time>2018-03-14 02:33:06</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:20:01</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5781,11 +5781,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2062</source_id>
-            <time>2018-03-14 02:12:20</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:21:17</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5803,11 +5803,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2064</source_id>
-            <time>2018-03-14 02:18:07</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:21:32</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5847,11 +5847,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2073</source_id>
-            <time>2018-03-14 02:35:19</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:22:15</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5869,11 +5869,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2090</source_id>
-            <time>2018-03-14 02:24:35</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:23:15</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5891,11 +5891,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2091</source_id>
-            <time>2018-03-14 02:16:24</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:24:59</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5957,11 +5957,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2122</source_id>
-            <time>2018-03-10 03:02:53</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-14 10:04:45</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>53</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -5979,11 +5979,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2126</source_id>
-            <time>2018-03-14 02:12:47</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:25:16</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6023,11 +6023,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2155</source_id>
-            <time>2018-03-14 02:20:08</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:56:15</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6111,11 +6111,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2171</source_id>
-            <time>2018-03-14 02:12:56</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:27:00</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6133,11 +6133,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2172</source_id>
-            <time>2018-03-14 02:27:18</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:56:28</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6177,11 +6177,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2188</source_id>
-            <time>2018-03-14 02:31:38</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:29:39</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6243,11 +6243,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2193</source_id>
-            <time>2018-03-14 02:13:51</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:29:52</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6265,11 +6265,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2196</source_id>
-            <time>2018-03-14 02:19:17</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:30:38</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6287,11 +6287,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2199</source_id>
-            <time>2018-03-14 02:15:05</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:30:52</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6331,11 +6331,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2208</source_id>
-            <time>2018-03-14 02:15:00</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:31:32</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6397,11 +6397,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2217</source_id>
-            <time>2018-03-14 02:13:33</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:32:50</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6485,11 +6485,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2245</source_id>
-            <time>2018-03-14 02:23:40</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:10:30</time>
+            <status>Submitted</status>
+            <message># Source Fixed, submitted for evaluation</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6507,18 +6507,18 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2249</source_id>
-            <time>2018-03-14 02:33:32</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:21:51</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
         <enable>1</enable>
         <errors>
             <source_id>2258</source_id>
-            <errors>911</errors>
+            <errors>920</errors>
         </errors>
         <source_id>2258</source_id>
         <source_name>youreable.com</source_name>
@@ -6551,11 +6551,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2260</source_id>
-            <time>2018-03-14 02:13:23</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:33:05</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6573,11 +6573,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2262</source_id>
-            <time>2018-03-14 02:27:07</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:33:40</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6595,11 +6595,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2264</source_id>
-            <time>2018-03-14 02:19:26</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:33:55</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6617,11 +6617,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2268</source_id>
-            <time>2018-03-14 02:09:32</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:34:31</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6661,11 +6661,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2275</source_id>
-            <time>2018-03-14 02:19:45</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:34:44</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6705,11 +6705,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2288</source_id>
-            <time>2018-03-14 02:25:38</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:22:05</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6727,11 +6727,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2296</source_id>
-            <time>2018-03-14 02:31:03</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:24:32</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6749,11 +6749,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2304</source_id>
-            <time>2018-03-14 02:17:54</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:35:24</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6771,11 +6771,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2306</source_id>
-            <time>2018-03-14 02:27:13</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:24:48</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6815,11 +6815,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2315</source_id>
-            <time>2018-03-14 02:14:11</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:37:25</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6837,11 +6837,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2325</source_id>
-            <time>2018-03-14 02:31:29</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:24:57</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6859,11 +6859,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2330</source_id>
-            <time>2018-03-14 02:34:48</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:25:07</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6925,11 +6925,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2349</source_id>
-            <time>2018-03-14 02:19:35</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:38:05</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -6947,11 +6947,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2352</source_id>
-            <time>2018-03-14 02:04:00</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:39:03</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7013,11 +7013,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2364</source_id>
-            <time>2018-03-14 02:33:44</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:27:10</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7035,11 +7035,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2366</source_id>
-            <time>2018-03-14 02:29:08</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:27:20</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7057,11 +7057,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2369</source_id>
-            <time>2018-03-14 02:27:43</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:27:55</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7079,11 +7079,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2373</source_id>
-            <time>2018-03-14 02:26:28</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:28:05</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7101,11 +7101,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2377</source_id>
-            <time>2018-03-14 02:31:34</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:28:14</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7123,11 +7123,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2382</source_id>
-            <time>2018-03-14 02:32:45</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:28:22</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7167,11 +7167,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2391</source_id>
-            <time>2018-03-14 02:09:38</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:28:33</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>73</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7189,11 +7189,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2395</source_id>
-            <time>2018-03-10 05:00:00</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-14 10:04:34</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>75</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7255,11 +7255,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2419</source_id>
-            <time>2018-03-14 02:10:21</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:40:36</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7321,11 +7321,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2432</source_id>
-            <time>2018-03-14 02:24:07</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:40:50</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7343,11 +7343,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2433</source_id>
-            <time>2018-03-14 02:21:09</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:41:02</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7365,11 +7365,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2436</source_id>
-            <time>2018-03-14 02:20:27</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:41:15</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>75</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7387,11 +7387,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2439</source_id>
-            <time>2018-03-14 02:18:40</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:14:29</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7497,11 +7497,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2461</source_id>
-            <time>2018-03-14 02:09:07</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:14:45</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7541,11 +7541,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2472</source_id>
-            <time>2018-03-14 02:21:40</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:31:47</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7563,11 +7563,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2475</source_id>
-            <time>2018-03-14 02:22:39</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:31:37</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7585,11 +7585,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2476</source_id>
-            <time>2018-03-14 02:36:52</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:32:11</time>
+            <status>Checked</status>
+            <message># Website does not exist.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7629,11 +7629,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2486</source_id>
-            <time>2018-03-14 02:10:10</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:33:05</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7695,11 +7695,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2493</source_id>
-            <time>2018-03-14 02:29:25</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:35:25</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7783,11 +7783,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2503</source_id>
-            <time>2018-03-14 02:36:06</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:37:40</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7805,11 +7805,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2508</source_id>
-            <time>2018-03-14 02:36:57</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:40:28</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7827,11 +7827,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2510</source_id>
-            <time>2018-03-14 02:20:03</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:40:43</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7849,11 +7849,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2516</source_id>
-            <time>2018-03-14 02:11:44</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:41:03</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7871,11 +7871,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2520</source_id>
-            <time>2018-03-14 02:23:57</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:41:20</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7893,11 +7893,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2524</source_id>
-            <time>2018-03-14 02:20:41</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:41:37</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7937,11 +7937,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2535</source_id>
-            <time>2018-03-14 02:09:01</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:41:52</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -7981,11 +7981,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2563</source_id>
-            <time>2018-03-14 02:20:46</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:42:09</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8014,7 +8014,7 @@
         <enable>1</enable>
         <errors>
             <source_id>2577</source_id>
-            <errors>1</errors>
+            <errors>21</errors>
         </errors>
         <source_id>2577</source_id>
         <source_name>androidcentral.com</source_name>
@@ -8036,7 +8036,7 @@
         <enable>1</enable>
         <errors>
             <source_id>2586</source_id>
-            <errors>604</errors>
+            <errors>0</errors>
         </errors>
         <source_id>2586</source_id>
         <source_name>bleacherreport.com</source_name>
@@ -8047,11 +8047,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2586</source_id>
-            <time>2018-03-14 04:41:06</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-14 10:03:54</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>67</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8069,11 +8069,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2589</source_id>
-            <time>2018-03-14 02:26:23</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:43:03</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8102,7 +8102,7 @@
         <enable>1</enable>
         <errors>
             <source_id>2601</source_id>
-            <errors>3205</errors>
+            <errors>3208</errors>
         </errors>
         <source_id>2601</source_id>
         <source_name>latimesblogs.latimes.com</source_name>
@@ -8179,11 +8179,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2612</source_id>
-            <time>2018-03-14 02:25:51</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:43:45</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8223,11 +8223,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2628</source_id>
-            <time>2018-03-14 02:30:42</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:45:52</time>
+            <status>Checked</status>
+            <message># Website does no update in a year.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8245,11 +8245,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2632</source_id>
-            <time>2018-03-14 02:09:47</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:46:09</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8267,11 +8267,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2637</source_id>
-            <time>2018-03-14 02:18:46</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:46:54</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8289,11 +8289,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2638</source_id>
-            <time>2018-03-14 02:27:27</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:48:34</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8355,11 +8355,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2645</source_id>
-            <time>2018-03-14 02:22:15</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:50:07</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8377,11 +8377,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2646</source_id>
-            <time>2018-03-14 02:18:03</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:49:08</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8399,11 +8399,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2647</source_id>
-            <time>2018-03-14 02:14:44</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:50:27</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8443,11 +8443,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2660</source_id>
-            <time>2018-03-14 02:21:04</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:50:41</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8465,11 +8465,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2663</source_id>
-            <time>2018-03-14 02:17:45</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:50:54</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8509,11 +8509,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2666</source_id>
-            <time>2018-03-14 02:13:13</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:51:10</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8619,11 +8619,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2686</source_id>
-            <time>2018-03-14 02:14:16</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:51:24</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8663,11 +8663,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2699</source_id>
-            <time>2018-03-14 02:24:31</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:51:36</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8685,11 +8685,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2703</source_id>
-            <time>2018-03-14 02:36:02</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:54:43</time>
+            <status>Checked</status>
+            <message># Connecting Issue.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8729,11 +8729,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2706</source_id>
-            <time>2018-03-14 02:18:21</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:52:07</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8773,11 +8773,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2723</source_id>
-            <time>2018-03-14 02:20:59</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:52:22</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8817,11 +8817,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2730</source_id>
-            <time>2018-03-14 02:18:12</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:52:35</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8861,11 +8861,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2735</source_id>
-            <time>2018-03-14 02:11:39</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:52:52</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8927,11 +8927,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2753</source_id>
-            <time>2018-03-14 02:21:25</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:53:05</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -8993,11 +8993,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2766</source_id>
-            <time>2018-03-14 02:11:55</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:53:21</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9015,11 +9015,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2772</source_id>
-            <time>2018-03-14 02:16:29</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:53:37</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9125,11 +9125,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2798</source_id>
-            <time>2018-03-14 02:09:52</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:53:50</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9147,11 +9147,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2799</source_id>
-            <time>2018-03-14 02:21:35</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:56:07</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9169,11 +9169,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2805</source_id>
-            <time>2018-03-14 02:12:30</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:56:22</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9213,11 +9213,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2822</source_id>
-            <time>2018-03-14 02:37:11</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:56:55</time>
+            <status>Checked</status>
+            <message># Website does not exist.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9235,11 +9235,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2826</source_id>
-            <time>2018-03-14 02:21:56</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:57:33</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9279,11 +9279,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2845</source_id>
-            <time>2018-03-14 02:19:12</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:58:41</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9301,11 +9301,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2846</source_id>
-            <time>2018-03-14 02:18:51</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:58:04</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9345,11 +9345,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2849</source_id>
-            <time>2018-03-14 02:22:50</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:58:17</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9389,11 +9389,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2851</source_id>
-            <time>2018-03-14 02:14:07</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:58:56</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9433,11 +9433,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2854</source_id>
-            <time>2018-03-14 02:13:37</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:59:08</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9455,11 +9455,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2855</source_id>
-            <time>2018-03-14 02:09:25</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:59:20</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9477,11 +9477,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2862</source_id>
-            <time>2018-03-14 02:16:34</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:59:31</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9499,11 +9499,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2866</source_id>
-            <time>2018-03-10 04:27:08</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-14 10:19:46</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>68</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9521,11 +9521,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2867</source_id>
-            <time>2018-03-14 02:21:17</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:59:45</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9543,11 +9543,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2873</source_id>
-            <time>2018-03-14 02:12:04</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:59:57</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9565,11 +9565,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2874</source_id>
-            <time>2018-03-14 02:14:02</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:00:08</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9609,11 +9609,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2880</source_id>
-            <time>2018-03-14 02:16:39</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:00:23</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9675,11 +9675,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2893</source_id>
-            <time>2018-03-14 02:10:50</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:00:43</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9697,11 +9697,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2895</source_id>
-            <time>2018-03-14 02:11:50</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:00:57</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9741,11 +9741,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2907</source_id>
-            <time>2018-03-14 02:13:47</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:01:08</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9763,11 +9763,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2911</source_id>
-            <time>2018-03-14 02:17:05</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:01:24</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9785,11 +9785,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2915</source_id>
-            <time>2018-03-14 02:15:56</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:01:36</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9807,11 +9807,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2920</source_id>
-            <time>2018-03-14 02:18:35</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:01:49</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>68</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9829,11 +9829,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2921</source_id>
-            <time>2018-03-14 02:11:33</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:07:14</time>
+            <status>Checked</status>
+            <message># Website does not exist: Myprotein Community Forum Discontinued</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9851,11 +9851,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2923</source_id>
-            <time>2018-03-14 02:15:38</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:11:19</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9873,11 +9873,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2932</source_id>
-            <time>2018-03-14 02:35:23</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:12:20</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -9895,11 +9895,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2940</source_id>
-            <time>2018-03-14 02:28:34</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:12:54</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10027,11 +10027,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2961</source_id>
-            <time>2018-03-14 02:15:33</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:14:36</time>
+            <status>Checked</status>
+            <message># Website does not exist.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10049,11 +10049,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2963</source_id>
-            <time>2018-03-14 02:12:52</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:15:06</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10071,11 +10071,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2970</source_id>
-            <time>2018-03-14 02:35:34</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:15:37</time>
+            <status>Checked</status>
+            <message># Website does no update in a year.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10093,11 +10093,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2973</source_id>
-            <time>2018-03-14 02:12:12</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:16:31</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10137,11 +10137,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2978</source_id>
-            <time>2018-03-14 02:25:43</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:21:46</time>
+            <status>Submitted</status>
+            <message># Source Fixed, submitted for evaluation</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10159,11 +10159,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2981</source_id>
-            <time>2018-03-14 02:14:39</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:20:30</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10181,11 +10181,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2984</source_id>
-            <time>2018-03-14 02:31:10</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:23:31</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10203,11 +10203,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>2985</source_id>
-            <time>2018-03-14 02:15:28</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:24:12</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10269,11 +10269,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3012</source_id>
-            <time>2018-03-14 02:21:46</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:32:39</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10291,11 +10291,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3013</source_id>
-            <time>2018-03-14 02:37:36</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:34:47</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10313,11 +10313,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3018</source_id>
-            <time>2018-03-14 02:19:22</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 09:35:17</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10357,11 +10357,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3051</source_id>
-            <time>2018-03-14 02:22:26</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:18:19</time>
+            <status>Submitted</status>
+            <message># Source Fixed, submitted for evaluation</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10401,11 +10401,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3057</source_id>
-            <time>2018-03-14 02:31:17</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:24:14</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10445,11 +10445,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3087</source_id>
-            <time>2018-03-14 02:11:21</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:24:29</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10467,11 +10467,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3091</source_id>
-            <time>2018-03-14 02:37:27</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:30:04</time>
+            <status>Submitted</status>
+            <message># Source Fixed, submitted for evaluation</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10489,11 +10489,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3094</source_id>
-            <time>2018-03-14 02:21:30</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:31:17</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10544,7 +10544,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3102</source_id>
-            <errors>15</errors>
+            <errors>16</errors>
         </errors>
         <source_id>3102</source_id>
         <source_name>en.community.dell.com</source_name>
@@ -10577,11 +10577,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3106</source_id>
-            <time>2018-03-14 02:33:36</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:31:50</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10643,11 +10643,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3138</source_id>
-            <time>2018-03-14 02:10:01</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:32:26</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10731,11 +10731,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3149</source_id>
-            <time>2018-03-14 02:09:20</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 12:07:03</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10775,11 +10775,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3161</source_id>
-            <time>2018-03-14 02:17:50</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 12:07:55</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -10885,11 +10885,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3181</source_id>
-            <time>2018-03-14 02:22:31</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 12:09:07</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -11017,11 +11017,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3203</source_id>
-            <time>2018-03-14 02:13:56</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 12:10:42</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -11061,11 +11061,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3256</source_id>
-            <time>2018-03-14 02:18:17</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 12:10:54</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -11083,11 +11083,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3265</source_id>
-            <time>2018-03-14 02:13:29</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 12:11:08</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -11105,11 +11105,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3268</source_id>
-            <time>2018-03-14 02:37:22</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 12:12:05</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>71</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -11446,7 +11446,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3395</source_id>
-            <errors>35</errors>
+            <errors>0</errors>
         </errors>
         <source_id>3395</source_id>
         <source_name>blog.goo.ne.jp</source_name>
@@ -11457,11 +11457,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3395</source_id>
-            <time>2018-03-14 05:26:32</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-14 10:19:51</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>67</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -12216,7 +12216,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3554</source_id>
-            <errors>34</errors>
+            <errors>40</errors>
         </errors>
         <source_id>3554</source_id>
         <source_name>ljudochbild.se</source_name>
@@ -12348,7 +12348,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3574</source_id>
-            <errors>43</errors>
+            <errors>0</errors>
         </errors>
         <source_id>3574</source_id>
         <source_name>blog.itavisen.no</source_name>
@@ -12359,11 +12359,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3574</source_id>
-            <time>2018-03-14 05:40:27</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-14 10:19:53</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>67</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -12414,7 +12414,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3580</source_id>
-            <errors>424</errors>
+            <errors>429</errors>
         </errors>
         <source_id>3580</source_id>
         <source_name>android.stackexchange.com</source_name>
@@ -12524,7 +12524,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3596</source_id>
-            <errors>980</errors>
+            <errors>986</errors>
         </errors>
         <source_id>3596</source_id>
         <source_name>apple.stackexchange.com</source_name>
@@ -12689,11 +12689,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3620</source_id>
-            <time>2018-03-14 02:02:49</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:17:32</time>
+            <status>Checked</status>
+            <message># Delivery looks good, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -12711,11 +12711,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3621</source_id>
-            <time>2018-03-14 02:07:53</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:23:31</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -12733,11 +12733,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3628</source_id>
-            <time>2018-03-14 02:07:33</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:24:16</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -12799,11 +12799,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3637</source_id>
-            <time>2018-03-14 02:05:02</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:25:22</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -12821,11 +12821,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3648</source_id>
-            <time>2018-03-14 02:03:42</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:26:21</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -12843,11 +12843,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3652</source_id>
-            <time>2018-03-14 02:05:55</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:54:13</time>
+            <status>Submitted</status>
+            <message># Source Fixed, submitted for evaluation</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -12865,11 +12865,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3655</source_id>
-            <time>2018-03-14 02:06:01</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:29:05</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -12909,11 +12909,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3665</source_id>
-            <time>2018-03-14 02:06:55</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:29:56</time>
+            <status>Checked</status>
+            <message># Website does no update in a year.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -12931,11 +12931,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3674</source_id>
-            <time>2018-03-14 02:04:12</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:31:44</time>
+            <status>Checked</status>
+            <message># Delivery decrease a lot, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -13030,7 +13030,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3706</source_id>
-            <errors>2392</errors>
+            <errors>2413</errors>
         </errors>
         <source_id>3706</source_id>
         <source_name>alriyadh.com</source_name>
@@ -13063,11 +13063,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3709</source_id>
-            <time>2018-03-14 02:30:10</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:33:04</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -13085,11 +13085,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3719</source_id>
-            <time>2018-03-14 02:05:08</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:34:54</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -13151,11 +13151,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3734</source_id>
-            <time>2018-03-14 02:08:04</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:35:52</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -13195,11 +13195,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3740</source_id>
-            <time>2018-03-14 02:06:35</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:36:50</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -13217,11 +13217,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3751</source_id>
-            <time>2018-03-14 02:37:40</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:38:34</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -13272,7 +13272,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3797</source_id>
-            <errors>307</errors>
+            <errors>311</errors>
         </errors>
         <source_id>3797</source_id>
         <source_name>instyle.de</source_name>
@@ -13305,11 +13305,11 @@
             <comment>precise</comment>
             <enable>1</enable>
             <source_id>3802</source_id>
-            <time>2018-03-14 02:05:44</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:39:49</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>precise</comment>
@@ -13349,11 +13349,11 @@
             <comment>precise</comment>
             <enable>1</enable>
             <source_id>3813</source_id>
-            <time>2018-03-10 05:10:08</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-14 10:04:24</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>73</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>precise</comment>
@@ -13371,18 +13371,18 @@
             <comment>precise</comment>
             <enable>1</enable>
             <source_id>3814</source_id>
-            <time>2018-03-14 02:08:44</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:41:31</time>
+            <status>Submitted</status>
+            <message># Source Fixed, submitted for evaluation</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>precise</comment>
         <enable>1</enable>
         <errors>
             <source_id>3815</source_id>
-            <errors>0</errors>
+            <errors>4</errors>
         </errors>
         <source_id>3815</source_id>
         <source_name>elle.com.tw</source_name>
@@ -13393,11 +13393,11 @@
             <comment>precise</comment>
             <enable>1</enable>
             <source_id>3815</source_id>
-            <time>2018-03-10 04:32:44</time>
-            <status>Submitted</status>
-            <message># Source Fixed, submitted for evaluation</message>
+            <time>2018-03-14 10:04:08</time>
+            <status>Approved</status>
+            <message># Source updated to production database and works fine</message>
         </status>
-        <user_id>73</user_id>
+        <user_id>64</user_id>
     </source>
     <source>
         <comment>precise</comment>
@@ -13415,11 +13415,11 @@
             <comment>precise</comment>
             <enable>1</enable>
             <source_id>3827</source_id>
-            <time>2018-03-14 02:06:17</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:41:24</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>precise</comment>
@@ -13437,18 +13437,18 @@
             <comment>precise</comment>
             <enable>1</enable>
             <source_id>3829</source_id>
-            <time>2018-03-14 02:07:42</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:44:23</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>precise</comment>
         <enable>1</enable>
         <errors>
             <source_id>3831</source_id>
-            <errors>1046</errors>
+            <errors>1052</errors>
         </errors>
         <source_id>3831</source_id>
         <source_name>maximonline.ru</source_name>
@@ -13503,11 +13503,11 @@
             <comment>precise</comment>
             <enable>1</enable>
             <source_id>3841</source_id>
-            <time>2018-03-14 02:05:14</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:46:14</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>precise</comment>
@@ -13525,11 +13525,11 @@
             <comment>precise</comment>
             <enable>1</enable>
             <source_id>3850</source_id>
-            <time>2018-03-14 02:05:19</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:48:06</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>precise</comment>
@@ -13547,11 +13547,11 @@
             <comment>precise</comment>
             <enable>1</enable>
             <source_id>3851</source_id>
-            <time>2018-03-14 02:08:22</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:48:29</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>precise</comment>
@@ -13602,7 +13602,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3869</source_id>
-            <errors>46</errors>
+            <errors>49</errors>
         </errors>
         <source_id>3869</source_id>
         <source_name>euroman.dk</source_name>
@@ -13613,11 +13613,11 @@
             <comment>precise</comment>
             <enable>1</enable>
             <source_id>3869</source_id>
-            <time>2018-03-14 02:04:06</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:49:09</time>
+            <status>Fixing</status>
+            <message># Transformation has fatal errors that causes delivery decreasing a lot.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>precise</comment>
@@ -13646,7 +13646,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3874</source_id>
-            <errors>797</errors>
+            <errors>800</errors>
         </errors>
         <source_id>3874</source_id>
         <source_name>trendmagazin.ch</source_name>
@@ -13679,11 +13679,11 @@
             <comment>precise</comment>
             <enable>1</enable>
             <source_id>3875</source_id>
-            <time>2018-03-14 02:07:59</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:50:30</time>
+            <status>Checked</status>
+            <message># Delivery decrease a lot, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>precise</comment>
@@ -13701,11 +13701,11 @@
             <comment>precise</comment>
             <enable>1</enable>
             <source_id>3881</source_id>
-            <time>2018-03-14 02:33:16</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:50:58</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -13789,11 +13789,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3905</source_id>
-            <time>2018-03-14 02:34:14</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:51:37</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -13833,11 +13833,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3916</source_id>
-            <time>2018-03-14 02:07:00</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:53:06</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -13855,11 +13855,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3921</source_id>
-            <time>2018-03-14 02:33:41</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:54:14</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -13899,11 +13899,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3930</source_id>
-            <time>2018-03-14 02:08:16</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:55:14</time>
+            <status>Checked</status>
+            <message># Website does not exist.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -13921,11 +13921,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3935</source_id>
-            <time>2018-03-14 02:03:57</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:55:32</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -14009,11 +14009,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3954</source_id>
-            <time>2018-03-14 02:07:22</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:57:07</time>
+            <status>Checked</status>
+            <message># Website does no update in a year.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -14097,11 +14097,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3971</source_id>
-            <time>2018-03-14 02:06:23</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:59:08</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -14141,11 +14141,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3975</source_id>
-            <time>2018-03-14 02:05:25</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 10:59:43</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -14163,11 +14163,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3984</source_id>
-            <time>2018-03-14 02:06:40</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:01:05</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -14185,11 +14185,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>3987</source_id>
-            <time>2018-03-14 02:06:49</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:02:56</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -14207,11 +14207,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>4003</source_id>
-            <time>2018-03-14 02:07:12</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:04:14</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -14229,11 +14229,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>4006</source_id>
-            <time>2018-03-14 02:05:50</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:06:09</time>
+            <status>Fixing</status>
+            <message># Transformation does not work at all.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -14251,11 +14251,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>4011</source_id>
-            <time>2018-03-14 02:07:06</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:07:39</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>
@@ -14295,11 +14295,11 @@
             <comment>NoTag</comment>
             <enable>1</enable>
             <source_id>4014</source_id>
-            <time>2018-03-14 02:08:10</time>
-            <status>Queued</status>
-            <message># Require checking source</message>
+            <time>2018-03-14 11:08:36</time>
+            <status>Checked</status>
+            <message># None deliver in system, delivery situation same with website, transformation works.</message>
         </status>
-        <user_id>39</user_id>
+        <user_id>76</user_id>
     </source>
     <source>
         <comment>NoTag</comment>

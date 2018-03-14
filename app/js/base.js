@@ -2,7 +2,7 @@
  * @Author: guoyu19961004
  * @Date:   2018-03-03 18:20:32
  * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-14 16:06:15
+ * @Last Modified time: 2018-03-14 20:37:15
  */
 const fs = require('fs')
 const xml2js = require('xml2js')
@@ -549,7 +549,7 @@ function collect_forum(source_name, log_type) {
         if (!fs.existsSync(path.join(log_path, '../'))) {
             fs.mkdirSync(path.join(log_path, '../'));
         }
-        fs.unlinkSync(log_path);
+        if (fs.existsSync(log_path)) { fs.unlinkSync(log_path); }
         files.forEach(function(filename, index, array) {
             let currentfile = path.join(baseUrl, filename, 'logs', log_type + '.log');
             if (fs.existsSync(currentfile)) {
@@ -558,8 +558,8 @@ function collect_forum(source_name, log_type) {
                     if (stats.isFile()) {
                         // console.log(index,currentfile);
                         fs.readFile(currentfile, (err, data) => {
-                          if (err) throw err;
-                          fs.appendFileSync(log_path, data)
+                            if (err) throw err;
+                            fs.appendFileSync(log_path, data)
                         });
                     } else if (stats.isDirectory()) {
                         return false;
@@ -571,11 +571,19 @@ function collect_forum(source_name, log_type) {
             width: 800,
             height: 600
         })
-        newwindow.loadURL(url.format({
-            pathname: path.join(root_path, 'forum_transformed.html'),
-            protocol: 'file:',
-            slashes: true
-        }))
+        if (log_type == 'transformed') {
+            newwindow.loadURL(url.format({
+                pathname: path.join(root_path, 'forum_transformed.html'),
+                protocol: 'file:',
+                slashes: true
+            }))
+        } else {
+            newwindow.loadURL(url.format({
+                pathname: path.join(root_path, 'forum_error.html'),
+                protocol: 'file:',
+                slashes: true
+            }))
+        }
         newwindow.on("closed", function() {
             newwindow = null
         })

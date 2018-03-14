@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-03-09 19:40:26
  * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-14 17:09:05
+ * @Last Modified time: 2018-03-14 20:16:14
  */
 const fs = require('fs')
 const path = require('path')
@@ -100,8 +100,11 @@ function generateBlogTransformed() {
 }
 
 /*生成Blog Error页面*/
-function generateBlogErrors() {
-    const log_path = path.join(root_path, 'environment/ingentia-run/logs/errors.log')
+function generateErrors(type) {
+    let log_path;
+    if (type == 'blog') {
+        log_path = path.join(root_path, 'environment/ingentia-run/logs/errors.log');
+    } else log_path = path.join(confData.source, '../','temp/errors.log')
     const rl = readline.createInterface({
       input: fs.createReadStream(log_path),
       crlfDelay: Infinity
@@ -176,6 +179,6 @@ function generateForumTransformed() {
 /*暴露生成BLOPOST接口*/
 module.exports = {
     BlogTransformed: generateBlogTransformed,
-    BlogError: generateBlogErrors,
+    Error: generateErrors,
     ForumTransfomed: generateForumTransformed
 };
