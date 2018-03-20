@@ -2,7 +2,7 @@
  * @Author: guoyu19961004
  * @Date:   2018-03-03 18:20:32
  * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-14 20:37:15
+ * @Last Modified time: 2018-03-15 11:17:44
  */
 const fs = require('fs')
 const xml2js = require('xml2js')
@@ -424,7 +424,9 @@ function url_run(callback) {
     jsonParser.parseString(fs.readFileSync(path.join(confData.finish, 'SubSourceCrawlerConfig.xml')), function(err, result) {
         // console.log(result.SubSourceCrawlerConfig)
         $('#shell_info').append('<p>正在运行 <strong>' + result.SubSourceCrawlerConfig.SourceName + '</strong> URL，请稍等，日志延迟显示！</p>');
-        let py = spawn("python", [path.join(Tmonkey_path, 'tmonkey.py'), "sc"]);
+        let py = spawn("python", [path.join(Tmonkey_path, 'tmonkey.py'), "sc"], {
+            shell: true
+        });
         py.stdout.setEncoding("ASCII");
         const stdoutRl = readline.createInterface({
             input: py.stdout,
@@ -460,7 +462,7 @@ function url_run(callback) {
         $('#forum_stop_button').on('click', function(event) {
             event.preventDefault();
             /* Act on the event */
-            py.kill()
+            py.kill('SIGKILL')
         });
     })
 }
@@ -544,8 +546,6 @@ function collect_forum(source_name, log_type) {
             console.error(err);
             return;
         }
-        let fileReadStream;
-        let fileWriteStream;
         if (!fs.existsSync(path.join(log_path, '../'))) {
             fs.mkdirSync(path.join(log_path, '../'));
         }

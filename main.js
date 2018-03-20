@@ -58,6 +58,17 @@ function createWindow() {
         // Dereference the window object, usually you would store windows
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
+
+        const baseUrl = path.join(__dirname, '/app/environment/forumtest/temp')
+        const filedirs = fs.readdirSync(baseUrl)
+        for (let i = 0; i < filedirs.length; i++) {
+            let stats = fs.statSync(path.join(baseUrl, filedirs[i]))
+            if (stats.isFile()) {
+                fs.unlinkSync(path.join(baseUrl, filedirs[i]))
+            } else if (stats.isDirectory()) {
+                deleteAll(path.join(baseUrl, filedirs[i]))
+            }
+        }
         mainWindow = null
     })
 }
@@ -229,3 +240,18 @@ const tray_menu_template = [{
     label: "退出",
     role: "quit"
 }]
+
+function deleteAll(dir_path) {
+    if (fs.existsSync(dir_path)) {
+        let files = fs.readdirSync(dir_path);
+        files.forEach(function(file, index) {
+            let curPath = path.join(dir_path,file);
+            if (fs.statSync(curPath).isDirectory()) { // recurse
+                deleteAll(curPath);
+            } else { // delete file
+                fs.unlinkSync(curPath);
+            }
+        });
+        fs.rmdirSync(dir_path);
+    }
+};

@@ -1,1781 +1,692 @@
 <?xml version="1.0" standalone="yes"?>
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"></meta><meta http-equiv="Cache-control" content="no-cache"></meta><meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0"></meta><meta name="MobileOptimized" content="240"></meta><meta name="Iphone-content" content="320"></meta><meta name="format-detection" content="telephone=no"></meta><script src="static/js/mobile/jquery-1.8.3.min.js?ViY" type="text/javascript"></script><meta name="keywords" content=""></meta><meta name="description" content=",UC&#32448;&#24807;&#23599;_UC&#27996;&#1091;&#25639;&#37712;&#21614;&#31092;"></meta><title>&#37819;&#24878;&#12378;&#28103;&#8451;&#20229; -  UC&#32448;&#24807;&#23599;_UC&#27996;&#1091;&#25639;&#37712;&#21614;&#31092; -  &#37813;&#23339;&#28288;&#37911;&#65533;</title><style type="text/css">
-/*COPYRIGHT(C)UCWEB 2012.*/
-/*UCbbs.*/
+<html dir="ltr" lang="ru" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"></meta><meta http-equiv="X-UA-Compatible" content="IE=edge"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><title>Oysters - &#1060;&#1086;&#1088;&#1091;&#1084; Apple-iPhone.ru</title><link rel="canonical" href="https://www.apple-iphone.ru/forum/viewforum.php?f=187"></link><link rel="icon" href="https://www.apple-iphone.ru/forum/ext/planetstyles/flightdeck/store/apple-touch-icon-180x180.png"></link><script>
+	WebFontConfig = {
+		google: {
+			families: ['Open+Sans:600:cyrillic-ext,latin,greek-ext,greek,vietnamese,latin-ext,cyrillic']
+		}
+	};
 
-/* Css Reset */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,span,img,form,fieldset,legend,input,textarea,blockquote,th,td ,menu,figure,dir{margin:0;padding:0;}
-li{list-style:none;text-indent:0;}
-img,a img{border:0;}
-h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
-em{font-style:normal;}
+	(function(d) {
+		var wf = d.createElement('script'), s = d.scripts[0];
+		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+		wf.async = true;
+		s.parentNode.insertBefore(wf, s);
+	})(document);
+</script><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"></link><style type="text/css">body {font-family: "Roboto", Arial, Helvetica, sans-serif; font-size: 14px;}</style><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"></link><link href="./styles/Milk_v2/theme/stylesheet.css?assets_version=161" rel="stylesheet"></link><link href="./styles/Milk_v2/theme/ru/stylesheet.css?assets_version=161" rel="stylesheet"></link><link class="preset_stylesheet" href="./styles/Milk_v2/theme/colour-presets/Ibiza_Sunset.css?assets_version=161" rel="stylesheet"></link><script type="text/javascript">function ctSetCookie(c_name,value){document.cookie=c_name+"="+escape(value)+"; path=/";} setTimeout("ctSetCookie(\"ct_checkjs\", \"c50e1bea4fcbcdcb4f064e0732942ed2\");",1000);</script><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"></link><link href="./ext/dmzx/topstats/styles/prosilver/theme/topstats.css?assets_version=161" rel="stylesheet" type="text/css" media="screen"></link><link href="./ext/dmzx/whovisitedthistopic/styles/prosilver/theme/whovisitedthistopic.css?assets_version=161" rel="stylesheet" type="text/css" media="screen"></link><link href="./ext/phpbb/boardannouncements/styles/all/theme/boardannouncements.css?assets_version=161" rel="stylesheet" type="text/css" media="screen"></link><link href="./ext/rmcgirr83/elonw/styles/all/theme/elonw.css?assets_version=161" rel="stylesheet" type="text/css" media="screen"></link><script type="text/javascript">
+			// &lt;![CDATA[		
+				(function () {
+					var oa = document.createElement('script'); oa.type = 'text/javascript'; 
+					oa.async = true; oa.src = '//appleiphoneru.api.oneall.com/socialize/library.js'
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oa, s);
+				})();
+			// ]]&gt;
+		</script><script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/47fb3225f39e32d752a29222209c6d63_1.js" async="async"></script><script>top.hpmd=top.hpmd||[];(function(l,a,d,b){if(d.querySelector('script[src=\''+l+'\']'))return;b=d.createElement(a);b.async=1;b.src=l;a=d.querySelector(a);a.parentNode.insertBefore(b,a)})('//banner.hpmdnetwork.ru/client/273.min.js','script',top.document);</script></head><body class="nojs notouch section-viewforum ltr body-layout-Fluid content_block_header_block navbar_i_header" id="phpbb">
 
-/* Common Elements */
-body{
-    line-height:1.5em;
-    color:#333;
-    background:#FFF;
-    font-size:12px;
-    font-family:"Droid Sans Fallback","Gotham-Medium",Helvetica,Arial;
-}
-html{
-    -webkit-text-size-adjust:100%;
-}
-a{color:#434246;text-decoration:none;}
-a:visited{
-    color:#434244;
-}
-.gray{
-    color:#999;
-}
-.org{
-    color:#f60;
-}
-.blur {
-    color: #4f6ab5;
-}
-.blur:visited {
-    color: #4f6ab3;
-}
-.fr{
-    float:right;
-}
-.cf:after {visibility:hidden;display:block;font-size:0;content:"";clear:both;height:0;}
-.cf{zoom:1;}
-img{
-    vertical-align:middle;
-}
-.loum{
-    line-height:22px;
-    padding:4px 6px 6px 13px;
-    font-size:16px;
-}
-.logo-bbs{
-    width:81px;
-    vertical-align:top;
-    margin-top:4px;
-    margin-left:6px;
-}
-.table-header{
-    position:relative;
-    padding:6px 10px 6px 5px;
-    border-bottom:1px solid #f0f0f0;
-}
-.table-header td{
-    padding:0px 0 0px 0px;
-}
-.login{
-    float:right;
-    font-size: 14px;
-    line-height: 21px;
-}
-.login .user-name {
-    display: inline-block;
-    color: #dadada;
-    position: relative;
-}
-.login .user-name a {
-    max-width: 120px;
-    color: #434246;
-}
-.login .user-name a:visited {
-    color: #434242;
-}
-.login .user-name.user-ico {
-    display: inline-block;
-}
-.login .user-name a {
-    color: #434246;
-}
-.login .user-name a:visited {
-    color: #434242;
-}
-.login .new-tip {
-    display: inline-block;
-    color: #434246;
-    font-size: 14px;
-    vertical-align: top;
-}
-.login .new-tip:visited {
-    color: #434242;
-}
-.login .new-tip em {
-    color: #f60;
-}
-.pre{
-    margin:0 7px;
-    color:#dadada;
-}
-.title-loum{
-    line-height:22px;
-    font-size:16px;
-    background: #f2f2f2;
-    border-bottom: 1px #dad9d9 solid;
-    padding:6px 10px 6px 12px;
-    color:#f60;
-}
-.more{
-    float:right;
-}
-.hot-list {
-    padding: 5px 0 0;
-}
-.hot-list li {
-    line-height: 22px;
-    font-size: 16px;
-    padding:5px 0;
-    border-bottom:1px #efefef solid;
-}
-.hot-list a {
-    display: block;
-    padding-left:10px;
-    overflow: hidden;
-}
-.public-list li{
-    border-bottom: 1px #efefef solid;
-    -webkit-box-sizing: border-box;
-    line-height:27px;
-    padding:6px 0 6px 10px;
-    font-size:16px;
-}
-.public-list li.first{
-    padding-bottom:0;
-}
-.public-list li a {
-    display: block;
-}
-
-.public-list li .gray {
-    margin-left: 3px;
-}
-.browser {
-    display: none;
-}
-.browser:checked ~ .browser-label .triangle {
-    width: 0;
-    height: 0;
-    border: 5px solid transparent;
-    border-bottom-color: #cccccc;
-    vertical-align:middle;
-}
-
-.browser:checked ~ .tableb-box {
-    display: none;
-}
-.browser-label {
-    width: 100%;
-    display: block;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    margin-bottom:6px;
-}
-.tableb-box{
-    margin-left:-14px;
-}
-.table-browser{
-    background:#f5f5f5;
-    padding-left:5px;
-}
-.table-browser td{
-    line-height:20px;
-    padding:5px 0 5px 6px;
-    border-top:1px solid #e5e5e5;
-    font-size:16px;
-}
-.table-browser td.even{
-    border-left:1px solid #e5e5e5;
-}
-.online-box {
-    line-height:22px;
-    padding:6px 0 6px 10px;
-    color: #6f6f6f;
-    font-size: 14px;
-}
-.footer {
-    width:100%;
-    -webkit-box-sizing:border-box;
-    background: #f0f0f0;
-    border-top: 1px #ff6600 solid;
-    padding: 0 0px 10px 10px;
-}
-.foot-nav {
-    margin:10px 0;
-}
-.foot-nav a {
-    font-size: 14px;
-    line-height: 20px;
-    position: relative;
-}
-.bread{
-    line-height:20px;
-    background: #f9f9f9;
-    padding:7px 0 7px 10px;
-    color: #ccc;
-    font-size: 14px;
-}
-.bread .pre{
-    margin:0 2px;
-    color:#ccc;
-}
-.list-posts li {
-    border-top: 1px #eeeeee solid;
-    display: block;
-    padding: 10px 10px 5px;
-}
-.list-title {
-    font-size: 14px;
-    line-height: 21px;
-    margin-bottom:5px;
-}
-.list-read {
-    color: #acacac;
-}
-.list-read .list-name {
-    float: left;
-    font-size: 12px;
-padding-right: 4px;
-}
-.list-read .read-box {
-    float: right;
-    font-size: 12px;
-}
-.essence {
-    width: 19px;
-    height: 14px;
-    font-size: 10px;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    line-height: 14px;
-    color: #fff;
-    background: #ffb72c;
-    margin: 0 2px;
-    position: relative;
-    top: -2px;
-}
-.essence em {
-    font-size: 7px;
-    position: relative;
-    top: 2px;
-}
-.column-ico {
-    position: relative;
-    top: 2px;
-    margin-left: 3px;
-}
-.page-box {
-    padding: 10px;
-    border-top: 1px #eeeeee solid;
-}
-.page-box .page-wrap {
-    border-left: 1px #dddddd solid;
-}
-.page-box .page-wrap td {
-    text-align: center;
-    vertical-align: middle;
-    border-right: 1px #dddddd solid;
-    border-bottom: 1px #dddddd solid;
-    border-top: 1px #dddddd solid;
-    padding:5px 0;
-}
-.page-box .page-wrap a {
-    text-align: center;
-    color: #434246;
-    font-size: 16px;
-}
-.page-box .page-wrap a:visited {
-    color: #434242;
-}
-.page-box .page-current {
-    width: 77px;
-    height: 20px;
-    line-height: 24px;
-    font-size: 14px;
-    color: #999;
-    text-align: center;
-    border: none;
-    background: #fff;
-    outline: none;
-}
-.page-box .page-current:focus {
-    color: #999;
-}
-.page-select{
-    -webkit-appearance: button;
-    -webkit-padding-start:20px;
-    -webkit-padding-end:20px;
-    -webkit-user-select: none;
-    -webkit-box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    background: #fff;
-    border:none;
-    height: 30px;
-    overflow: hidden;
-    color: #434246;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    font-size:14px;
-}
-.page-select:focus{
-    outline:none;
-}
-.sort-box{
-    padding: 7px 10px;
-    font-size:16px;
-}
-.sort-box a{
-    margin-bottom:5px;
-    display:inline-block;
-    font-size:15px;
-}
-.sort-box .org{
-    margin-left: 5px;
-    font-size:16px;
-}
-.sort-box .pre{
-    font-size:14px;
-    vertical-align:top;
-}
-.core-jump {
-    height: 30px;
-    color: #999;
-    font-size: 14px;
-    padding-left: 8px;
-    padding-bottom: 20px;
-    border-bottom: 1px #e5e5e5 solid;
-}
-.core-jump .select {
-    -webkit-appearance: button;
-    -webkit-user-select: none;
-    -webkit-box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-padding-start: 10px;
-    -webkit-padding-end: 30px;
-    background: #fff;
-    border: 1px #dddddd solid;
-    width: 43%;
-    height: 30px;
-    overflow: hidden;
-    background: white url(./images/mobile/select.png) no-repeat right center;
-    background-size: 29px 28px;
-    color: #434246;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 4px;
-}
-.core-jump .select:focus {
-    outline: none;
-}
-.core-jump input[type='submit'] {
-    width: 22%;
-    height: 30px;
-    -webkit-box-sizing: border-box;
-    text-align: center;
-    line-height: 25px;
-    background: #fff;
-    border: 1px #dddddd solid;
-    display: inline-block;
-    vertical-align: middle;
-    outline: none;
-    font-size: 16px;
-}
-.detail-title{
-    font-size: 16px;
-    color: #404040;
-    padding-top:10px;
-}
-.detail-title .table-header{
-    padding-bottom:9px;
-}
-.detail-title a{
-    color:#4f6ab5;
-}
-.detail-title a:visited{
-    color:#4f6ab3;
-}
-.list-question {
-    background: #f9f9f9;
-    padding: 8px 10px 8px 8px;
-}
-.detail-info {
-    padding: 10px 10px 10px 8px;
-    color: #505050;
-    line-height: 25px;
-    font-size: 15px;
-}
-.load-img {
-    width: 115px;
-    height: 30px;
-    padding-left: 10px;
-    line-height: 27px;
-    border: 1px #7babe0 solid;
-    background: #f5faff;
-    display: inline-block;
-    font-size: 12px;
-    color: #7babe0;
-    margin: 7px 0;
-}
-.load-img:visited {
-    color: #7babe2;
-}
-.load-img .pic{
-    margin-right: 5px;
-}
-.detail-reply {
-    text-align: right;
-    padding: 0px 10px 10px 8px;
-    font-size: 14px;
-}
-.detail-reply a {
-    color: #4f6ab5;
-}
-.detail-reply a:visited {
-    color: #4f6ab2;
-}
-.reply-list li {
-    border-top: 1px #eeeeee solid;
-    padding: 9px 11px 9px 8px;
-}
-.reply-list .user-wrap {
-    float: left;
-}
-.reply-list .user-wrap .user-name {
-    color: #4f6ab5;
-}
-.reply-list .user-wrap .user-name:visited {
-    color: #4f6ab2;
-}
-.reply-list .reply-floor {
-    float: right;
-    color: #999;
-}
-.reply-list .reply-info {
-    line-height: 19px;
-    padding:7px 0;
-    font-size: 15px;
-}
-.reply-box {
-    padding: 0 10px;
-    margin: 10px 0 15px 0;
-}
-
-.reply-box textarea {
-    width: 100%;
-    height: 67px;
-    border: 1px #dddddd solid;
-    -webkit-box-shadow: 0 2px 4px rgba(4, 0, 0, 0.06) inset;
-    -moz-box-shadow: 0 2px 4px rgba(4, 0, 0, 0.06) inset;
-    box-shadow: 0 2px 4px rgba(4, 0, 0, 0.06) inset;
-    -webkit-box-sizing: border-box;
-    color: #999;
-    line-height: 14px;
-    padding: 7px 8px 5px;
-    outline: none;
-    resize: none;
-}
-
-.reply-box input[type='submit'],.btn {
-    width: 86px;
-    height: 30px;
-    -webkit-box-sizing: border-box;
-    border: 1px #dddddd solid;
-    line-height: 28px;
-    text-align: center;
-    color: #434246;
-    font-size: 16px;
-    background: #fff;
-    outline: none;
-    float: right;
-    margin-top: 9px;
-}
-.center-list .gray{
-    float:right;
-    margin-right:10px;
-}
-.per-ico{
-    width:68px;
-    height:68px;
-    border:1px solid #ddd;
-    overflow:hidden;
-}
-.per-ico img{
-    width:68px;
-    height:68px;
-}
-.table-center{
-    font-size:14px;
-    color:#6f6f6f;
-    line-height:25px;
-    padding:8px 13px 7px 10px;
-    border-bottom:1px solid #eee;
-}
-.table-center a{
-    color:#4f6ab5;
-}
-.user-name{
-    font-size:16px;
-}
-.table-cother{
-    font-size:14px;
-    color:#606060;
-    line-height:25px;
-    padding:8px 13px 7px 10px;
-    margin-bottom:20px;
-}
-.table-cother a{
-    color:#4f6ab5;
-}
-.avatar-edit{
-    width:68px;
-    height:22px;
-    display:block;
-    margin-top:10px;
-    text-align:center;
-    font-size:14px;
-    color:#4f6ab5;
-    line-height:22px;
-    border:1px solid #ddd;
-}
-.header-title{
-    width:100%;
-    position:absolute;
-    top:0;
-    left:0;
-    text-align:center;
-}
-.vwork-info{
-    padding: 10px 10px 10px 8px;
-    color: #6f6f6f;
-    line-height: 25px;
-    font-size: 15px;
-}
-.vwork-list li{
-    border-bottom: 1px #efefef solid;
-    -webkit-box-sizing: border-box;
-    line-height: 27px;
-    padding: 6px 14px 6px 10px;
-    font-size: 14px;
-    color:#434246;
-}
-.vwork-list a{
-    color:#4f6ab5;
-}
-.vwork-list .pre{
-    color:#6f6f6f;
-    margin:0 8px;
-}
-.sub-ptitle{
-    margin:1px 0 10px 13px;
-    font-size:16px;
-    color:#6f6f6f;
-}
-.sub-ptitle a{
-    color:#4f6ab5;
-}
-.sub-ptitle a:visited{
-    color:#4f6ab2;
-}
-.title-loum .fr{
-    color:#999;
-    font-size:14px;
-}
-.table-panoply{
-    margin:5px 0;
-}
-.table-panoply td{
-    padding:8px 0;
-    line-height:20px;
-    color:#6f6f6f;
-    font-size:16px;
-    border-bottom:1px solid #eee;
-}
-.table-panoply a{
-    color:#4f6ab5;
-}
-.table-panoply a:visited{
-    color:#4f6ab2;
-}
-.table-panoply .panoply-name{
-    margin-left:13px;
-}
-.bind-panoply td{
-    border-bottom:none;
-}
-.propmt{
-    margin:5px 12px;
-    font-size:14px;
-    line-height:25px;
-    color:#999;
-}
-.site-box{
-    margin:20px 0 30px 30px;
-}
-.site-box .core-jump{
-    border-bottom:none;
-}
-.site-sumbit{
-    width:41.8%;
-    height:30px;
-    display:block;
-    margin-left:72px;
-    margin-bottom:20px;
-    -webkit-box-sizing:border-box;
-    border:1px solid #ddd;
-    font-size:16px;
-    line-height:30px;
-    text-align:center;
-    color:#434246;
-}
-.site-box .sub-ptitle{
-    font-size:14px;
-}
-.panoply-way{
-    margin-bottom:20px;
-    margin-left:10px;
-}
-.panoply-way a{
-    color:#4f6ab5;
-    font-size:16px;
-}
-.panoply-way a:visited{
-    color:#4f6ab2;
-}
-.f_c{
-    min-height: 250px;
-    text-align: center;
-    padding-top: 50px;
-}
-.f_c p{
-    margin-top: 10px;
-}
-.box{
-    padding: 10px;
-}
-.box input{
-    padding: 5px 10px;
-}
-.bm{
-    margin: 10px;
-}
-#delform div{
-    padding: 10px 0;
-    border-bottom: 1px #F0F0F0 solid;
-}
-.txt{
-    height: 30px;
-    margin: 10px 0;
-    width: 80%;
-}
-.xw1,.xi1{
-    word-wrap:break-word;word-break:break-all;
-}
-.user-name{
-    font-size: 12px;
-}
-a,a:visited{
-    color: #4F6AB5;
-}
-a:hover{
-    color: #F60;
-}
-.pop{ background:rgba(0,0,0,0.7); height:55px; position:fixed; bottom:0; width:100%; }
-.pop ul{ -webkit-box-sizing:border-box; text-align:center; display:box;box-orient:horizontal;display:-webkit-box;-webkit-box-orient:horizontal;}
-.pop li{box-flex:1;-webkit-box-flex:1;text-align:center; color:#ffffff; font-size:12px; padding:32px 10px 5px; border-right:1px #676767 solid; background:url(./images/mobile/ico.png) no-repeat; background-size:18px 128px;}
-.pop li:first-child{ background-position:50% 10px;}
-.pop li:nth-child(2){ background-position:50% -45px;}
-.pop li:last-child {background-position:50% -100px; border:none;}
-.postmessage {
-    word-wrap: break-word;
-}
-
-.table-nav{ background:#f5f5f5;}
-.table-nav td{ text-align:center; height:40px; line-height:40px; font-size:14px; width:50%;}
-.table-nav td.current{ background:#fff; color:#333333;}
-.table-nav a{ color:#666666;}
-.content{ padding: 16px;}
-.content h1{color:#4c4b4f; font-size:16px; margin-bottom:5px; font-weight:bold;}
-.title{ border-bottom:1px #eeeeee solid; font-size:14px; color:#666666; margin-bottom:10px; padding-bottom:10px;}
-
-.pd15{ padding:15px 0;}
-.f14{ font-size:14px;}
-.f12{ font-size:12px;}
-
-.table-login{ width:100%; color:#434246;}
-.table-login td{ padding:5px 0; font-size:14px;}
-
-.input{ width:100%; border:1px #cdcdcd solid; height:35px;}
-
-.butn{ width:184px; height:46px; line-height:46px; margin:10px auto; text-align:center; color:#fff; display:block; background:#ff7c20;}
-.butn a{ color:#fff;}
-
-.hint{ text-align:center; color:#999; padding:20px 0;}
-.hint a{ color:#ff6d00;}
-.succeed{ font-size:16px; color:#4c4b4f; text-align:center; padding:15px 0 0; font-weight:bold;}
-.succeed img{ width:16px;}
-.msg{ background:#fff0c9; color:#665227; padding:15px 13px;}
-
-.quick-login{ text-align:center; color:#cecece; padding:20px 0;}
-.quick-login a{ color:#F60; padding:0 10px;}
-
-/* &#38329;&#38747;&#57542;&#23143;&#65533;&#38328;&#25489;&#26836;&#38346;&#9541;&#24381;&#23428;&#25198;&#30784; */
-.info {
-    padding: 15px 10px;
-    color: #bfbfbf;
-    text-align: center;
-}
-.info h3 {
-    font-size: 15px;
-    line-height: 32px;
-    color: #ff6600;
-}
-.info p {
-    line-height: 24px;
-    color: #5C5B57;
-}
-.share {
-    text-align: center;
-    margin: 10px 10px 6px;
-    font-size: 0;
-}
-.share li {
-    width: 71px;
-    height: 25px;
-    text-align: center;
-    display: inline-block;
-    margin: 0 5px;
-    border-radius: 5px;
-}
-.icon-weibo {
-    background: #b00400 url(./images/share.png) no-repeat 25px 50%;
-    background-size: 184px 20px;
-    border-bottom: 2px solid #860700;
-}
-.icon-q {
-    background: #3e88c7 url(./images/share.png) no-repeat -56px 50%;
-    background-size: 184px 20px;
-    border-bottom: 2px solid #2a6aa0;
-}
-.icon-renren {
-    background: #125da8 url(./images/share.png) no-repeat -137px 50%;
-    background-size: 184px 20px;
-    border-bottom: 2px solid #114c87;
-}
-.imgCenter{
-    text-align: center;
-}
-.imgCenter img{
-    width: 40%;
-}
-.formM{
-    padding:8px 10px;
-}
-.formM span{
-    color: #ff6600;
-}
-.formM a{
-    text-decoration: underline;
-    color: #4f6ab5;
-}
-.formP{
-    margin:0 10px;
-    padding:0 0 10px;
-}
-.formP [type=text],.formP select{
-    box-sizing: border-box;
-    width: 100%;
-    height: 33px;
-    border: 1px solid #e3e3e3;
-    margin:0 0 10px;
-}
-.formP [type=text]{
-    background-size: 10px 10px;
-    padding:0 5px;
-}
-.formP  textarea {
-    width: 100%;
-    height: 150px;
-    border: 1px solid #e3e3e3;
-    box-sizing: border-box;
-    padding:5px 3px;
-    margin:0 0 10px;
-}
-.formP .tit1{
-    line-height: 22px;
-    font-size: 12px;
-    color: #333;
-}
-.formP .tit2{
-    line-height: 22px;
-    font-size: 12px;
-    color: #999;
-}
-.tabformp{
-    position: relative;
-    margin:0 10px;
-}
-.tabform{
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.tabform li{
-    float: left;
-    width:42px;
-    height: 36px;
-    text-align: center;
-    font-size: 12px;
-}
-.tabform li ul{
-    width:20px;
-    height: 20px;
-    background:url("./images/icon_form.png") no-repeat;
-    background-size: 20px 75px;
-    margin:0 auto;
-}
-.tabform li:nth-child(2) ul{
-    background:url("./images/icon_form.png") no-repeat 0 -25px;
-    background-size: 20px 75px;
-}
-.tabform li:nth-child(3) ul{
-    background:url("./images/icon_form.png") no-repeat 0 -50px;
-    background-size: 20px 75px;
-}
-.btnform{
-    box-sizing: border-box;
-    border:1px solid #dddddd;
-    height: 36px;
-    line-height: 34px;
-    display: block;
-    margin:0 0 0 130px;
-    text-align: center;
-}
-.tabcon{
-    margin:10px 0 10px;
-}
-.conpar{
-    padding:10px 0 0;
-    position: relative;
-}
-.tabcon .conpar:nth-child(2):before,.tabcon .conpar:nth-child(2):after{left: 62px;}
-.tabcon .conpar:nth-child(3):before,.tabcon .conpar:nth-child(3):after{left: 103px;}
-.conpar:before,.conpar:after{
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 21px;
-    border:10px solid #d5d5d5;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-top-width: 0;
-}
-.conpar:after{
-    border-bottom-color:#eee;
-    top:1px;
-}
-.bq{
-    overflow: hidden;
-    background: #eeeeee;
-    border:1px solid #d5d5d5;
-    border-width: 1px 0;
-    padding:6px 0;
-}
-.bq li{
-    float: left;
-}
-.bq li img{
-    width:23px;
-    height: 23px;
-    margin:5px;
-}
-.listfile{
-    overflow: hidden;
-    background: #eeeeee;
-    border:1px solid #d5d5d5;
-    border-width: 1px 0;
-    padding:10px 5px;
-}
-.listfile li{
-    float: left;
-    width: 65px;
-    height: 65px;
-    position: relative;
-    background: url("./images/bg_fileNor.png") no-repeat center;
-    background-size: 65px 65px;
-    margin:5px;
-}
-.listfile .selImg{
-    background:#8b8b8c url("./images/bg_img.jpg") no-repeat center;
-    background-size: 32px 26px;
-}
-.listfile .selVideo{
-    background:#8b8b8c url("./images/bg_video.jpg") no-repeat center;
-    background-size: 32px 26px;
-}
-.listfile .selZip{
-    background:#8b8b8c url("./images/bg_zip.jpg") no-repeat center;
-    background-size: 26px 32px;
-}
-.listfile .selFile{
-    background:#8b8b8c url("./images/bg_file.jpg") no-repeat center;
-    background-size: 26px 32px;
-}
-.listfile li img{
-    width: 100%;
-    height: 100%;
-}
-.listfile li em{
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    background: url("./images/btn_close1.png") no-repeat;
-    background-size: 24px 24px;
-    width: 24px;
-    height: 24px;
-}
-.listfile li span{
-position: absolute;
-left: 0;
-bottom: 0;
-width:100%;
-height: 22px;
-line-height: 22px;	
-overflow: hidden;
-text-overflow: ellipsis;
-white-space: nowrap;
-color: #fff;
-font-size: 12px;
-background: rgba(0,0,0,.5);
-text-indent: 3px;
-}
-.listfile .up{
-    overflow: hidden;
-}
-.listfile .up [type=file]{
-    opacity: 0;
-    display: block;
-    width: 300%;
-    height: 100%;
-    position: relative;
-    top: 0;
-    left:-100%;
-}
-.ejectShare{
-    height: 42px;
-    border:1px solid #dddddd;
-    border-width: 1px 0px 0px 0px;
-    background: #fff;
-    position: fixed;
-    bottom: 0px;
-    left: 0;
-    width:100%;
-    z-index: 999;
-}
-.ejectShare em{
-    background: url("./images/icon_share.png") no-repeat center;
-    background-size: 22px 22px;
-    width:30px;
-    height: 30px;
-    position: absolute;
-    top: 7px;
-    right: 7px;
-}
-.ejectShare ul{
-    margin:5px 40px 0 5px;
-    border:1px solid #dddddd;
-    height:30px;
-    line-height: 30px;
-    padding:0 0 0 5px;
-    color: #999999;
-}
-.defilade{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width:100%;
-    height: 100%;
-    background: rgba(0,0,0,.3);
-    display: none;
-    z-index: 999;
-}
-.sharepar{
-    border:1px solid #dddddd;
-    border-width: 1px 0;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    bottom:0;
-    background: #fff;
-    z-index: 999;
-}
-.sharepar .sharetit{
-    padding:16px 0 10px;
-    text-indent: 10px;
-}
-.sharepar .sharetit img{
-    width: 16px;
-    height: 16px;
-    margin:0 0 0 5px;
-    position: relative;
-    top: -2px;
-}
-.sharepar .sharelist{
-    overflow: hidden;
-}
-
-.sharepar .sharelist li{
-    width: 20%;
-    float: left;
-}
-.sharepar .sharelist li a{
-    display: block;
-    margin:0 10px;
-}
-.sharepar .sharelist li a img{
-    width: 100%;
-}
-.sharepar .sharebtn,.listTwoBtn li a{
-    display: block;
-    width:60%;
-    height: 34px;
-    line-height: 34px;
-    border:1px solid #dddddd;
-    text-align: center;
-    margin:10px auto;
-}
-.listTwoBtn{
-    overflow: hidden;
-    margin:0 5px 10px;
-}
-.listTwoBtn li{
-    float: left;
-    width:50%;
-}
-.listTwoBtn li a{
-    margin:0 5px;
-    width:auto;
-}
-.sharepar .conpar:before,.sharepar .conpar:after{
-    left: 69px;
-}
-/* &#28638;&#25779;&#25040;&#37806;&#23106;&#249;&#28654;&#65533; */
-.clear {
-    clear:both;
-}
-.clearfix:after {
-    visibility:hidden;
-    display:block;
-    font-size:0;
-    content:"";
-    clear:both;
-    height:0;
-}
-.clearfix {
-    zoom:1;
-}
-header em.user, header em.search, .title span:before, .list li span.ms, .list li span.view,.menu p {
-    background:url("./images/mobile/ico1.png") no-repeat;
-    background-size:20px 175px;
-}
-header {
-    height:48px;
-    line-height:48px;
-    padding:0 15px 0 17px;
-    background: #fff;
-}
-header img {
-    width:94px;
-}
-header em {
-    float:right;
-    font-style:normal;
-    display:inline-block;
-    height:20px;
-    line-height: 20px;
-    margin-top:15px;
-}
-header em.user {
-    background-position:0px 0px;
-    font-size:11px;
-    color:#ff6600;
-    padding-left: 22px;
-    overflow: hidden;
-    max-width: 92px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    margin-right:27px;
-}
-header em.user.sel{
-    background-position:0px -100px;
-}
-header em.edit {
-    width:20px;
-    background-position:0px -125px;
-    margin-right:27px;
-}
-header em.search {
-    width:20px;
-    background-position:0px -21px;
-}
-.searh-input {
-    background:#b9b9b9;
-    padding:3px 60px 3px 8px;
-    position:relative;
-    display:none;
-}
-.searh-input span {
-    position:relative;
-}
-.searh-input em.del {
-    position:absolute;
-    display:none;
-    right:4px;
-    top:-3px;
-    background:url("./images/mobile/close.png") no-repeat;
-    background-size:14px 14px;
-    width:29px;
-    height:29px;
-    background-position: 7px 5px;
-}
-.searh-input .input {
-    width:100%;
-    background:#f3f3f3;
-    height:29px;
-    line-height:29px;
-    padding:0 18px 0 10px;
-    border:0;
-    border-radius:0;
-    -webkit-appearance:none;
-    appearance:none;
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-}
-.searh-input .btn {
-    color:#fff;
-    background:#b9b9b9;
-    height:29px;
-    line-height:29px;
-    text-align:center;
-    position:absolute;
-    right:2px;
-    top:3px;
-    border:0;
-    width:54px;
-}
-.path{
-padding:0 10px;
-line-height: 33px;
-background:#f9f9f9;
-/*	border-top:1px solid #eeeeee; */
-border-bottom:1px solid #eeeeee;
-}
-.path a{
-position:relative;
-margin-right:14px;
-color:#434246;
-font-size:12px;
-}
-.path a:after{
-content:"";
-position:absolute;
-right:-9px;
-top:50%;
-margin-top:-3.5px;
-display: inline-block;
-border: #cccccc solid;
-border-width: 2px 2px 0 0;
-width: 6px;
-height: 6px;
-transform: rotate(45deg);
--webkit-transform: rotate(45deg);
-}
-.path a:last-child:after{
-display: none;
-}
-.formM{
-padding:8px 10px;
-}
-.formM span{
-color: #ff6600;
-}
-.formM a{
-text-decoration: underline;
-color: #4f6ab5;
-}
-.formP{
-margin:0 10px;
-padding:0 0 10px;
-}
-.formP [type=text],.formP select{
-box-sizing: border-box;
-width: 100%;
-height: 33px;
-border: 1px solid #e3e3e3;
-margin:0 0 10px;
-}
-.formP [type=text]{
-background-size: 10px 10px;
-padding:0 5px;
-}
-.formP  textarea {
-width: 100%;
-height: 150px;
-border: 1px solid #e3e3e3;
-box-sizing: border-box;
-padding:5px 3px;
-margin:0 0 10px;
-}
-.formP .tit1{
-line-height: 22px;
-font-size: 12px;
-color: #333;
-}
-.formP .tit2{
-line-height: 22px;
-font-size: 12px;
-color: #999;
-}
-.tabformp{
-position: relative;
-margin:0 10px;
-}
-.tabform{
-overflow: hidden;
-position: absolute;
-left: 0;
-top: 0;
-}
-.tabform li{
-float: left;
-width:42px;
-height: 36px;
-text-align: center;
-font-size: 12px;
-}
-.tabform li ul{
-width:20px;
-height: 20px;
-background:url("./images/mobile/icon_form.png") no-repeat;
-background-size: 20px 75px;
-margin:0 auto;
-}
-.tabform li:nth-child(2) ul{
-background:url("./images/mobile/icon_form.png") no-repeat 0 -25px;
-background-size: 20px 75px;
-}
-.tabform li:nth-child(3) ul{
-background:url("./images/mobile/icon_form.png") no-repeat 0 -50px;
-background-size: 20px 75px;
-}
-.btnform{
-box-sizing: border-box;
-border:1px solid #dddddd;
-height: 36px;
-line-height: 34px;
-display: block;
-margin:0 0 0 130px;
-text-align: center;
-}
-.tabcon{
-margin:10px 0 10px;
-}
-.conpar{
-padding:10px 0 0;
-position: relative;
-}
-.tabcon .conpar:nth-child(2):before,.tabcon .conpar:nth-child(2):after{left: 62px;}
-.tabcon .conpar:nth-child(3):before,.tabcon .conpar:nth-child(3):after{left: 103px;}
-.conpar:before,.conpar:after{
-content: '';
-position: absolute;
-top: 0px;
-left: 21px;
-border:10px solid #d5d5d5;
-border-left-color: transparent;
-border-right-color: transparent;
-border-top-width: 0;
-}
-.conpar:after{
-border-bottom-color:#eee; 
-top:1px;
-}
-/*  &#28638;&#25117;&#29258;&#28028;&#21614;&#31241;&#32506;&#28844;&#12356;&#37922;&#21578;&#26728;em&#38330;&#23941;&#22066;&#32497;&#65533;  add by caily at 4.1.0 on 20140827 */
-.sms-center-list em {
-  float:right;
-  margin:5px 10px 0 0;
-}
-.list-sms li {
-  border-bottom: 1px #eeeeee solid;
-  display: block;
-  padding: 10px;
-}
-.request {
-  margin-top: 10px;
-  text-align: center;
-}
-.hello {
-  font-size: 14px;
-}
-.hello p {
-  margin-bottom: 10px;
-}
-.gray {
-  color: #999;
-}
-.select {
--webkit-appearance: button;
--webkit-user-select: none;
--webkit-box-sizing: border-box;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
--webkit-padding-start: 10px;
--webkit-padding-end: 30px;
-background: #fff;
-border: 1px #dddddd solid;
-width: 43%;
-height: 30px;
-overflow: hidden;
-background: white url(./images/mobile/select.png) no-repeat right center;
-background-size: 29px 28px;
-color: #434246;
-position: relative;
-display: inline-block;
-vertical-align: middle;
-margin: 0 4px;
-}
-.request input[type='submit'] {
-margin: auto;
-width: 86px;
-height: 30px;
--webkit-box-sizing: border-box;
-border: 1px #dddddd solid;
-line-height: 28px;
-text-align: center;
-color: #434246;
-font-size: 16px;
-background: #fff;
-outline: none;
-margin-top: 9px;
-}
-
-/*add by 20141121 for task*/
-.task-post,.list-task dt{
-    position: relative;
-    height: 64px;
-    font-size: 15px;
-    color: #333333;
-    background: url(./images/ico_task.png)no-repeat;
-    background-size:45px 628px;
-    border-bottom:1px #bfbfbf solid;
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-}
-.task-post{
-    padding: 11px 13px 0 64px;
-    background: url(./images/ico_task.png)no-repeat #ffeec1;
-    background-position:10px 10px;
-    background-size:45px 628px;
-}
-.task-post span{
-    font-size: 11px;
-    color: #999999;
-}
-.task-post em,.list-task dd p em{
-    position: absolute;
-    right: 10px;
-    top: 18px;
-    display: inline-block;
-    width: 68px;
-    height: 28px;
-    background: url(./images/task.png) no-repeat;
-    background-size:68px  225px;
-}
-
-
-.list-task dt{
-    padding: 23px 13px 0 64px;
-    background-position:10px 10px;
-}
-.list-task dt:first-child{
-    background-position:10px -54px;
-}
-.list-task dt:nth-child(3){
-    background-position:10px -509px;
-}
-.list-task dt:nth-child(5){
-    background-position:10px -574px;
-}
-.list-task dd{
-    padding: 0 10px;
-    background: #f1f1f1;
-    border-bottom:1px #bfbfbf solid;
-    transition: 0.6s all ease;
-    -webkit-transition: 0.6s all ease;
-}
-.list-task dd p{
-    position: relative;
-    height: 64px;
-    padding: 10px 13px 10px 73px;
-    font-size: 15px;
-    color: #333333;
-    background: url(./images/ico_task.png)no-repeat;
-    background-size:45px 628px;
-    background-position:0 -54px;
-    border-bottom:1px #bfbfbf solid;
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-}
-.list-task dd p span{
-    font-size: 11px;
-    color: #999999;
-}
-.list-task dd p.task-activity{
-    background-position:0 -118px;
-}
-.list-task dd p.task-share{
-    background-position:0 -184px;
-}
-.list-task dd p.task-tech{
-    background-position:0 -248px;
-}
-.list-task dd p.task-hot{
-    background-position:0 -317px;
-}
-.list-task dd p.task-sign{
-    background-position:0 -378px;
-}
-.list-task dd p.task-luck{
-    background-position:0 -445px;
-}
-.list-task dd p:last-child{
-    border-bottom: none;
-}
-.list-task dd p em{
-    right: 0px;
-}
-.list-task dd p em.labe-ongoing{
-    background-position: 0px -130px;
-}
-.list-task dd p em.labe-no-receive{
-    background-position: 0px -195px;
-}
-.labe-not-apply{
-    background-position: 0px 0px;
-}
-.list-task dt i{
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    width: 13px;
-    height: 12px;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAMCAYAAAB8xa1IAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUBJREFUeNpiPHPmDCcDA8NGIJ4CxJsYqAv8gDgHiP2ZgMQcIHaFWtYOxMxUsIAZatZGqNlzQBatAeIvUAUVQLwLiCUosEQCakYFlA8yeyXIovVAbAjE16ASTkB8BohtyLDEBqrXCcq/DDV7ExNU4A4QmwDxMihfGoj3AnERCZYUQfVIQ/mLgdgcajYDE5LC70AcDcRZQPwLiNmAuBeIVwMxDx4LeKBqeqF6QHrTgTgOaiYDukUwMB2IbYH4EZQfAg0OLSxqtaByIVA+SI8VEM9CV8iEw5WnoGG7G8pXB+KTQByFpCYKKqYO5e+A6jmLzUAmPEHyDog9gbgJKYiWAvFkKF6KFKT1ULXvcBnGCMywxES0NxAvAmIhLI6JQPI5TsBEZIraCk2VZ/EEL17AQkLyvQ9NJBOgKasYShMFAAIMALSrQmm7ISBvAAAAAElFTkSuQmCC)no-repeat;
-    background-size:13px 6px;
-    -webkit-transition: 0.6s all ease;
-
-}
-.list-task dt i.more{
-    top: 25px;
-    -webkit-transform: rotate(-180deg) !important;
-}
-/**/
-.mytask {
-    margin: 25px 12px;
-}
-.mytask dt {
-    float: left;
-}
-.mytask dt img {
-    width: 94px;
-}
-.mytask dd {
-    margin-left: 106px;
-}
-.mytask dd p {
-    padding:1px 0;
-}
-.mytask dd em {
-    font-style: normal;
-}
-.mytask dd b {
-    display: block;
-    float: left;
-    font-weight: normal;
-}
-.mytask dd span {
-    display: block;
-    margin-left: 44px;
-}
-.btn-orange-big,
-a.btn-orange-big {
-    display: block;
-    height: 35px;
-    padding: 0 20px;
-    text-align: center;
-    line-height: 35px;
-    color: #fff;
-    font-size: 15px;
-    background: #f60;
-}
-.btn-gray-big,
-a.btn-gray-big {
-    display: block;
-    height: 35px;
-    padding: 0 20px;
-    text-align: center;
-    line-height: 35px;
-    color: #fff;
-    font-size: 15px;
-    background: #bebebe;
-}
-.btn-orange-line,
-a.btn-orange-line {
-    display: block;
-    height: 33px;
-    padding: 0 20px;
-    text-align: center;
-    line-height: 33px;
-    color: #f60;
-    font-size: 15px;
-    border:1px #f60 solid;
-}
-.task-apply {
-    width: 145px;
-    height:35px;
-    margin: auto;
-    margin-bottom: 30px;
-}
-.task-btn {
-    margin: 0 6px 30px;
-}
-.task-btn li{
-    float: left;
-    width: 50%;
-    height:35px;
-}
-.task-btn li a {
-    margin:0 6px;
-}
-.percent {
-    position: relative;
-    height: 10px;
-    margin: 0 10px 25px;
-    background: #eee;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.percent p {
-    height: 10px;
-    background: #f60;
-    border-radius: 5px 0 0 5px;
-}
-.percent span {
-    position: absolute;
-    top: 1px;
-    right: 8px;
-    font-size: 9px;
-    color: #999;
-}
-.footer-fixed {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-</style></head><body id="body">
-<header class="clearfix">
-    <em class="search" id="search_ico"></em>
-    <em class="user" onclick="location.href='member.php?mod=logging&amp;action=login&amp;mobile=1'">
-            </em>
-    <img src="images/logo.png" onclick="location.href='./forum.php?mobile=1'"></img>
-</header>
-<div class="searh-input" id="searh_input" style="display:none;">
-    <form enctype="application/x-www-form-urlencoded" method="post" class="searchform" id="searchform" action="search.php?mod=forum&amp;mobile=1">
-        <input type="hidden" name="formhash" value="b00673ee"></input>
-        <input type="hidden" name="srhfid" value=""></input>
-        <input type="hidden" name="srchfid" value=""></input>
-        <input type="hidden" name="searchsubmit" value="yes"></input>
-    <span>
-    <input type="search" class="input" id="skeyword" name="srchtxt" placeholder="&#37820;&#28357;&#20648;"></input>
-    <em class="del" id="btn_del"></em> </span>
-        <button type="submit" class="btn" style="margin-top: 0; font-size: 12px;">&#37820;&#28357;&#20648;</button>
-    </form>
-</div>
-<div style="border-bottom: 1px solid #f0f0f0;"></div>
-<script src="template/uc_style/mobile/res/js/search.js" type="text/javascript"></script><div class="f_c">
-<div id="messagetext">
-<p>  UC&#32448;&#24807;&#23599;&#37719;&#22249;&#39559;&#32513;&#23384;&#23010;&#28051;&#57704;&#32029;&#37812;&#25116;&#28369;&#28028;&#27692;&#25942;&#36423;&#57506;&#30060;&#37812;&#24878;&#28142;&#37814;&#12421;&#20240;&#28003;&#28368;&#32029;&#32513;&#23384;&#23010;&#37832;&#29116;&#26879;&#37712;&#21615;&#12382;&#37718;&#21700;&#23003;&#38003;&#33445;&#27535;&#37827;&#33333;&#26852;&#23049;&#26330;&#23047;&#37922;&#59346;&#32029;&#29831;&#38155;&#20557;&#38000;&#24876;&#32318;&#32475;&#22794;&#32223;&#37510;&#20636;&#28142;&#37814;&#12423;&#31912;&#37833;&#29111;&#24727;&#28751;&#21976;&#24385;&#28186;&#28060;&#713;&#32475;&#21477;&#25442;&#37716;&#176;&#65533;&#20634;&#59111;&#37832;&#22793;&#39559;&#37725;&#20352;&#26870;&#26864;&#27199;&#32341;&#29831;&#39118;&#1065;&#23005;&#12520;&#22182;&#23092;&#24538;&#59213;&#37731;&#12581;&#21812;&#26473;&#28060;&#58641;&#37721;&#23945;&#59117;&#37510;&#65533;</p>
-        <p><a shape="rect" href="http://bbs.uc.cn/./?mobile=1">&#37904;&#29808;&#22190;&#23005;&#12425;&#25724;&#37818;&#12520;&#32344;&#29723;&#23683;&#28902;&#26462;&#65533;</a></p>
-            <script>
-                setTimeout(function(){
-                    window.location.href = 'http://bbs.uc.cn/./?mobile=1&amp;mobile=1';
-                },3000);
-            </script>
-</div>
-</div><div class="footer" id="footer">
-    <div class="foot-nav">
-        <a shape="rect" href="forum.php?mobile=1">&#32448;&#24807;&#23599;&#26851;&#26669;&#12297;</a>
-        <span class="pre">|</span>
-        <a shape="rect" href="http://uc.cn">uc&#28729;&#27196;&#32137;</a>
-        <span class="pre">|</span>
-                <a shape="rect" href="#top">&#26473;&#26047;&#27926;&#26916;&#22549;&#20788;&#37419;&#65533;</a>
-    </div>
-    <div class="foot-nav">
-        <a shape="rect" style="color: #f60" href="http://bbs.uc.cn/forum.php?mobile=2">&#37813;&#23339;&#28288;&#37911;&#65533;</a>
+    <div class="wrap" id="wrap">
+        <a shape="rect" class="top-anchor" id="top" accesskey="t"></a>
         
-        <span class="pre">|</span>
-        <a shape="rect" href="http://bbs.uc.cn/forum.php?mobile=no">&#37922;&#20291;&#21107;&#37911;&#65533;</a>
+        <div id="page-header">
+        
+            
+                <div class="navbar navbar_in_header" role="navigation">
+	<div class="inner">
+
+	<ul class="nav-main linklist" id="nav-main" role="menubar"><li class="quick-links dropdown-container responsive-menu" id="quick-links" data-skip-responsive="true">
+			<a shape="rect" class="dropdown-trigger" href="#">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>&#1057;&#1089;&#1099;&#1083;&#1082;&#1080;</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu"><li class="separator"></li><li>
+								<a shape="rect" href="./search.php?search_id=unreadposts&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" role="menuitem">
+									<i class="icon fa-file-o fa-fw" aria-hidden="true"></i><span>&#1053;&#1077;&#1087;&#1088;&#1086;&#1095;&#1080;&#1090;&#1072;&#1085;&#1085;&#1099;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1103;</span>
+								</a>
+							</li><li>
+								<a shape="rect" href="./search.php?search_id=unanswered&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" role="menuitem">
+									<i class="icon fa-file-o fa-fw" aria-hidden="true"></i><span>&#1058;&#1077;&#1084;&#1099; &#1073;&#1077;&#1079; &#1086;&#1090;&#1074;&#1077;&#1090;&#1086;&#1074;</span>
+								</a>
+							</li><li>
+								<a shape="rect" href="./search.php?search_id=active_topics&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" role="menuitem">
+									<i class="icon fa-file-o fa-fw" aria-hidden="true"></i><span>&#1040;&#1082;&#1090;&#1080;&#1074;&#1085;&#1099;&#1077; &#1090;&#1077;&#1084;&#1099;</span>
+								</a>
+							</li><li class="separator"></li><li>
+								<a shape="rect" href="./search.php?sid=4e23bda503fd320b6f2e4ded1bbb1252" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>&#1055;&#1086;&#1080;&#1089;&#1082;</span>
+								</a>
+							</li><li class="separator"></li><li>
+								<a shape="rect" href="https://www.apple-iphone.ru/" role="menuitem">
+									<i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Apple-iPhone.ru</span>
+								</a>
+							</li><li class="separator"></li></ul>
+			</div>
+		</li><li class="rightside" data-skip-responsive="true">
+			<a shape="rect" href="./ucp.php?mode=login&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" title="&#1042;&#1093;&#1086;&#1076;" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>&#1042;&#1093;&#1086;&#1076;</span>
+			</a>
+		</li><li class="rightside" data-skip-responsive="true">
+				<a shape="rect" href="./ucp.php?mode=register&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" role="menuitem">
+					<i class="icon fa-pencil-square-o fa-fw" aria-hidden="true"></i><span>&#1056;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1103;</span>
+				</a>
+			</li></ul>
+
+	</div>
+</div>                   
+            
+                        <div class="headerbar has_navbar" role="banner">
+                
+			<div class="headerbar_overlay_container">        
+            	<div class="particles_container" id="particles-js">
+					
+                    
+                
+
+                        <div class="site-description" id="site-description">
+                                                            <h1>&#1060;&#1086;&#1088;&#1091;&#1084; Apple-iPhone.ru</h1>
+                                <p>&#1076;&#1083;&#1103; &#1074;&#1083;&#1072;&#1076;&#1077;&#1083;&#1100;&#1094;&#1077;&#1074; iPhone, iPad &#1080; MacBook</p>
+                                                    </div>
+
+
+                    
+                                 
+                </div>              
             </div>
-    <div class="gray">&#23536;&#57787;&#20426;&#37734;&#12583;&#22158;&#28729;&#12833;&#28231;&#38171;&#27510;cwebkf</div>
-</div>
-<div class="pop" id="pop" style="display: none;">
-    <ul><li onclick="showAdd()">&#23075;&#35826;&#23006;&#37413;&#28143;C&#32448;&#24807;&#23599;&#37413;&#28614;&#22476;UC&#23092;&#24538;&#59213;&#37731;&#12585;&#59131;&#26916;&#65533;</li><li id="tips" onclick="noNotice();">&#28051;&#23941;&#21824;&#37819;&#24878;&#12378;</li><li id="close" onclick="closeTip()">&#37711;&#25277;&#26868;</li></ul>
-</div>
-<script>
-    var platform = navigator.platform;
-    var ua = navigator.userAgent;
-    var ios = /iPhone|iPad|iPod/.test(platform) &amp;&amp; ua.indexOf( "AppleWebKit" ) &gt; -1;
-    var andriod = ua.toLocaleLowerCase().indexOf( "android" ) &gt; -1;
-
-    var iframe;
-    var INDEX =  true ;
-    function showAdd(){
-        center();
-        iframe.style.display = 'block';
-        closeTip();
-    }
-
-    function center() {
-        iframe.style.top = (document.documentElement.scrollTop + (document.documentElement.clientHeight - 160) / 2) + "px";
-        iframe.style.left = (document.documentElement.scrollLeft + (document.documentElement.clientWidth - 320) / 2) + "px";
-    }
-
-    function receiveMessage(event){
-        var msg = event.data.message;
-        if(msg){
-            if(msg == 'already exist'){
-                iframe.parentNode.removeChild(iframe);
-            }else if(msg  == 'close' || msg  == 'success' || msg  == 'cancle'){
-                iframe.parentNode.removeChild(iframe);
-            }else if(!msg){
-                document.getElementById('pop').style.display = 'block';
-            }
-        }
-    }
-
-    window.addEventListener('message',receiveMessage,false);
-
-    function closeTip(){
-        document.getElementById('pop').style.display = 'none';
-    }
-
-    function noNotice(){
-        setCookie('uc_tags_noNotice','ok',10);
-        closeTip();
-    }
-
-    /**
-     @&#25652;&#26338;&#20788;&#37911;&#22559;&#28488;&#28766;&#21613;&#31795;&#38318;&#65533;
-     **/
-    function footFix(){
-        try{
-            var footer = document.getElementById("footer");
-            var body = document.getElementById("body");
-
-            var bodyHeight = document.body.clientHeight;
-            var screenHeight = window.innerHeight;
-            if(bodyHeight &lt; screenHeight){
-                footer.style.cssText="position:absolute;bottom:0px;left:0;";
-                body.style.cssText = "padding:0 0 100px 0";
-            }else{
-                footer.style.cssText= '';
-                body.style.cssText = "";
-            }
-        }catch(e){}
-        setTimeout(footFix,1000);
-    }
-
-    function createTipIfram(){
-        iframe = document.createElement('iframe');
-        iframe.style.position = 'fixed';
-        iframe.style.display = 'none';
-        iframe.style.borderRadius = '10px';
-        iframe.style.backgroundColor = 'transparent';
-        iframe.src = 'http://app.uc.cn/appstore/AppCenter/frame?uc_param_str=nieidnutssvebipfcp&amp;api_ver=2.0&amp;id=2222';
-        iframe.height='180';
-        iframe.width='320';
-        iframe.frameborder='no';
-        iframe.scrolling='no';
-        iframe.allowtransparency = true;
-        document.body.appendChild(iframe);
-    }
-
-    footFix();
-    if(andriod){
-        if(checkCookie('uc_tags_oncome')){
-            if(!checkCookie('uc_tags_noNotice') &amp;&amp; INDEX){
-                createTipIfram();
-            }
-        }else{
-            createTipIfram();
-            setCookie('uc_tags_oncome','ok',10);
-        }
-    }
-
-    function getCookie(c_name)
-    {
-        if (document.cookie.length&gt;0)
-        {
-            c_start=document.cookie.indexOf(c_name + "=")
-            if (c_start!=-1)
-            {
-                c_start=c_start + c_name.length+1
-                c_end=document.cookie.indexOf(";",c_start)
-                if (c_end==-1) c_end=document.cookie.length
-                return unescape(document.cookie.substring(c_start,c_end))
-            }
-        }
-        return ""
-    }
-
-    function setCookie(c_name,value,expiredays)
-    {
-        var exdate=new Date()
-        exdate.setDate(exdate.getDate()+expiredays)
-        document.cookie=c_name+ "=" +escape(value)+
-                ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
-    }
-
-    function checkCookie(c_name)
-    {
-        var value=getCookie(c_name)
-        return value!=null &amp;&amp; value!="";
-    }
-
-    //&#37714;&#12421;&#30078;&#28051;&#22795;&#26591;QQ&#37922;&#12582;&#22491;&#38322;&#23943;&#30086;&#28725;&#21977;&#29212;
+                    
+            </div>  
+                        
+                  
+        </div>
+        
+        <div id="inner-wrap">
+        
+       
+            <ul class="nav-breadcrumbs linklist navlinks" id="nav-breadcrumbs" role="menubar"><li class="breadcrumbs">
+                                                                <span class="crumb" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a shape="rect" href="./index.php?sid=4e23bda503fd320b6f2e4ded1bbb1252" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">&#1060;&#1086;&#1088;&#1091;&#1084;&#1099; &#1040;&#1081;&#1092;&#1086;&#1085;, &#1040;&#1081;&#1087;&#1101;&#1076; &#1080; &#1052;&#1072;&#1082;&#1073;&#1091;&#1082;</span></a></span>
+        
+                                                                    <span class="crumb" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="208"><a shape="rect" href="./viewforum.php?f=208&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" itemprop="url"><span itemprop="title">&#1052;&#1080;&#1088; Android</span></a></span>
+                                                                                            <span class="crumb" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="150"><a shape="rect" href="./viewforum.php?f=150&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" itemprop="url"><span itemprop="title">&#1059;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1072; &#1085;&#1072; Android</span></a></span>
+                                                                                            <span class="crumb" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="187"><a shape="rect" href="./viewforum.php?f=187&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" itemprop="url"><span itemprop="title">Oysters</span></a></span>
+                                                                                </li><li class="rightside responsive-search">
+                        <a shape="rect" href="./search.php?sid=4e23bda503fd320b6f2e4ded1bbb1252" title="&#1055;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1099; &#1088;&#1072;&#1089;&#1096;&#1080;&#1088;&#1077;&#1085;&#1085;&#1086;&#1075;&#1086; &#1087;&#1086;&#1080;&#1089;&#1082;&#1072;" role="menuitem">
+                            <i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">&#1055;&#1086;&#1080;&#1089;&#1082;</span>
+                        </a>
+                    </li></ul>
+                
     
-    var promptMsg = $("#promptMsg").length &gt; 0 ? $("#promptMsg") : $(".promptMsg");
-    function showPrompt(p,p2,msg,timeout){
-        promptMsg.html(msg);
-        promptMsg.parent().show();
-        setTimeout(function(){
-            promptMsg.parent().hide();
-        },timeout);
-    }
-</script>
-<script src="http://tajs.qq.com/stats?sId=9712955" type="text/javascript" charset="UTF-8"></script>
+            
+        <a shape="rect" class="anchor" id="start_here"></a>
+        <div class="page-body" id="page-body" role="main">
+                
+             
+	<div class="panel">
+		<div class="inner">
+			<div class="content">
+									<h2 class="login-title">&#1042;&#1086;&#1081;&#1090;&#1080; &#1085;&#1072; &#1092;&#1086;&#1088;&#1091;&#1084; &#1095;&#1077;&#1088;&#1077;&#1079; &#1089;&#1086;&#1094;&#1089;&#1077;&#1090;&#1100;</h2>
+								<div class="oneall_social_login_providers" id="oneall_social_login_overall_header_content_before" style="margin-top:10px"></div>
+					
+					<script type="text/javascript">
+						// &lt;![CDATA[					            
+							var _oneall = _oneall || [];
+							_oneall.push(['social_login', 'set_providers', ['facebook','mailru','odnoklassniki','vkontakte','youtube']]);	
+							_oneall.push(['social_login', 'set_callback_uri', 'https://www.apple-iphone.ru/forum/viewforum.php?f=187&amp;st=365']);				
+							_oneall.push(['social_login', 'set_custom_css_uri', (("https:" == document.location.protocol) ? "https://secure" : "http://public") + '.oneallcdn.com/css/api/socialize/themes/phpbb/default.css']);
+							_oneall.push(['social_login', 'do_render_ui', 'oneall_social_login_overall_header_content_before']);
+						// ]]&gt;
+					</script>		
+			</div>
+		</div>
+</div>
+		<div id="phpbb_announcement" style="background-color:#3b343b">
+				<div><a shape="rect" class="postlink" href="https://www.apple-iphone.ru/news/9-dostupnykh-tovarov-s-aliexpress-kotorye-porazha/">9 &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;&#1093; &#1090;&#1086;&#1074;&#1072;&#1088;&#1086;&#1074; &#1089; AliExpress</a> | <a shape="rect" class="postlink" href="https://www.apple-iphone.ru/editorial/wwdc-2018-chto-pokazhut-ios-12-kakie-ustroystva-p/">WWDC 2018</a> | <a shape="rect" class="postlink" href="https://www.apple-iphone.ru/news/ios-12-data-vykhoda-obzor-chto-novogo-kaki/">&#1046;&#1076;&#1077;&#1084; iOS 12</a> | <a shape="rect" class="postlink" href="https://www.apple-iphone.ru/tag/akcii/">&#1040;&#1082;&#1094;&#1080;&#1080;</a></div>
+	</div>
+          
+            
+                            
+<h2 class="forum-title"><a shape="rect" href="./viewforum.php?f=187&amp;st=365&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">Oysters</a></h2>
+
+
+
+	<div class="action-bar bar-top">
+
+				
+		<a shape="rect" class="button specialbutton" href="./posting.php?mode=post&amp;f=187&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" title="&#1053;&#1086;&#1074;&#1072;&#1103; &#1090;&#1077;&#1084;&#1072;">
+							<span>&#1053;&#1086;&#1074;&#1072;&#1103; &#1090;&#1077;&#1084;&#1072;</span> <i class="icon fa-pencil fa-fw" aria-hidden="true"></i>
+					</a>
+				
+			<div class="search-box" role="search">
+			<form enctype="application/x-www-form-urlencoded" method="get" id="forum-search" action="./search.php?sid=4e23bda503fd320b6f2e4ded1bbb1252">
+			<fieldset>
+				<input type="search" class="inputbox search tiny" id="search_keywords" name="keywords" size="20" placeholder="&#1055;&#1086;&#1080;&#1089;&#1082; &#1074; &#1092;&#1086;&#1088;&#1091;&#1084;&#1077;&#8230;"></input>
+				<button type="submit" class="button button-search" title="&#1055;&#1086;&#1080;&#1089;&#1082;">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">&#1055;&#1086;&#1080;&#1089;&#1082;</span>
+				</button>
+				<a shape="rect" class="button button-search-end" href="./search.php?sid=4e23bda503fd320b6f2e4ded1bbb1252" title="&#1056;&#1072;&#1089;&#1096;&#1080;&#1088;&#1077;&#1085;&#1085;&#1099;&#1081; &#1087;&#1086;&#1080;&#1089;&#1082;">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">&#1056;&#1072;&#1089;&#1096;&#1080;&#1088;&#1077;&#1085;&#1085;&#1099;&#1081; &#1087;&#1086;&#1080;&#1089;&#1082;</span>
+				</a>
+				<input type="hidden" name="fid[0]" value="187"></input>
+<input type="hidden" name="sid" value="4e23bda503fd320b6f2e4ded1bbb1252"></input>
+
+			</fieldset>
+			</form>
+		</div>
+	
+	<div class="pagination">
+            
+		<a shape="rect" class="mark" href="./viewforum.php?hash=cd44399f&amp;f=187&amp;mark=topics&amp;mark_time=1521037597&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" accesskey="m" data-ajax="mark_topics_read">&#1054;&#1090;&#1084;&#1077;&#1090;&#1080;&#1090;&#1100; &#1074;&#1089;&#1077; &#1090;&#1077;&#1084;&#1099; &#1082;&#1072;&#1082; &#1087;&#1088;&#1086;&#1095;&#1090;&#1105;&#1085;&#1085;&#1099;&#1077;</a> &#8226; 		0 &#1090;&#1077;&#1084;
+					&#8226; &#1057;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094;&#1072; <strong>1</strong> &#1080;&#1079; <strong>1</strong>
+			</div>
+
+	</div>
+
+
+
+
+	
+			<div class="forumbg announcement">
+		<div class="inner">
+		<ul class="topiclist"><li class="header">
+				<dl class="row-item"><dt></dt></dl><div class="list-inner">&#1054;&#1073;&#1098;&#1103;&#1074;&#1083;&#1077;&#1085;&#1080;&#1103;</div>
+					<dl><dd class="posts"><span class="icon fa-comments"></span></dd><dd class="views"><span class="icon fa-eye"></span></dd><dd class="lastpost"><span><span class="icon fa-clock-o"></span></span></dd></dl>
+			</li></ul>
+		<ul class="topiclist topics"><li class="row bg1 global-announce">
+						<dl class="row-item global_unread"><dt title="&#1053;&#1077;&#1087;&#1088;&#1086;&#1095;&#1080;&#1090;&#1072;&#1085;&#1085;&#1099;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1103;">
+					<a shape="rect" class="row-item-link" href="./viewtopic.php?f=10&amp;t=99251&amp;view=unread&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#unread"></a>					</dt></dl><div class="list-inner">
+						                        
+                        
+                        
+						                        	<span class="topic_type topic_type_announce">
+                            	<i class="icon fa-bullhorn fa-fw"></i>                            	
+                            </span>
+                        																		                                                                      
+													<a shape="rect" class="unread" href="./viewtopic.php?f=10&amp;t=99251&amp;view=unread&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#unread">
+								<i class="icon fa-circle fa-fw icon-red icon-md" aria-hidden="true"></i>
+							</a>
+						                        
+                        
+                        
+						<a shape="rect" class="topictitle" href="./viewtopic.php?f=10&amp;t=99251&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;&#1077; &#1080; &#1087;&#1086;&#1083;&#1077;&#1079;&#1085;&#1099;&#1077; &#1090;&#1086;&#1074;&#1072;&#1088;&#1099; &#1089; AliExpress</a>
+						<br clear="none"></br>
+						
+												<div class="responsive-show" style="display: none;">
+							&#1055;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1077;  <a shape="rect" class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=2&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" style="color: #D03C3C;">_Alexey_</a> &#171; <a shape="rect" href="./viewtopic.php?f=10&amp;t=99251&amp;p=637545&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#p637545" title="&#1055;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1082; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1084;&#1091; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1102;">11 &#1052;&#1072;&#1088;&#1090; 2018, 18:20</a>
+							<br clear="none"></br>&#1044;&#1086;&#1073;&#1072;&#1074;&#1083;&#1077;&#1085;&#1086; &#1074; &#1092;&#1086;&#1088;&#1091;&#1084;&#1077; <a shape="rect" href="./viewforum.php?f=10&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">FAQ &#1087;&#1086; iPhone, iPad, iOS, App Store, Apple ID</a>						</div>
+												
+						<div class="topic-poster responsive-hide">
+														 <a shape="rect" class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=2&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" style="color: #D03C3C;">_Alexey_</a> <span class="clutter">&#187; 11 &#1052;&#1072;&#1088;&#1090; 2018, 18:20</span>
+							 &#187; &#1074; &#1092;&#1086;&#1088;&#1091;&#1084;&#1077; <a shape="rect" href="./viewforum.php?f=10&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">FAQ &#1087;&#1086; iPhone, iPad, iOS, App Store, Apple ID</a>						</div>
+
+						
+											</div>
+				
+				<dl><dd class="posts">0 <dfn>&#1054;&#1090;&#1074;&#1077;&#1090;&#1099;</dfn></dd><dd class="views">66 <dfn>&#1055;&#1088;&#1086;&#1089;&#1084;&#1086;&#1090;&#1088;&#1099;</dfn></dd><dd class="lastpost">
+					<span><dfn>&#1055;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1077; </dfn> <a shape="rect" class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=2&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" style="color: #D03C3C;">_Alexey_</a>
+													<a shape="rect" href="./viewtopic.php?f=10&amp;t=99251&amp;p=637545&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#p637545" title="&#1055;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1082; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1084;&#1091; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1102;">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br clear="none"></br>11 &#1052;&#1072;&#1088;&#1090; 2018, 18:20
+					</span>
+				</dd></dl>
+					</li><li class="row bg2 global-announce">
+						<dl class="row-item global_unread"><dt title="&#1053;&#1077;&#1087;&#1088;&#1086;&#1095;&#1080;&#1090;&#1072;&#1085;&#1085;&#1099;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1103;">
+					<a shape="rect" class="row-item-link" href="./viewtopic.php?f=11&amp;t=94922&amp;view=unread&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#unread"></a>					</dt></dl><div class="list-inner">
+						                        
+                        
+                        
+						                        	<span class="topic_type topic_type_announce">
+                            	<i class="icon fa-bullhorn fa-fw"></i>                            	
+                            </span>
+                        																		                                                                      
+													<a shape="rect" class="unread" href="./viewtopic.php?f=11&amp;t=94922&amp;view=unread&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#unread">
+								<i class="icon fa-circle fa-fw icon-red icon-md" aria-hidden="true"></i>
+							</a>
+						                        
+                        
+                        
+						<a shape="rect" class="topictitle" href="./viewtopic.php?f=11&amp;t=94922&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">&#1063;&#1090;&#1086; &#1085;&#1091;&#1078;&#1085;&#1086; &#1079;&#1085;&#1072;&#1090;&#1100; &#1087;&#1077;&#1088;&#1077;&#1076; &#1087;&#1086;&#1082;&#1091;&#1087;&#1082;&#1086;&#1081; &#1080;&#1083;&#1080; &#1087;&#1088;&#1086;&#1076;&#1072;&#1078;&#1077;&#1081; &#1040;&#1081;&#1092;&#1086;&#1085;&#1072; [FAQ]</a>
+						<br clear="none"></br>
+						
+												<div class="responsive-show" style="display: none;">
+							&#1055;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1077;  <a shape="rect" class="username" href="./memberlist.php?mode=viewprofile&amp;u=212175&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">&#1063;&#1072;&#1085;&#1072;&#1081;&#1103;</a> &#171; <a shape="rect" href="./viewtopic.php?f=11&amp;t=94922&amp;p=636336&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#p636336" title="&#1055;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1082; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1084;&#1091; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1102;">10 &#1060;&#1077;&#1074;&#1088;&#1072;&#1083;&#1100; 2018, 17:50</a>
+							<br clear="none"></br>&#1044;&#1086;&#1073;&#1072;&#1074;&#1083;&#1077;&#1085;&#1086; &#1074; &#1092;&#1086;&#1088;&#1091;&#1084;&#1077; <a shape="rect" href="./viewforum.php?f=11&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">&#1055;&#1088;&#1086;&#1076;&#1072;&#1090;&#1100; iPhone, iPad, iPod, Apple Watch</a>						</div>
+													<span class="responsive-show" style="display: none;">&#1054;&#1090;&#1074;&#1077;&#1090;&#1099;: <strong>34</strong></span>
+													
+						<div class="topic-poster responsive-hide">
+							<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>							 <a shape="rect" class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=2&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" style="color: #D03C3C;">_Alexey_</a> <span class="clutter">&#187; 21 &#1044;&#1077;&#1082;&#1072;&#1073;&#1088;&#1100; 2016, 13:11</span>
+							 &#187; &#1074; &#1092;&#1086;&#1088;&#1091;&#1084;&#1077; <a shape="rect" href="./viewforum.php?f=11&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">&#1055;&#1088;&#1086;&#1076;&#1072;&#1090;&#1100; iPhone, iPad, iPod, Apple Watch</a>						</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul><li><a shape="rect" class="button" href="./viewtopic.php?f=11&amp;t=94922&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">1</a></li><li><a shape="rect" class="button" href="./viewtopic.php?f=11&amp;t=94922&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=10">2</a></li><li><a shape="rect" class="button" href="./viewtopic.php?f=11&amp;t=94922&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=20">3</a></li><li><a shape="rect" class="button" href="./viewtopic.php?f=11&amp;t=94922&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=30">4</a></li></ul>
+						</div>
+						
+											</div>
+				
+				<dl><dd class="posts">34 <dfn>&#1054;&#1090;&#1074;&#1077;&#1090;&#1099;</dfn></dd><dd class="views">46125 <dfn>&#1055;&#1088;&#1086;&#1089;&#1084;&#1086;&#1090;&#1088;&#1099;</dfn></dd><dd class="lastpost">
+					<span><dfn>&#1055;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1077; </dfn> <a shape="rect" class="username" href="./memberlist.php?mode=viewprofile&amp;u=212175&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">&#1063;&#1072;&#1085;&#1072;&#1081;&#1103;</a>
+													<a shape="rect" href="./viewtopic.php?f=11&amp;t=94922&amp;p=636336&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#p636336" title="&#1055;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1082; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1084;&#1091; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1102;">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br clear="none"></br>10 &#1060;&#1077;&#1074;&#1088;&#1072;&#1083;&#1100; 2018, 17:50
+					</span>
+				</dd></dl>
+					</li><li class="row bg1 global-announce">
+						<dl class="row-item global_unread"><dt title="&#1053;&#1077;&#1087;&#1088;&#1086;&#1095;&#1080;&#1090;&#1072;&#1085;&#1085;&#1099;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1103;">
+					<a shape="rect" class="row-item-link" href="./viewtopic.php?f=34&amp;t=43331&amp;view=unread&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#unread"></a>					</dt></dl><div class="list-inner">
+						                        
+                        
+                        
+						                        	<span class="topic_type topic_type_announce">
+                            	<i class="icon fa-bullhorn fa-fw"></i>                            	
+                            </span>
+                        																		                                                                      
+													<a shape="rect" class="unread" href="./viewtopic.php?f=34&amp;t=43331&amp;view=unread&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#unread">
+								<i class="icon fa-circle fa-fw icon-red icon-md" aria-hidden="true"></i>
+							</a>
+						                        
+                        
+                        
+						<a shape="rect" class="topictitle" href="./viewtopic.php?f=34&amp;t=43331&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">&#1055;&#1083;&#1072;&#1090;&#1085;&#1099;&#1077; &#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103; &#1080;&#1079; App Store - &#1073;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1086;!</a>
+						<br clear="none"></br>
+						
+												<div class="responsive-show" style="display: none;">
+							&#1055;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1077;  <a shape="rect" class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=203752&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" style="color: #D03C3C;">Andrei@</a> &#171; <a shape="rect" href="./viewtopic.php?f=34&amp;t=43331&amp;p=637593&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#p637593" title="&#1055;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1082; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1084;&#1091; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1102;">&#1057;&#1077;&#1075;&#1086;&#1076;&#1085;&#1103;, 07:28</a>
+							<br clear="none"></br>&#1044;&#1086;&#1073;&#1072;&#1074;&#1083;&#1077;&#1085;&#1086; &#1074; &#1092;&#1086;&#1088;&#1091;&#1084;&#1077; <a shape="rect" href="./viewforum.php?f=34&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">AppStore</a>						</div>
+													<span class="responsive-show" style="display: none;">&#1054;&#1090;&#1074;&#1077;&#1090;&#1099;: <strong>1924</strong></span>
+													
+						<div class="topic-poster responsive-hide">
+							<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>							 <a shape="rect" class="username" href="./memberlist.php?mode=viewprofile&amp;u=86227&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">Hamster-Ninja</a> <span class="clutter">&#187; 28 &#1054;&#1082;&#1090;&#1103;&#1073;&#1088;&#1100; 2011, 13:11</span>
+							 &#187; &#1074; &#1092;&#1086;&#1088;&#1091;&#1084;&#1077; <a shape="rect" href="./viewforum.php?f=34&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">AppStore</a>						</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul><li><a shape="rect" class="button" href="./viewtopic.php?f=34&amp;t=43331&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">1</a></li><li class="ellipsis"><span>&#8230;</span></li><li><a shape="rect" class="button" href="./viewtopic.php?f=34&amp;t=43331&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=1880">189</a></li><li><a shape="rect" class="button" href="./viewtopic.php?f=34&amp;t=43331&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=1890">190</a></li><li><a shape="rect" class="button" href="./viewtopic.php?f=34&amp;t=43331&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=1900">191</a></li><li><a shape="rect" class="button" href="./viewtopic.php?f=34&amp;t=43331&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=1910">192</a></li><li><a shape="rect" class="button" href="./viewtopic.php?f=34&amp;t=43331&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=1920">193</a></li></ul>
+						</div>
+						
+											</div>
+				
+				<dl><dd class="posts">1924 <dfn>&#1054;&#1090;&#1074;&#1077;&#1090;&#1099;</dfn></dd><dd class="views">1931654 <dfn>&#1055;&#1088;&#1086;&#1089;&#1084;&#1086;&#1090;&#1088;&#1099;</dfn></dd><dd class="lastpost">
+					<span><dfn>&#1055;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1077; </dfn> <a shape="rect" class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=203752&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" style="color: #D03C3C;">Andrei@</a>
+													<a shape="rect" href="./viewtopic.php?f=34&amp;t=43331&amp;p=637593&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#p637593" title="&#1055;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1082; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1084;&#1091; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1102;">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br clear="none"></br>&#1057;&#1077;&#1075;&#1086;&#1076;&#1085;&#1103;, 07:28
+					</span>
+				</dd></dl>
+					</li><li class="row bg2 global-announce">
+						<dl class="row-item global_unread_locked"><dt title="&#1053;&#1077;&#1087;&#1088;&#1086;&#1095;&#1080;&#1090;&#1072;&#1085;&#1085;&#1099;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1103;">
+					<a shape="rect" class="row-item-link" href="./viewtopic.php?f=10&amp;t=11873&amp;view=unread&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#unread"></a>					</dt></dl><div class="list-inner">
+						                        
+                        
+                        
+						                        	<span class="topic_type topic_type_announce">
+                            	<i class="icon fa-bullhorn fa-fw"></i>                            	
+                            </span>
+                        																		                                                                      
+													<a shape="rect" class="unread" href="./viewtopic.php?f=10&amp;t=11873&amp;view=unread&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#unread">
+								<i class="icon fa-circle fa-fw icon-red icon-md" aria-hidden="true"></i>
+							</a>
+						                        
+                        
+                        
+						<a shape="rect" class="topictitle" href="./viewtopic.php?f=10&amp;t=11873&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">iPhone &#1080; iPad FAQ &#1086;&#1090; Annalion</a>
+						<br clear="none"></br>
+						
+												<div class="responsive-show" style="display: none;">
+							&#1055;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1077;  <a shape="rect" class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=2&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" style="color: #D03C3C;">_Alexey_</a> &#171; <a shape="rect" href="./viewtopic.php?f=10&amp;t=11873&amp;p=610386&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#p610386" title="&#1055;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1082; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1084;&#1091; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1102;">16 &#1060;&#1077;&#1074;&#1088;&#1072;&#1083;&#1100; 2016, 00:53</a>
+							<br clear="none"></br>&#1044;&#1086;&#1073;&#1072;&#1074;&#1083;&#1077;&#1085;&#1086; &#1074; &#1092;&#1086;&#1088;&#1091;&#1084;&#1077; <a shape="rect" href="./viewforum.php?f=10&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">FAQ &#1087;&#1086; iPhone, iPad, iOS, App Store, Apple ID</a>						</div>
+													<span class="responsive-show" style="display: none;">&#1054;&#1090;&#1074;&#1077;&#1090;&#1099;: <strong>483</strong></span>
+													
+						<div class="topic-poster responsive-hide">
+														 <a shape="rect" class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=9942&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" style="color: #D03C3C;">Annalion</a> <span class="clutter">&#187; 31 &#1052;&#1072;&#1081; 2009, 11:41</span>
+							 &#187; &#1074; &#1092;&#1086;&#1088;&#1091;&#1084;&#1077; <a shape="rect" href="./viewforum.php?f=10&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">FAQ &#1087;&#1086; iPhone, iPad, iOS, App Store, Apple ID</a>						</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul><li><a shape="rect" class="button" href="./viewtopic.php?f=10&amp;t=11873&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">1</a></li><li class="ellipsis"><span>&#8230;</span></li><li><a shape="rect" class="button" href="./viewtopic.php?f=10&amp;t=11873&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=440">45</a></li><li><a shape="rect" class="button" href="./viewtopic.php?f=10&amp;t=11873&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=450">46</a></li><li><a shape="rect" class="button" href="./viewtopic.php?f=10&amp;t=11873&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=460">47</a></li><li><a shape="rect" class="button" href="./viewtopic.php?f=10&amp;t=11873&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=470">48</a></li><li><a shape="rect" class="button" href="./viewtopic.php?f=10&amp;t=11873&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252&amp;start=480">49</a></li></ul>
+						</div>
+						
+											</div>
+				
+				<dl><dd class="posts">483 <dfn>&#1054;&#1090;&#1074;&#1077;&#1090;&#1099;</dfn></dd><dd class="views">618527 <dfn>&#1055;&#1088;&#1086;&#1089;&#1084;&#1086;&#1090;&#1088;&#1099;</dfn></dd><dd class="lastpost">
+					<span><dfn>&#1055;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1077; </dfn> <a shape="rect" class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=2&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" style="color: #D03C3C;">_Alexey_</a>
+													<a shape="rect" href="./viewtopic.php?f=10&amp;t=11873&amp;p=610386&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#p610386" title="&#1055;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1082; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1084;&#1091; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1102;">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br clear="none"></br>16 &#1060;&#1077;&#1074;&#1088;&#1072;&#1083;&#1100; 2016, 00:53
+					</span>
+				</dd></dl>
+					</li><li class="row bg1 global-announce">
+						<dl class="row-item global_unread_locked"><dt title="&#1053;&#1077;&#1087;&#1088;&#1086;&#1095;&#1080;&#1090;&#1072;&#1085;&#1085;&#1099;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1103;">
+					<a shape="rect" class="row-item-link" href="./viewtopic.php?f=10&amp;t=2470&amp;view=unread&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#unread"></a>					</dt></dl><div class="list-inner">
+						                        
+                        
+                        
+						                        	<span class="topic_type topic_type_announce">
+                            	<i class="icon fa-bullhorn fa-fw"></i>                            	
+                            </span>
+                        																		                                                                      
+													<a shape="rect" class="unread" href="./viewtopic.php?f=10&amp;t=2470&amp;view=unread&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#unread">
+								<i class="icon fa-circle fa-fw icon-red icon-md" aria-hidden="true"></i>
+							</a>
+						                        
+                        
+                        
+						<a shape="rect" class="topictitle" href="./viewtopic.php?f=10&amp;t=2470&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">&#1041;&#1086;&#1083;&#1100;&#1096;&#1086;&#1081; FAQ &#1087;&#1086; iPhone, iPad, iOS, App Store, iCloud</a>
+						<br clear="none"></br>
+						
+												<div class="responsive-show" style="display: none;">
+							&#1055;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1077;  <a shape="rect" class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=2&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" style="color: #D03C3C;">_Alexey_</a> &#171; <a shape="rect" href="./viewtopic.php?f=10&amp;t=2470&amp;p=617730&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#p617730" title="&#1055;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1082; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1084;&#1091; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1102;">19 &#1071;&#1085;&#1074;&#1072;&#1088;&#1100; 2017, 15:38</a>
+							<br clear="none"></br>&#1044;&#1086;&#1073;&#1072;&#1074;&#1083;&#1077;&#1085;&#1086; &#1074; &#1092;&#1086;&#1088;&#1091;&#1084;&#1077; <a shape="rect" href="./viewforum.php?f=10&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">FAQ &#1087;&#1086; iPhone, iPad, iOS, App Store, Apple ID</a>						</div>
+													<span class="responsive-show" style="display: none;">&#1054;&#1090;&#1074;&#1077;&#1090;&#1099;: <strong>1</strong></span>
+													
+						<div class="topic-poster responsive-hide">
+														 <a shape="rect" class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=2&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" style="color: #D03C3C;">_Alexey_</a> <span class="clutter">&#187; 20 &#1040;&#1087;&#1088;&#1077;&#1083;&#1100; 2008, 15:10</span>
+							 &#187; &#1074; &#1092;&#1086;&#1088;&#1091;&#1084;&#1077; <a shape="rect" href="./viewforum.php?f=10&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">FAQ &#1087;&#1086; iPhone, iPad, iOS, App Store, Apple ID</a>						</div>
+
+						
+											</div>
+				
+				<dl><dd class="posts">1 <dfn>&#1054;&#1090;&#1074;&#1077;&#1090;&#1099;</dfn></dd><dd class="views">1405903 <dfn>&#1055;&#1088;&#1086;&#1089;&#1084;&#1086;&#1090;&#1088;&#1099;</dfn></dd><dd class="lastpost">
+					<span><dfn>&#1055;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1077; </dfn> <a shape="rect" class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=2&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" style="color: #D03C3C;">_Alexey_</a>
+													<a shape="rect" href="./viewtopic.php?f=10&amp;t=2470&amp;p=617730&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252#p617730" title="&#1055;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1082; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1084;&#1091; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1102;">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br clear="none"></br>19 &#1071;&#1085;&#1074;&#1072;&#1088;&#1100; 2017, 15:38
+					</span>
+				</dd></dl>
+					</li></ul>
+		</div>
+	</div>
+	
+
+	<div class="action-bar bar-bottom">
+					
+			<a shape="rect" class="button specialbutton" href="./posting.php?mode=post&amp;f=187&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" title="&#1053;&#1086;&#1074;&#1072;&#1103; &#1090;&#1077;&#1084;&#1072;">
+							<span>&#1053;&#1086;&#1074;&#1072;&#1103; &#1090;&#1077;&#1084;&#1072;</span> <i class="icon fa-pencil fa-fw" aria-hidden="true"></i>
+						</a>
+
+					        
+        
+
+					<form enctype="application/x-www-form-urlencoded" method="post" action="./viewforum.php?f=187&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252">
+			<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span class="button button-secondary dropdown-trigger dropdown-select" title="&#1053;&#1072;&#1089;&#1090;&#1088;&#1086;&#1081;&#1082;&#1080; &#1086;&#1090;&#1086;&#1073;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103; &#1080; &#1089;&#1086;&#1088;&#1090;&#1080;&#1088;&#1086;&#1074;&#1082;&#1080;">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>&#1055;&#1086;&#1082;&#1072;&#1079;&#1072;&#1090;&#1100;: <select id="st" name="st"><option value="0">&#1042;&#1089;&#1077; &#1090;&#1077;&#1084;&#1099;</option><option value="1">1 &#1076;&#1077;&#1085;&#1100;</option><option value="7">7 &#1076;&#1085;&#1077;&#1081;</option><option value="14">2 &#1085;&#1077;&#1076;&#1077;&#1083;&#1080;</option><option value="30">1 &#1084;&#1077;&#1089;&#1103;&#1094;</option><option value="90">3 &#1084;&#1077;&#1089;&#1103;&#1094;&#1072;</option><option value="180">6 &#1084;&#1077;&#1089;&#1103;&#1094;&#1077;&#1074;</option><option selected="selected" value="365">1 &#1075;&#1086;&#1076;</option></select></label>
+								<label>&#1055;&#1086;&#1083;&#1077; &#1089;&#1086;&#1088;&#1090;&#1080;&#1088;&#1086;&#1074;&#1082;&#1080;: <select id="sk" name="sk"><option value="a">&#1040;&#1074;&#1090;&#1086;&#1088;</option><option selected="selected" value="t">&#1042;&#1088;&#1077;&#1084;&#1103; &#1088;&#1072;&#1079;&#1084;&#1077;&#1097;&#1077;&#1085;&#1080;&#1103;</option><option value="r">&#1054;&#1090;&#1074;&#1077;&#1090;&#1099;</option><option value="s">&#1047;&#1072;&#1075;&#1086;&#1083;&#1086;&#1074;&#1086;&#1082;</option><option value="v">&#1055;&#1088;&#1086;&#1089;&#1084;&#1086;&#1090;&#1088;&#1099;</option></select></label>
+				<label>&#1055;&#1086;&#1088;&#1103;&#1076;&#1086;&#1082;: <select id="sd" name="sd"><option value="a">&#1087;&#1086; &#1074;&#1086;&#1079;&#1088;&#1072;&#1089;&#1090;&#1072;&#1085;&#1080;&#1102;</option><option selected="selected" value="d">&#1087;&#1086; &#1091;&#1073;&#1099;&#1074;&#1072;&#1085;&#1080;&#1102;</option></select></label>
+								<hr class="dashed"></hr>
+				<input type="submit" class="button2" name="sort" value="&#1055;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080;"></input>
+						</fieldset>
+		</div>
+	</div>
+</div>
+			</form>
+		
+		<div class="pagination">
+			<a shape="rect" href="./viewforum.php?hash=cd44399f&amp;f=187&amp;mark=topics&amp;mark_time=1521037597&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" data-ajax="mark_topics_read">&#1054;&#1090;&#1084;&#1077;&#1090;&#1080;&#1090;&#1100; &#1074;&#1089;&#1077; &#1090;&#1077;&#1084;&#1099; &#1082;&#1072;&#1082; &#1087;&#1088;&#1086;&#1095;&#1090;&#1105;&#1085;&#1085;&#1099;&#1077;</a> &#8226; 			0 &#1090;&#1077;&#1084;
+							 &#8226; &#1057;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094;&#1072; <strong>1</strong> &#1080;&#1079; <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a shape="rect" class="left-box arrow-left" href="./index.php?sid=4e23bda503fd320b6f2e4ded1bbb1252" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>&#1042;&#1077;&#1088;&#1085;&#1091;&#1090;&#1100;&#1089;&#1103; &#1082; &#1089;&#1087;&#1080;&#1089;&#1082;&#1091; &#1092;&#1086;&#1088;&#1091;&#1084;&#1086;&#1074;</span>
+		</a>
+	</p>
+	
+		<br clear="none"></br><br clear="none"></br>
+	</div>
+
+
+<div class="forumbg alt_block" id="clutter_collapse">
+    <div class="inner">
+        <ul class="topiclist"><li class="header">
+                <dl class="row-item"><dt></dt></dl><div class="list-inner">&#1048;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1103;</div>
+                
+            </li></ul>
+                            <div class="collapse-trigger open">
+                    <span class="icon fa-minus tooltip-left" title="Collapse"></span>
+                    <span class="icon fa-plus tooltip-left" title="Expand"></span>
+                </div>
+                        
+            <ul class="topiclist forums"><li class="row">
+                    <div class="stat-block permissions">
+                        <h3>&#1055;&#1088;&#1072;&#1074;&#1072; &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1072;</h3>
+                        <p>&#1042;&#1099; <strong>&#1085;&#1077; &#1084;&#1086;&#1078;&#1077;&#1090;&#1077;</strong> &#1085;&#1072;&#1095;&#1080;&#1085;&#1072;&#1090;&#1100; &#1090;&#1077;&#1084;&#1099;<br clear="none"></br>&#1042;&#1099; <strong>&#1085;&#1077; &#1084;&#1086;&#1078;&#1077;&#1090;&#1077;</strong> &#1086;&#1090;&#1074;&#1077;&#1095;&#1072;&#1090;&#1100; &#1085;&#1072; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1103;<br clear="none"></br>&#1042;&#1099; <strong>&#1085;&#1077; &#1084;&#1086;&#1078;&#1077;&#1090;&#1077;</strong> &#1088;&#1077;&#1076;&#1072;&#1082;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1090;&#1100; &#1089;&#1074;&#1086;&#1080; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1103;<br clear="none"></br>&#1042;&#1099; <strong>&#1085;&#1077; &#1084;&#1086;&#1078;&#1077;&#1090;&#1077;</strong> &#1091;&#1076;&#1072;&#1083;&#1103;&#1090;&#1100; &#1089;&#1074;&#1086;&#1080; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1103;<br clear="none"></br>&#1042;&#1099; <strong>&#1085;&#1077; &#1084;&#1086;&#1078;&#1077;&#1090;&#1077;</strong> &#1076;&#1086;&#1073;&#1072;&#1074;&#1083;&#1103;&#1090;&#1100; &#1074;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103;<br clear="none"></br></p>
+                    </div>
+                </li></ul>
+    </div>
+</div>
+
+
+					
+
+                                    </div>
+            
+                        
+            	</div>
+            
+                                	<div class="social_links_footer"><a shape="rect" href="https://vk.com/apple_iphone_ru"><span class="fa fa-vk"></span></a>
+<a shape="rect" href="https://twitter.com/appleiphoneru/"><span class="fa fa-twitter"></span></a>
+<a shape="rect" href="https://www.facebook.com/aiprussia"><span class="fa fa-facebook"></span></a>
+<a shape="rect" href="https://plus.google.com/+AppleiphoneRussian"><span class="fa fa-google"></span></a>
+<a shape="rect" href="https://www.youtube.com/user/iPhoneInRussia"><span class="fa fa-youtube"></span></a></div>
+                             
+          
+            
+            <div class="page-footer" id="page-footer" role="contentinfo">
+                <div class="navbar_footer" role="navigation">
+	<div class="inner">
+
+	<ul class="nav-footer linklist" id="nav-footer" role="menubar"><li class="breadcrumbs">
+									<span class="crumb"><a shape="rect" href="./index.php?sid=4e23bda503fd320b6f2e4ded1bbb1252" data-navbar-reference="index"><span>&#1060;&#1086;&#1088;&#1091;&#1084;&#1099; &#1040;&#1081;&#1092;&#1086;&#1085;, &#1040;&#1081;&#1087;&#1101;&#1076; &#1080; &#1052;&#1072;&#1082;&#1073;&#1091;&#1082;</span></a></span>					</li><li class="rightside">&#1063;&#1072;&#1089;&#1086;&#1074;&#1086;&#1081; &#1087;&#1086;&#1103;&#1089;: <span title="&#1045;&#1074;&#1088;&#1086;&#1087;&#1072;/&#1052;&#1086;&#1089;&#1082;&#1074;&#1072;">UTC+03:00</span></li><li class="rightside">
+				<a shape="rect" href="./ucp.php?mode=delete_cookies&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>&#1059;&#1076;&#1072;&#1083;&#1080;&#1090;&#1100; cookies &#1082;&#1086;&#1085;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1080;</span>
+				</a>
+			</li><li class="rightside" data-last-responsive="true">
+					<a shape="rect" href="https://www.apple-iphone.ru/editorial/ios-11-chto-novogo/" title="&#1055;&#1088;&#1086;&#1089;&#1084;&#1086;&#1090;&#1088; &#1074;&#1089;&#1077;&#1075;&#1086; &#1089;&#1087;&#1080;&#1089;&#1082;&#1072; &#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1077;&#1081;" role="menuitem">
+						<i class="icon fa-apple fa-fw" aria-hidden="true"></i><span>iOS 11</span>
+					</a>
+				</li><li class="rightside" data-last-responsive="true">
+				<a shape="rect" href="https://www.apple-iphone.ru/review/iphone-x-obzor/" role="menuitem">
+					<i class="icon fa-mobile fa-fw" aria-hidden="true"></i><span>iPhone X</span>
+				</a>
+			</li><li class="rightside" data-last-responsive="true">
+				<a shape="rect" href="https://www.apple-iphone.ru/editorial/iphone-8-kharakteristiki-dizayn-osobenno/" role="menuitem">
+					<i class="icon fa-mobile fa-fw" aria-hidden="true"></i><span>iPhone 8</span>
+				</a>
+			</li></ul>
+
+	</div>
+</div>
+
+                <div class="darkenwrapper" id="darkenwrapper" data-ajax-error-title="&#1054;&#1096;&#1080;&#1073;&#1082;&#1072; AJAX" data-ajax-error-text="&#1055;&#1088;&#1080; &#1086;&#1073;&#1088;&#1072;&#1073;&#1086;&#1090;&#1082;&#1077; &#1079;&#1072;&#1087;&#1088;&#1086;&#1089;&#1072; &#1087;&#1088;&#1086;&#1080;&#1079;&#1086;&#1096;&#1083;&#1072; &#1086;&#1096;&#1080;&#1073;&#1082;&#1072;." data-ajax-error-text-abort="&#1047;&#1072;&#1087;&#1088;&#1086;&#1089; &#1087;&#1088;&#1077;&#1088;&#1074;&#1072;&#1085; &#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1077;&#1084;." data-ajax-error-text-timeout="&#1042;&#1088;&#1077;&#1084;&#1103; &#1079;&#1072;&#1087;&#1088;&#1086;&#1089;&#1072; &#1080;&#1089;&#1090;&#1077;&#1082;&#1083;&#1086;; &#1087;&#1086;&#1074;&#1090;&#1086;&#1088;&#1080;&#1090;&#1077; &#1087;&#1086;&#1087;&#1099;&#1090;&#1082;&#1091;." data-ajax-error-text-parsererror="&#1055;&#1088;&#1080; &#1074;&#1099;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1080; &#1079;&#1072;&#1087;&#1088;&#1086;&#1089;&#1072; &#1074;&#1086;&#1079;&#1085;&#1080;&#1082;&#1083;&#1072; &#1085;&#1077;&#1087;&#1088;&#1077;&#1076;&#1074;&#1080;&#1076;&#1077;&#1085;&#1085;&#1072;&#1103; &#1086;&#1096;&#1080;&#1073;&#1082;&#1072;, &#1080; &#1089;&#1077;&#1088;&#1074;&#1077;&#1088; &#1074;&#1077;&#1088;&#1085;&#1091;&#1083; &#1085;&#1077;&#1074;&#1077;&#1088;&#1085;&#1099;&#1081; &#1086;&#1090;&#1074;&#1077;&#1090;.">
+                    <div class="darken" id="darken">&#160;</div>
+                </div>
+            
+                <div class="phpbb_alert" id="phpbb_alert" data-l-err="&#1054;&#1096;&#1080;&#1073;&#1082;&#1072;" data-l-timeout-processing-req="&#1042;&#1088;&#1077;&#1084;&#1103; &#1074;&#1099;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1103; &#1079;&#1072;&#1087;&#1088;&#1086;&#1089;&#1072; &#1080;&#1089;&#1090;&#1077;&#1082;&#1083;&#1086;.">
+                    <a shape="rect" class="alert_close" href="#">
+                        <i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+                    </a>
+                    <h3 class="alert_title">&#160;</h3><p class="alert_text"></p>
+                </div>
+                <div class="phpbb_alert" id="phpbb_confirm">
+                    <a shape="rect" class="alert_close" href="#">
+                        <i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+                    </a>
+                    <div class="alert_text"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="copyright_bar">
+
+
+
+
+
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-51194058-1', 'uc.cn');
-    ga('send', 'pageview');
+  ga('create', 'UA-16999139-1', 'auto');
+  ga('send', 'pageview');
 
 </script>
+
 <script type="text/javascript">
-    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffa2e15502e6376a1cf835ae52829893d' type='text/javascript'%3E%3C/script%3E"));
+document.write("&lt;a href='//www.liveinternet.ru/click' "+
+"target=_blank&gt;&lt;img src='//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='1' height='1'&gt;&lt;\/a&gt;")
 </script>
+
+ <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter45508002 = new Ya.Metrika({ id:45508002, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://d31j93rd8oukbv.cloudfront.net/metrika/watch_ua.js" style="position:absolute; left:-9999px;" alt=""></img></div></noscript> 
+
+
+
+
+                 
+                                      
+            </div> 
+            
+                            
+            
+            </div> 
+            
+             
+
+           
+            
+            
+     
+            
+            <div style="display: none;">
+                <a shape="rect" class="anchor" id="bottom" accesskey="z"></a>
+                <img src="./cron.php?cron_type=cron.task.text_reparser.user_signature&amp;sid=4e23bda503fd320b6f2e4ded1bbb1252" width="1" height="1" alt="cron"></img>            </div>
+            
+            <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            
+                            <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="./assets/javascript/jquery.min.js?assets_version=161"&gt;\x3C/script&gt;');</script>
+                        
+            <script type="text/javascript" src="./assets/javascript/core.js?assets_version=161"></script>
+
+			                                                                       
+                                                
+
+                
+
+                            <script type="text/javascript">
+                    (function($){
+                        var $fa_cdn = $('head').find('link[rel="stylesheet"]').first(),
+                            $span = $('&lt;span class="fa" style="display:none"&gt;&lt;/span&gt;').appendTo('body');
+                        if ($span.css('fontFamily') !== 'FontAwesome' ) {
+                            $fa_cdn.after('&lt;link href="./assets/css/font-awesome.min.css" rel="stylesheet"&gt;');
+                            $fa_cdn.remove();
+                        }
+                        $span.remove();
+                    })(jQuery);
+                </script>
+                     
+            
+              
+                       
+            <script type="text/javascript">
+var elonw_title = 'ELONW';
+var source=removeSubdomain(location.hostname);
+$(document).on('click',('a[href^="http://"], a[href^="https://"], a[href^="ftp://"]'), function() {
+   var href = $(this).attr('href');
+   var hostname = this.hostname;
+   if(hostname &amp;&amp; removeSubdomain(hostname)!==source)
+   {
+      window.open(href);
+      return false;
+   }
+});
+(function($) {
+   $('.forum_link').each(function(){
+      $(this).find('a').attr("onclick","window.open(this.href);return false;").attr("rel", "nofollow");
+   });   
+})(jQuery);
+function removeSubdomain(a,b){return a.split(".").slice(-(b||2)).join(".")};
+</script>
+            
+                        <script type="text/javascript" src="./ext/phpbb/boardannouncements/styles/all/template/js/boardannouncements.js?assets_version=161"></script>
+<script type="text/javascript" src="./styles/Milk_v2/template/tooltipster.bundle.min.js?assets_version=161"></script>
+<script type="text/javascript" src="./styles/Milk_v2/template/jquery.collapse.js?assets_version=161"></script>
+<script type="text/javascript" src="./styles/Milk_v2/template/jquery.collapse_storage.js?assets_version=161"></script>
+<script type="text/javascript" src="./styles/Milk_v2/template/forum_fn.js?assets_version=161"></script>
+<script type="text/javascript" src="./styles/prosilver/template/ajax.js?assets_version=161"></script>
+
+            
+                            <script type="text/javascript">
+					/* Identify the height of headerbar */
+					var headerbar_height = $('.headerbar').height();
+					/* Match particle container height to headerbar. Creates window for canvas */
+					$('.particles_container').css({'height': headerbar_height});
+					
+					/* Dynamically apply width to site desc container, maximising clickable area behind it. We only need this to happen when particles are enabled. */
+					var logo_width = $('.site-description').width();
+					var logo_width_fix = (logo_width+2); /* Caters for retina devices where the width is defined as a decimal. Obvs we can't set a decimal pixel width */
+					$('.site-description').css({'width': logo_width_fix});
+				</script>            
+				<script src="./styles/Milk_v2/template/particles.js"></script>
+                <script src="./styles/Milk_v2/template/particles.app.js"></script>
+                
+                <script type="text/javascript">
+					/* Reposition the canvas so it aligns with headerbar */
+					$('canvas.particles-js-canvas-el').css({'margin-top': -headerbar_height});
+				</script>                        
+                        
+			<script type="text/javascript">
+            $(function($) {
+                var num_cols = 3,
+                container = $('.sub-forumlist'),
+                listItem = 'li',
+                listClass = 'sub-list';
+                container.each(function() {
+                    var items_per_col = new Array(),
+                    items = $(this).find(listItem),
+                    min_items_per_col = Math.floor(items.length / num_cols),
+                    difference = items.length - (min_items_per_col * num_cols);
+                    for (var i = 0; i &lt; num_cols; i++) {
+                        if (i &lt; difference) {
+                            items_per_col[i] = min_items_per_col + 1;
+                        } else {
+                            items_per_col[i] = min_items_per_col;
+                        }
+                    }
+                    for (var i = 0; i &lt; num_cols; i++) {
+                        $(this).append($('&lt;ul &gt;&lt;/ul&gt;').addClass(listClass));
+                        for (var j = 0; j &lt; items_per_col[i]; j++) {
+                            var pointer = 0;
+                            for (var k = 0; k &lt; i; k++) {
+                                pointer += items_per_col[k];
+                            }
+                            $(this).find('.' + listClass).last().append(items[j + pointer]);
+                        }
+                    }
+                });
+            });
+            </script>
+            
+                        
+			<a shape="rect" class="scrollToTop" href="#"><span class="fa fa-arrow-up"></span></a>            
+
 </body></html>
 
