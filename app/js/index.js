@@ -1,8 +1,8 @@
 /*
  * @Author: Administrator
  * @Date:   2017-11-23 18:09:20
- * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-14 20:03:23
+ * @Last Modified by:   Administrator
+ * @Last Modified time: 2018-03-21 13:26:59
  */
 const electron = require('electron')
 const fs = require('fs')
@@ -32,19 +32,7 @@ const window_menuIteam = new MenuItem({
 menu.append(new MenuItem({
     label: "设置",
     click() {
-        let newwindow = new BrowserWindow({
-            width: 500,
-            height: 600,
-            resizable: false
-        })
-        newwindow.loadURL(url.format({
-            pathname: path.join(root_path, 'settings.html'),
-            protocol: 'file:',
-            slashes: true
-        }))
-        newwindow.on("closed", function() {
-            newwindow = null
-        })
+        openSettings()
     }
 }))
 menu.append(window_menuIteam)

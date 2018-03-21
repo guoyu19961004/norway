@@ -1,8 +1,8 @@
 /*
  * @Author: guoyu19961004
  * @Date:   2018-03-03 18:20:32
- * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-15 11:17:44
+ * @Last Modified by:   Administrator
+ * @Last Modified time: 2018-03-21 13:22:33
  */
 const fs = require('fs')
 const xml2js = require('xml2js')
@@ -74,20 +74,7 @@ function judge_settings() {
             alert('settings.xml为空!')
         }
     } else {
-        let newwindow = new BrowserWindow({
-            width: 500,
-            height: 400,
-            resizable: false
-        })
-        newwindow.loadURL(url.format({
-            pathname: path.join(root_path, 'settings.html'),
-            protocol: 'file:',
-            slashes: true
-        }))
-        newwindow.on("closed", function() {
-            change_env_path()
-            newwindow = null
-        })
+        openSettings()
     }
 }
 
@@ -98,6 +85,25 @@ function saveConf(argument) {
     confData.source = argument.source
     confData.host = argument.host
     confData.finish = argument.finish
+}
+
+//打开设置页
+function openSettings() {
+    let newwindow = new BrowserWindow({
+        width: 500,
+        height: 600,
+        resizable: false
+    })
+    newwindow.loadURL(url.format({
+        pathname: path.join(root_path, 'settings.html'),
+        protocol: 'file:',
+        slashes: true
+    }))
+    newwindow.setMenu(null)
+    newwindow.on("closed", function() {
+        remote.getCurrentWindow().webContents.reload()
+        newwindow = null
+    })
 }
 
 //获取Tmonkey web中source信息存放到resources/sources.xml
@@ -111,16 +117,26 @@ function get_source_info(argument) {
             login: 'Login'
         },
         success: function(msg) {
-            $.get(path.join(argument.host, 'api/outsource/source/'), function(sources) {
-                let xml = ''
-                let source = {
-                    source: sources
+            $.ajax({
+                type: "GET",
+                url: path.join(argument.host, 'api/outsource/source/'),
+                dataType: 'json',
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    Materialize.toast('登录失败！请确定账号密码！', 2000)
+                    openSettings()
+                },
+                success: function(sources) {
+                    Materialize.toast('登录成功！', 2000)
+                    let xml = ''
+                    let source = {
+                        source: sources
+                    }
+                    if (!checkDirExist(resource_path)) fs.mkdirSync(resource_path)
+                    xml = jsonBuilder.buildObject(source)
+                    fs.writeFileSync(path.join(resource_path, 'sources.xml'), xml)
+                    Materialize.toast('Sources 数量更新完毕！', 3000)
                 }
-                if (!checkDirExist(resource_path)) fs.mkdirSync(resource_path)
-                xml = jsonBuilder.buildObject(source)
-                fs.writeFileSync(path.join(resource_path, 'sources.xml'), xml)
-                Materialize.toast('Sources 数量更新完毕！', 3000)
-            }, 'json')
+            })
         }
     })
 }
