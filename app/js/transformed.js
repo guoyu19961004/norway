@@ -1,8 +1,8 @@
 /*
  * @Author: Administrator
  * @Date:   2018-03-09 19:40:26
- * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-14 20:16:14
+ * @Last Modified by:   Administrator
+ * @Last Modified time: 2018-03-21 14:17:16
  */
 const fs = require('fs')
 const path = require('path')
@@ -77,7 +77,7 @@ function generateBlogTransformed() {
         jsonParser.parseString(body, function(err, result) {
             $.each(result.root['no.integrasco.domain.xml.blog.BlogPosts'], function(index, val) {
                 /* iterate through array or object */
-                let $parent = $('<li></li>').addClass("collection-item").appendTo($('#content-wrap'))
+                let $parent = $('<div class="collapsible-body"></div').appendTo($('<li></li>').appendTo($('#content-wrap')))
                 generatePostList('Post' + (index + 1),val.generalThreadEntries["no.integrasco.domain.xml.blog.BlogPost"], $parent)
                 let commentArgs = val.generalThreadEntries["no.integrasco.domain.xml.blog.BlogPost"].generalThreadEntryComments
                 if (commentArgs != '') {

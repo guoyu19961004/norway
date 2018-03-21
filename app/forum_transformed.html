@@ -37,20 +37,7 @@
             alert('settings.xml为空!')
         }
     } else {
-        let newwindow = new BrowserWindow({
-            width: 500,
-            height: 400,
-            resizable: false
-        })
-        newwindow.loadURL(url.format({
-            pathname: path.join(root_path, 'settings.html'),
-            protocol: 'file:',
-            slashes: true
-        }))
-        newwindow.on("closed", function() {
-            change_env_path()
-            newwindow = null
-        })
+        openSettings()
     }
     $(document).ready(function() {
         transform.ForumTransfomed();
