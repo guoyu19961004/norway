@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-03-22 10:53:41
  * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-26 16:42:52
+ * @Last Modified time: 2018-03-26 17:59:14
  */
 const fs = require('fs')
 const path = require('path')
@@ -63,8 +63,8 @@ const url_run = () => {
             description: ''
         }]
     }
+    /*运行*/
     const run = (config_path, show_msg) => {
-
         const config = get_config(config_path, show_msg)
         // console.log(config)
         const first_url = {
@@ -72,79 +72,71 @@ const url_run = () => {
             description: config['SourceName']
         }
         add_to_visit_queue(first_url)
-        while (visit_queue.length != 0) {
-            /*选取并去除数组中的第一个*/
+        url_process(config, config_path, show_msg)
+    }
+    /*链接处理函数*/
+    const url_process = (config, config_path,show_msg) => {
+        if (visit_queue.length != 0) {
+        	/*选取并去除数组中的第一个*/
             const url = visit_queue.shift()
-            // console.log(url)
             const link = url.link
             const description = url.description
-            // let visit_link = 'https://club.omlet.co.uk/forum/forum/37-other-omlet-products/'
             let visit_link = link
             if (link == config['FirstUrl']) {
                 visit_link = link
             } else {
                 visit_link = append_parameters_to_url(link, config['VisitAddon'])
             }
-            // console.log(visit_link)
             show_msg(print_msg(util.format('Visiting %s', visit_link)))
+            visit_history.push(url)
             const download_obj = dump_page_ingentia(visit_link, config['InputEncoding'])
-            if (download_obj.status == 0) {
-                // console.log(download_obj.stdout.toString())
-                add_to_visit_queue(get_urls_from_dump(config))
-                visit_history.push(url)
-                // console.dir(get_urls_from_dump(config))
-                // console.log(visit_queue.length)
-                // console.dir(visit_queue)
-                if (match_filter(visit_link, convert_to_common_regular(config['SubsourceUriPattern']))) {
+            download_obj.on('close', (code) => {
+                if (code == 0) {
+                    add_to_visit_queue(get_urls_from_dump(config))
+                    if (match_filter(visit_link, convert_to_common_regular(config['SubsourceUriPattern']))) {
+                        show_msg(print_msg(util.format('Transforming %s', visit_link)))
+                        const url_info = is_subsource_valid(config['UrlTransformation'], link_dump_path, visit_link, 0)
+                        if (url_info.status) {
+                            url.link = append_parameters_to_url(url.link, config['UrlAddon'])
+                            const sourceurl = build_sourceurl(url.link, config['SourceName'], url.description)
+                            // console.log(result)
+                            subsources.push({ sourceurl })
+                        } else {
+                            failed_subsources.push(url)
+                        }
+                        show_msg(print_msg(url_info.msg))
+                    }
+                    url_process(config, config_path, show_msg)
+                }
+            });
+        } else if (failed_subsources.length != 0) {
+            /*选取并去除数组中的第一个*/
+            const url = failed_subsources.shift()
+            const link = url.link
+            const description = url.description
+            const visit_link = append_parameters_to_url(link, config['VisitAddon'])
+            show_msg(print_msg(util.format('Validating %s', visit_link)))
+            const download_obj = dump_page_ingentia(visit_link, config['InputEncoding'])
+            download_obj.on('close', (code) => {
+                if (code == 0) {
                     show_msg(print_msg(util.format('Transforming %s', visit_link)))
                     const url_info = is_subsource_valid(config['UrlTransformation'], link_dump_path, visit_link, 0)
                     if (url_info.status) {
                         url.link = append_parameters_to_url(url.link, config['UrlAddon'])
                         const sourceurl = build_sourceurl(url.link, config['SourceName'], url.description)
                         // console.log(result)
-                        subsources.push({sourceurl})
-                    } else {
-                        failed_subsources.push(url)
+                        subsources.push({ sourceurl })
                     }
                     show_msg(print_msg(url_info.msg))
-                } else {
-                    visit_history.push(url)
+                    url_process(config, config_path, show_msg)
                 }
-                // console.log(visit_queue)
-                // console.log(visit_history)
-            } else {
-                console.log(download_obj.stderr.toString())
-            }
+            });
+        } else {
+            fs.writeFileSync(path.join(config_path, '../finished.xml'), jsonBuilder.buildObject(subsources))
+            show_msg(print_msg('==============================================='))
+            show_msg(print_msg('URL完成！finished.xml已保存至' + path.join(config_path, '../finished.xml')))
         }
-        while (failed_subsources.length != 0) {
-            /*选取并去除数组中的第一个*/
-            const url = failed_subsources.shift()
-            // console.log(url)
-            const link = url.link
-            const description = url.description
-            const visit_link = append_parameters_to_url(link, config['VisitAddon'])
-            // console.log(visit_link)
-            show_msg(print_msg(util.format('Validating %s', visit_link)))
-            const download_obj = dump_page_ingentia(visit_link, config['InputEncoding'])
-            if (download_obj.status == 0) {
-                // console.log(download_obj.stdout.toString())
-                show_msg(print_msg(util.format('Transforming %s', visit_link)))
-                const url_info = is_subsource_valid(config['UrlTransformation'], link_dump_path, visit_link, 0)
-                if (url_info.status) {
-                    url.link = append_parameters_to_url(url.link, config['UrlAddon'])
-                    const sourceurl = build_sourceurl(url.link, config['SourceName'], url.description)
-                    // console.log(result)
-                    subsources.push({sourceurl})
-                }
-                show_msg(print_msg(url_info.msg))
-            } else {
-                console.log(download_obj.stderr.toString())
-            }
-        }
-        fs.writeFileSync(path.join(config_path, '../finished.xml'), jsonBuilder.buildObject(subsources))
-        console.log(subsources)
     }
-
     /*获取CONFIG*/
     const get_config = (config_path, callback) => {
         if (fs.existsSync(config_path)) {
@@ -174,11 +166,11 @@ const url_run = () => {
             urls.forEach((currentValue, index) => {
                 /*判断链接是否访问过*/
                 if (visit_history.some((element) => {
-                        return (currentValue.link == element.link)
+                        return (currentValue.link === element.link)
                     })) {
                     // console.log('visited')
                 } else if (visit_queue.some((element) => {
-                        return (currentValue.link == element.link)
+                        return (currentValue.link === element.link)
                     })) {
                     // console.log('visit_queue exists')
                 } else {
@@ -187,11 +179,11 @@ const url_run = () => {
             })
         } else if (urls.length != 0) {
             if (visit_history.some((element) => {
-                    return (urls.link == element.link)
+                    return (urls.link === element.link)
                 })) {
                 // console.log('visited')
             } else if (visit_queue.some((element) => {
-                    return (urls.link == element.link)
+                    return (urls.link === element.link)
                 })) {
                 // console.log('visit_queue exists')
             } else {
@@ -210,17 +202,10 @@ const url_run = () => {
     }
     /*通过dump_page_ingentia下载页面*/
     const dump_page_ingentia = (url, encoding) => {
-        return spawnSync("java", ["-jar", "ingentia-test-crawler-3.0.1-SNAPSHOT-jar-with-dependencies.jar", "-c", "clean", "tagsoup", url, encoding], {
+        return spawn("java", ["-jar", "ingentia-test-crawler-3.0.1-SNAPSHOT-jar-with-dependencies.jar", "-c", "clean", "tagsoup", url, encoding], {
             cwd: ingentia_path,
             shell: true
         });
-        // console.log(java.status)
-        // if (java.status == 0) {
-        //     // console.log(java.stdout.toString())
-        //     // add_to_visit_queue(get_urls_from_dump(config))
-        // } else {
-        //     console.log(java.stderr.toString())
-        // }
     }
     /*测获取满足规则链接*/
     const get_urls_from_dump = (config) => {
@@ -339,8 +324,7 @@ const url_run = () => {
         }
     }
     return {
-        run,
-        add_to_visit_queue
+        run
     }
 }
 

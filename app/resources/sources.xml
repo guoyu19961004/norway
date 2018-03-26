@@ -1634,7 +1634,7 @@
         <enable>1</enable>
         <errors>
             <source_id>1011</source_id>
-            <errors>26</errors>
+            <errors>29</errors>
         </errors>
         <source_id>1011</source_id>
         <source_name>businessinsider.com</source_name>
@@ -2822,7 +2822,7 @@
         <enable>1</enable>
         <errors>
             <source_id>1332</source_id>
-            <errors>65</errors>
+            <errors>66</errors>
         </errors>
         <source_id>1332</source_id>
         <source_name>blogsdna.com</source_name>
@@ -11072,7 +11072,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3366</source_id>
-            <errors>773</errors>
+            <errors>776</errors>
         </errors>
         <source_id>3366</source_id>
         <source_name>forum.hardware.fr</source_name>
@@ -12744,7 +12744,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3706</source_id>
-            <errors>2961</errors>
+            <errors>2964</errors>
         </errors>
         <source_id>3706</source_id>
         <source_name>alriyadh.com</source_name>
@@ -12810,7 +12810,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3719</source_id>
-            <errors>2</errors>
+            <errors>3</errors>
         </errors>
         <source_id>3719</source_id>
         <source_name>blogs.lancenet.com.br</source_name>
@@ -12964,7 +12964,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3797</source_id>
-            <errors>495</errors>
+            <errors>496</errors>
         </errors>
         <source_id>3797</source_id>
         <source_name>instyle.de</source_name>
@@ -13096,7 +13096,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3831</source_id>
-            <errors>1276</errors>
+            <errors>1280</errors>
         </errors>
         <source_id>3831</source_id>
         <source_name>maximonline.ru</source_name>
@@ -13250,7 +13250,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3869</source_id>
-            <errors>96</errors>
+            <errors>98</errors>
         </errors>
         <source_id>3869</source_id>
         <source_name>euroman.dk</source_name>
@@ -13294,7 +13294,7 @@
         <enable>1</enable>
         <errors>
             <source_id>3874</source_id>
-            <errors>959</errors>
+            <errors>963</errors>
         </errors>
         <source_id>3874</source_id>
         <source_name>trendmagazin.ch</source_name>

@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2017-11-23 18:09:20
  * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-26 10:40:55
+ * @Last Modified time: 2018-03-26 18:00:04
  */
 const electron = require('electron')
 const fs = require('fs')
@@ -237,19 +237,33 @@ $(document).ready(function() {
     $('#url_run_button').on('click', function(event) {
         event.preventDefault();
         /* Act on the event */
-        $('#shell_info').append('<p>=================start===================</p>')
-        forum.Url.run(path.join('D:/biyesheji/Norway/finish', 'SubSourceCrawlerConfig.xml'),(msg) => {
-            console.log(msg);
-            $('#shell_info').append('<p>' + msg + '</p>')
-        })
-        // console.log(forum)
-        // url_run(function (source_name) {
-        //     link_file(path.join(confData.finish,source_name+'.xml'),path.join(confData.source,source_name,'finished.xml'))
-        //     link_file(path.join(confData.finish,source_name+'.log'),path.join(confData.source,source_name,'finished.log'))
-        //     $('#shell_info').append('<p>--------------------------------------------------</p>')
-        //     $('#shell_info').append('<p>URL完成！finished.xml已复制到'+path.join(confData.source,source_name,'finished.xml')+'</p>')
-        //     console.log('finished done')
-        // })
+        if ($('#source_path').text()) {
+            $('#shell_info').append('<p>=================start===================</p>')
+            forum.Url.run(path.join($('#source_path').text(), 'SubSourceCrawlerConfig.xml'),(msg) => {
+                // console.log(msg);
+                $('#shell_info').append('<p>' + msg + '</p>')
+            })
+        } else {
+            dialog.showOpenDialog({
+                title: '选择Source',
+                properties: ['openDirectory']
+            }, function(filePaths) {
+                if (filePaths) {
+                    if (fs.existsSync(path.join(filePaths[0], 'SubSourceCrawlerConfig.xml'))) {
+                        $('#source_type').text('FORUM')
+                        $('#source_name').text(path.basename(filePaths[0]))
+                        $('#source_path').text(filePaths[0])
+                        $('#shell_info').append('<p>=================start===================</p>')
+                        forum.Url.run(path.join(filePaths[0], 'SubSourceCrawlerConfig.xml'),(msg) => {
+                            // console.log(msg);
+                            $('#shell_info').append('<p>' + msg + '</p>')
+                        })
+                    } else {
+                        alert('SubSourceCrawlerConfig.xml 不存在！');
+                    }
+                }
+            })
+        }
     });
     $('#forum_run_button').on('click', function(event) {
         event.preventDefault();
