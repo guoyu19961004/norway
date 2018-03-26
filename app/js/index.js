@@ -1,13 +1,14 @@
 /*
  * @Author: Administrator
  * @Date:   2017-11-23 18:09:20
- * @Last Modified by:   Administrator
- * @Last Modified time: 2018-03-21 13:26:59
+ * @Last Modified by:   guoyu19961004
+ * @Last Modified time: 2018-03-26 10:40:55
  */
 const electron = require('electron')
 const fs = require('fs')
 const path = require('path')
 const url = require('url')
+const forum = require('./forum.js')
 
 const menu = new Menu()
 const window_menuIteam = new MenuItem({
@@ -130,7 +131,7 @@ $(document).ready(function() {
             let type = form.download_type.value
             console.log(type)
             download_url(form.link.value, form.encoding.value, function() {
-                $('#blog_shell_info').append("<p>------------------------------</p>");
+                $('#shell_info').append("<p>------------------------------</p>");
                 let source_save_path = '';
                 if ($('#source_path').text() != '') {
                     if (type == 'blog') {
@@ -236,20 +237,26 @@ $(document).ready(function() {
     $('#url_run_button').on('click', function(event) {
         event.preventDefault();
         /* Act on the event */
-        url_run(function (source_name) {
-            link_file(path.join(confData.finish,source_name+'.xml'),path.join(confData.source,source_name,'finished.xml'))
-            link_file(path.join(confData.finish,source_name+'.log'),path.join(confData.source,source_name,'finished.log'))
-            $('#shell_info').append('<p>--------------------------------------------------</p>')
-            $('#shell_info').append('<p>URL完成！finished.xml已复制到'+path.join(confData.source,source_name,'finished.xml')+'</p>')
-            console.log('finished done')
+        $('#shell_info').append('<p>=================start===================</p>')
+        forum.Url.run(path.join('D:/biyesheji/Norway/finish', 'SubSourceCrawlerConfig.xml'),(msg) => {
+            console.log(msg);
+            $('#shell_info').append('<p>' + msg + '</p>')
         })
+        // console.log(forum)
+        // url_run(function (source_name) {
+        //     link_file(path.join(confData.finish,source_name+'.xml'),path.join(confData.source,source_name,'finished.xml'))
+        //     link_file(path.join(confData.finish,source_name+'.log'),path.join(confData.source,source_name,'finished.log'))
+        //     $('#shell_info').append('<p>--------------------------------------------------</p>')
+        //     $('#shell_info').append('<p>URL完成！finished.xml已复制到'+path.join(confData.source,source_name,'finished.xml')+'</p>')
+        //     console.log('finished done')
+        // })
     });
     $('#forum_run_button').on('click', function(event) {
         event.preventDefault();
         /* Act on the event */
         if ($('#source_path').text()) {
             let source_save_path = $('#source_path').text()
-            forum_run(source_save_path,function(source_name) {
+            forum_run(source_save_path, function(source_name) {
                 console.log(source_name)
             })
         } else {
@@ -264,7 +271,7 @@ $(document).ready(function() {
                         $('#source_type').text('FORUM')
                         $('#source_name').text(path.basename(filePaths[0]))
                         $('#source_path').text(filePaths[0])
-                        forum_run(filePaths[0],function(source_name) {
+                        forum_run(filePaths[0], function(source_name) {
                             console.log(source_name)
                         })
                     }
@@ -277,7 +284,7 @@ $(document).ready(function() {
         /* Act on the event */
         if ($('#source_path').text()) {
             let source_save_path = $('#source_path').text()
-            collect_forum(path.basename(source_save_path),'transformed')
+            collect_forum(path.basename(source_save_path), 'transformed')
         } else {
             dialog.showOpenDialog({
                 title: '选择Source',
@@ -290,7 +297,7 @@ $(document).ready(function() {
                         $('#source_type').text('FORUM')
                         $('#source_name').text(path.basename(filePaths[0]))
                         $('#source_path').text(filePaths[0])
-                        collect_forum(path.basename(filePaths[0]),'transformed')
+                        collect_forum(path.basename(filePaths[0]), 'transformed')
                     }
                 }
             })
@@ -301,7 +308,7 @@ $(document).ready(function() {
         /* Act on the event */
         if ($('#source_path').text()) {
             let source_save_path = $('#source_path').text()
-            collect_forum(path.basename(source_save_path),'errors')
+            collect_forum(path.basename(source_save_path), 'errors')
         } else {
             dialog.showOpenDialog({
                 title: '选择Source',
@@ -314,7 +321,7 @@ $(document).ready(function() {
                         $('#source_type').text('FORUM')
                         $('#source_name').text(path.basename(filePaths[0]))
                         $('#source_path').text(filePaths[0])
-                        collect_forum(path.basename(filePaths[0]),'errors')
+                        collect_forum(path.basename(filePaths[0]), 'errors')
                     }
                 }
             })
