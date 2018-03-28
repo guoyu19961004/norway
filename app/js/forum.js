@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-03-22 10:53:41
  * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-28 11:08:09
+ * @Last Modified time: 2018-03-28 11:16:09
  */
 const fs = require('fs')
 const path = require('path')
@@ -384,26 +384,6 @@ const subforum_run = () => {
                 delete_dir(path.join(temp_source_dir, file))
             })
         } else fs.mkdirSync(temp_source_dir)
-        // const fs_watch = fs.watch(temp_source_dir, { recursive: true }, (eventType, filename) => {
-        //     if (eventType == 'rename') {
-        //     	if (/transformed\.log$/g.test(filename)) {
-        //     		console.log(path.join(temp_source_dir,filename))
-        //     		if (fs.existsSync(path.join(temp_source_dir,filename))) {
-        //     			console.log('transformed show result button')
-        //     		}
-        //     	} else if (/errors\.log$/g.test(filename)) {
-        //     		console.log(path.join(temp_source_dir,filename))
-        //     		if (fs.existsSync(path.join(temp_source_dir,filename))) {
-        //     			console.log('errors show error button')
-        //     		}
-        //     	}
-        //     }else if (filename) {
-        //     	console.log(`事件类型是: ${eventType}`)
-        //         console.log(`提供的文件名: ${filename}`)
-        //     } else {
-        //         console.log('未提供文件名')
-        //     }
-        // })
     }
     /*复制ingentia文件夹*/
     const copy_ingentia_resource = (source_dir, url) => {
@@ -453,10 +433,10 @@ const subforum_run = () => {
             if (code == 0) {
                 show_msg(util.format('Url: %s 测试完毕', url))
                 pids.splice(thread_index, 1, thread_run(thread_index, source_dir, pids, urls, show_msg))
-                console.log(`子进程退出码：${code}`)
+                // console.log(`子进程退出码：${code}`)
             } else {
-                console.log(`子进程退出码：${code}`)
-                console.log("------------------------------")
+                // console.log(`子进程退出码：${code}`)
+                // console.log("------------------------------")
             }
         })
         return java.pid

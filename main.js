@@ -32,7 +32,7 @@ function createWindow() {
     menu = new Menu()
     let tray_menu = new Menu()
     let image = nativeImage.createFromPath('app/images/icon.ico')
-    tray = new Tray(image)
+    // tray = new Tray(image)
     menu.append(program_menuIteam)
     menu.append(edit_menuIteam)
     menu.append(window_menuIteam)
@@ -40,8 +40,8 @@ function createWindow() {
     //设置窗口内菜单
     Menu.setApplicationMenu(menu)
     //设置小图标菜单
-    tray_menu = Menu.buildFromTemplate(tray_menu_template)
-    tray.setContextMenu(tray_menu)
+    // tray_menu = Menu.buildFromTemplate(tray_menu_template)
+    // tray.setContextMenu(tray_menu)
     //创建菜单
     // and load the index.html of the app.
     mainWindow.loadURL(url.format({
@@ -59,7 +59,7 @@ function createWindow() {
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
 
-        const baseUrl = path.join(__dirname, '/app/environment/temp')
+        const baseUrl = path.join(__dirname, 'app/environment/temp')
         const filedirs = fs.readdirSync(baseUrl)
         for (let i = 0; i < filedirs.length; i++) {
             let stats = fs.statSync(path.join(baseUrl, filedirs[i]))
