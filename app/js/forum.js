@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-03-22 10:53:41
  * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-28 11:04:53
+ * @Last Modified time: 2018-03-28 11:08:09
  */
 const fs = require('fs')
 const path = require('path')
@@ -112,6 +112,8 @@ const url_run = () => {
                         show_msg(print_msg(url_info.msg))
                     }
                     url_process(config, config_path, show_msg)
+                } else {
+                	console.log('page download error!')
                 }
             });
         } else if (failed_subsources.length != 0) {

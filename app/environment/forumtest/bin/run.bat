@@ -1,2 +1,0 @@
-python runsource.py
-pause
