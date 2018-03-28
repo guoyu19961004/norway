@@ -1,4 +1,4 @@
-(:TEMPLATE-URL-v1.5:)
+(:TEMPLATE-URL-v1.6:)
 xquery version "1.0";
 declare namespace h = "http://www.w3.org/1999/xhtml";
 declare namespace ig = "http://www.integrasco.no/";
@@ -14,8 +14,8 @@ declare variable $gmtOffset := "0";
 declare variable $documentUri as xs:string external;
 
 (: Global variables :)
-declare variable $validateUri := "stackoverflow.com";
-declare variable $isFirstPostCountedInRepliesPerPage := false();
+declare variable $validateUri := "omlet.co.uk";
+declare variable $isFirstPostCountedInRepliesPerPage := true();
 declare variable $forumUsesPaginationMultiplyer := false();
 declare variable $checkThreadPagination := false();
 declare variable $checkSubforumPagination := false();
@@ -135,8 +135,8 @@ declare function ig:getParamValueFromQuery( $query as xs:string, $param as xs:st
     let $q := replace( $query, "#.*$", "" )
     let $r := if( matches( $q, concat("\W", $param, "=", ".+$" ) ) )
               then let $r := if( matches( $q, concat( "\?", $param, "=" )))
-                then	ig:subBefore( substring-after( $q, concat( "?", $param, "=") ), "&amp;" )
-                else	ig:subBefore( substring-after( $q, concat( "&amp;", $param, "=") ), "&amp;" )
+                then    ig:subBefore( substring-after( $q, concat( "?", $param, "=") ), "&amp;" )
+                else    ig:subBefore( substring-after( $q, concat( "&amp;", $param, "=") ), "&amp;" )
                 return $r
               else $default
     return $r
@@ -220,16 +220,16 @@ declare function ig:current-dateTime-adjusted() as xs:dateTime {
 
 declare function ig:convertToMMddyyyy( $timestamp as xs:string*, $datePattern as xs:string* ) as xs:string* {
 
-  let $dayExp			:=	"(dd|d)"
-  let $monthExp		:=	"(MM|M)"
-  let $yearExp		:=	"(yyyy|yy)"
-  let $hourExp		:=	"(HH|hh|H|h)"
-  let $minuteExp		:=	"(mm|m)"
-  let $secondExp		:=	"(ss|s)"
+  let $dayExp           :=  "(dd|d)"
+  let $monthExp     :=  "(MM|M)"
+  let $yearExp      :=  "(yyyy|yy)"
+  let $hourExp      :=  "(HH|hh|H|h)"
+  let $minuteExp        :=  "(mm|m)"
+  let $secondExp        :=  "(ss|s)"
 
-  let	$stampList		:=	tokenize( normalize-space( replace( $timestamp, "\D", " " ) ), "\D" )
-  let $dpList			:=	tokenize( $datePattern, "\W")
-  let $indexList		:=	for $dp in $dpList
+  let   $stampList      :=  tokenize( normalize-space( replace( $timestamp, "\D", " " ) ), "\D" )
+  let $dpList           :=  tokenize( $datePattern, "\W")
+  let $indexList        :=  for $dp in $dpList
                 return
                   if( matches( $dp, $monthExp ) ) then
                     1
@@ -262,29 +262,29 @@ declare function ig:convertToMMddyyyy( $timestamp as xs:string*, $datePattern as
 declare function ig:covertFromAmPmTo24HourTime( $time as xs:string*, $amPm as xs:string* ) as xs:string* {
 
   (: strip input timestamp for nonvalid chars and tokenize it to a list :)
-    let $tl 			:= 	tokenize( normalize-space(replace($time, "\D", " ")), " " )
+    let $tl             :=  tokenize( normalize-space(replace($time, "\D", " ")), " " )
 
     (: extraxt all datetime param. :)
-    let $year			:= 	$tl[3]
-    let $month    		:= 	$tl[1]
-    let $day	  		:= 	$tl[2]
-    let $hours    		:= 	$tl[4]
-    let $mins     		:= 	$tl[5]
-    let $sec     		:= 	$tl[6]
+    let $year           :=  $tl[3]
+    let $month          :=  $tl[1]
+    let $day            :=  $tl[2]
+    let $hours          :=  $tl[4]
+    let $mins           :=  $tl[5]
+    let $sec            :=  $tl[6]
 
     (: check if valid:)
     return if( ( string-length( $amPm ) > 0 ) and ( string-length( $year ) > 0 ) and ( string-length( $month ) > 0 ) and ( string-length( $day ) > 0 ) and ( string-length( $hours ) > 0 ) ) then
 
-      let $year			:= 	$year cast as xs:integer
-      let $month    		:= 	$month cast as xs:integer
-      let $day	  		:= 	$day cast as xs:integer
-      let $hours	  		:= 	$hours cast as xs:integer
+      let $year         :=  $year cast as xs:integer
+      let $month            :=  $month cast as xs:integer
+      let $day          :=  $day cast as xs:integer
+      let $hours            :=  $hours cast as xs:integer
 
       (: Check if timestamp is pm  pm :)
-      let $isPm			:=	if( matches( $amPm, "pm" ) ) then true() else false()
-      let $isAm			:=	if( matches( $amPm, "am" ) ) then true() else false()
+      let $isPm         :=  if( matches( $amPm, "pm" ) ) then true() else false()
+      let $isAm         :=  if( matches( $amPm, "am" ) ) then true() else false()
 
-      let $hours    		:=	if( $isPm and not($hours = 12 ) ) then
+      let $hours            :=  if( $isPm and not($hours = 12 ) ) then
                               $hours + 12
                             else if( $isAm and ($hours = 12 ) ) then
                               0
@@ -292,7 +292,7 @@ declare function ig:covertFromAmPmTo24HourTime( $time as xs:string*, $amPm as xs
 
 
       (: Increments the date if hour is 12 pm  and creates a new timestamp :)
-      let $newStamp 		:=	concat(
+      let $newStamp         :=  concat(
                      if(string-length($month cast as xs:string)=1) then concat("0", $month )else $month cast as xs:string, " ",
                      if(string-length($day cast as xs:string)=1) then concat("0", $day )else $day cast as xs:string, " ",
                      if(string-length($year cast as xs:string)=2) then concat("20", $year )else $year cast as xs:string, " ",
@@ -474,12 +474,12 @@ declare function zf:getReplies($threadNode as node(), $threadLink as xs:string, 
 declare function zf:parseReplies($replies as node()*) as xs:integer
 {
     let $text := replace( ig:nsj($replies), "-\d+", "-1" )
+    let $symbol := ig:extractEx($text, "(-)\d+")
     let $text := replace( $text, "\D", "" )
-    let $replies := if(not(string-length($text) = 0))
-                       then xs:integer(  $text  )
+    let $replies := if (not(string-length($text) = 0))
+                       then xs:integer(concat($symbol, $text))
                        else -1
     return $replies
-
 };
 
 declare function zf:getsubForumStartPage()
@@ -752,38 +752,38 @@ declare function zf:parseTimestamp($threadNode as node())
   language node on the wiki as well.:)
 declare function t:getLanguage() as node() {
 
-        <language>
+    <language>
         <!--        Durations...          -->
-        <duration>
-            <key>(\d+)\s+years?(\s+ago)?</key>
-            <value>P $1 Y</value>
-        </duration>
-        <duration>
-            <key>(\d+)\s+months?(\s+ago)?</key>
-            <value>P $1 M</value>
-        </duration>
-        <duration>
-            <key>(\d+)\s+days?(\s+ago)?</key>
-            <value>P $1 D</value>
-        </duration>
-        <duration>
-            <key>(\d+)\s+weeks?(\s+ago)?</key>
-            <value>P $1 D</value>
-            <mul>7</mul>
-        </duration>
-        <duration>
-            <key>(\d+)\s+hours?(\s+ago)?</key>
-            <value>PT $1 H</value>
-        </duration>
-        <duration>
-            <key>(\d+)\s+mins?(\s+ago)?</key>
-            <key>(\d+)\s+minutes?(\s+ago)?</key>
-            <value>PT $1 M</value>
-        </duration>
         <duration>
             <key>(\d+)\s+secs?\s+ago</key>
             <key>(\d+)\s+seconds?\s+ago</key>
             <value>PT $1 S</value>
+        </duration>
+        <duration>
+            <key>(\d+)\s+mins?\s+ago</key>
+            <key>(\d+)\s+minutes?\s+ago</key>
+            <value>PT $1 M</value>
+        </duration>
+        <duration>
+            <key>(\d+)\s+hours?\s+ago</key>
+            <value>PT $1 H</value>
+        </duration>
+        <duration>
+            <key>(\d+)\s+days?\s+ago</key>
+            <value>P $1 D</value>
+        </duration>
+        <duration>
+            <key>(\d+)\s+weeks?\s+</key>
+            <value>P $1 D</value>
+            <mul>7</mul>
+        </duration>
+        <duration>
+            <key>(\d+)\s+months?\s+ago</key>
+            <value>P $1 M</value>
+        </duration>
+        <duration>
+            <key>(\d+)\s+years?\s+ago</key>
+            <value>P $1 Y</value>
         </duration>
 
         <!--        Yesterday today          -->
@@ -823,6 +823,17 @@ declare function t:getLanguage() as node() {
         <month value="10">oct</month>
         <month value="11">nov</month>
         <month value="12">dec</month>
+        
+        <nonNumeric value =" 1 " >((^\s*)|(\s+))en\s+</nonNumeric>
+        <nonNumeric value =" 2 " >((^\s*)|(\s+))to\s+</nonNumeric>
+        <nonNumeric value =" 3 " >((^\s*)|(\s+))tre\s+</nonNumeric>
+        <nonNumeric value =" 4 " >((^\s*)|(\s+))fire\s+</nonNumeric>
+        <nonNumeric value =" 5 " >((^\s*)|(\s+))fem\s+</nonNumeric>
+        <nonNumeric value =" 6 " >((^\s*)|(\s+))seks\s+</nonNumeric>
+        <nonNumeric value =" 7 " >((^\s*)|(\s+))syv\s+</nonNumeric>
+        <nonNumeric value =" 8 " >((^\s*)|(\s+))åtte\s+</nonNumeric>
+        <nonNumeric value =" 9 " >((^\s*)|(\s+))ni\s+</nonNumeric>
+        <nonNumeric value =" 10 ">((^\s*)|(\s+))ti\s+</nonNumeric>
 
         <nonNumeric value =" 1 " >one</nonNumeric>
         <nonNumeric value =" 2 " >two</nonNumeric>
@@ -849,17 +860,16 @@ declare function t:getSpecialCharacterRegex() as xs:string
 (:2 - Uri pattern for thread validation:)
 declare function t:getAllowedThreadUriPatterns() as xs:string
 {
-    ("http://stackoverflow.com/questions/\d+/(\w*)(-\w*)*")       
+    ("")
 };
 
-                                 
 (:3 - NumberOfThreadsThreshold: This is the minimum of threads that the
       url transformation must output. To mimic the old behavior set it to
       '0' - i.e everything goes If you want to disallow empty url transformations
       set it to '1' or more:)
 declare function t:getNumberOfThreadsThreshold() as xs:integer
 {
-    1
+    0
 };
 
 (:4 - This is the threshold assosiated with the links that passes the regex patterns specified by
@@ -872,21 +882,24 @@ declare function t:getPatternMatchesThreshold() as xs:integer
 (:5 - Replies per thread page:)
 declare function t:getRepliesPerPage() as xs:integer
 {
-    30
+    25
 };
 
-(:6 - Node collection containing thread uri, replies, etc.. :) 
+(:6 - Node collection containing thread uri, replies, etc.. :)
 declare function t:getThreadNodes() as node()*
 {
-    let $threadNode := $rootNode//h:div[matches(@id, "question-summary-\d+")]
-    return $threadNode
-};  
+    let $threadNodes := $rootNode//h:ol[contains(@class,"cTopicList")]/h:li[matches(@data-rowid,"\d+")]
+    
+    return $threadNodes
+};
 
 (:7 - Fetch the threadlink inside the thread node:)
 declare function t:getThreadLink($threadNode as node()) as xs:string
 {
-    let $threadLink := ($threadNode//h:a[@class = "question-hyperlink"])[1]/@href
-    let $threadLink := ig:resolveUri($threadLink, "http://stackoverflow.com/")
+    let $threadLink := ig:nsj(($threadNode//h:h4[contains(@class,"ipsDataItem_title")]/h:span[@class="ipsType_break ipsContained"]/h:a[@href])[1]/@href)
+(:    let $threadLink := ig:resolveUri($threadLink,"http://www.forumangarska.ru/"):)
+    let $threadLink := ig:removeParamValueFromQuery($threadLink, "s")
+    let $threadLink := ig:removeParamValueFromQuery($threadLink, "sid")
     
     return $threadLink
 };
@@ -894,19 +907,15 @@ declare function t:getThreadLink($threadNode as node()) as xs:string
 (:8 - Fetch the thread id.:)
 declare function t:getThreadId($threadNode as node(), $threadLink as xs:string) as xs:string
 {
-    let $threadId := ig:extractEx($threadNode/@id,"question-summary-(\d+)")
-    
+    let $threadId := ig:extract($threadNode/@data-rowid,"\d+")
     return $threadId
 };
-
-
 
 (:9 - The node containing the replies number:)
 declare function t:getRepliesNode($threadNode as node(), $threadLink as xs:string, $threadId as xs:string) as node()*
 {
-    let $replies := ($threadNode//h:div[@class = "stats"]//h:div[matches(@class, "status") and matches(@class, "(un)*answered")])[1]
-    return
-        $replies
+    let $replies := ($threadNode//h:span[@class = "ipsDataItem_stats_number"])[1]
+    return $replies
 };
 
 (:10 - Generate the thread url's
@@ -916,18 +925,14 @@ declare function t:getRepliesNode($threadNode as node(), $threadLink as xs:strin
       when the function is called ex: 0, 10,20,30 etc.:)
 declare function t:parseThreadUrl($threadLink as xs:string, $threadId as xs:string,  $page as xs:integer, $lastPage as xs:integer) as node()
 {
-    let $threadUrl := ig:setParamValueFromQuery($threadLink, "page", xs:string($page))
-    
-    return
-        <thread>{$threadUrl}</thread>
+    let $threadLink := ig:setParamValueFromQuery($threadLink,"page",xs:string($page))
+    return <thread>{$threadLink}</thread>
 };
 
 (:11 - Get the year of the thread:)
-declare function t:getDateOfLastMessage($threadNode as node()) as xs:string
+declare function t:getDateOfLastMessage($threadNode as node()) as xs:string*
 {
-   let $date := ig:nsj(($threadNode//h:span[@class = "relativetime"])[1]/@title)
-   return
-       $date
+    ig:nsj(($threadNode//h:time)[last()]/@datetime)
 };
 
 (:12 - regex expression describing the current timestamp sequence.
@@ -939,21 +944,19 @@ declare function t:getTimestampRegex() as xs:string
 (:THREAD CODE - END :)
 
 
-
 (:PAGE CODE - START :)
-
 (:1 - Fetch the forum id:)
 declare function t:getForumId($paginationNode as node()*) as xs:string
 {
-     ""
+    let $forumId := ig:extractEx($documentUri,"forum/(\d+)-\S+")
+    return $forumId
 };
 
 (:2 - Enter the number of threads per page:)
 declare function t:getThreadsPerPage() as xs:integer
 {
-     15
+    25
 };
-
 
 (:3 - Fetch the navigation bar node.
       Set this function to return <IGNORE/> if you dont need the pagination node in order
@@ -961,18 +964,19 @@ declare function t:getThreadsPerPage() as xs:integer
       If the function returns <SINGLEPAGE/>, current page and last page are both set to t:getSubForumStartPage() :)
 declare function t:getPaginationNode() as node()*
 {
-    let $forumId := t:getForumId(())
-    let $a := $rootNode//h:div[@class = "pager fl"]//h:a[matches(@href, "/questions/")]/@href
-    let $pages := for $link in $a return xs:integer(ig:getParamValueFromQuery($link, "page", "1"))
+    let $a := $rootNode//h:div[@data-role="tablePagination"]//h:a[matches(@href, "page=\d+")]
+    let $pages := for $link in $a/@href return xs:integer( ig:getParamValueFromQuery( $link, "page", "1" ) ) 
     let $lastPage := max($pages)
      
-    return if( count($a) > 0)
+    
+    return
+        if( count($a) > 0)
             then
                 <p>{$lastPage}</p>
             else
                 <SINGLEPAGE/>
-};
 
+};
 
 (:4 - Fetch the the current page. If the forum uses a pagination multiplyer like:
       start=0, start=10, start=20, etc, this function should still return the raw parameter.
@@ -981,15 +985,16 @@ declare function t:getPaginationNode() as node()*
       the cause.:)
 declare function t:getCurrentForumPage($paginationNode as node()*) as xs:integer
 {
-    let $currentPage := xs:integer(ig:getParamValueFromQuery($documentUri, "page", "1"))
-    
-    return xs:integer($currentPage)
+    let $currentPage := ig:getParamValueFromQuery($documentUri,"page","1")
+    return if( $currentPage!="")
+           then xs:integer( $currentPage)
+           else 1
 };
 
 (:5 - Fetch the last page on the subforum:)
 declare function t:getLastForumPage($paginationNode as node()*, $forumId as xs:string) as xs:integer
 {
-    xs:integer( $paginationNode/text() ) 
+    xs:integer( $paginationNode/text() )
 };
 
 (:6 - Generate the page url's. If the forum uses a pagination multiplyer like:
@@ -997,37 +1002,36 @@ declare function t:getLastForumPage($paginationNode as node()*, $forumId as xs:s
       If this is the case, remember to set the $forumUsesPaginationMultiplyer := true():)
 declare function t:parsePageUrl($forumId as xs:string, $threadsPerPage as xs:integer, $page as xs:integer) as node()
 {
-    let $forumUrl := ig:setParamValueFromQuery($documentUri, "page", xs:string($page))
-    
-    return
-        <page>{$forumUrl}</page>
+    let $forumUrl := ig:setParamValueFromQuery($documentUri,"page",xs:string($page))
+    return <page>{$forumUrl}</page>
 };
 (:PAGE CODE - END :)
 
 (: CODE TO UPDATE - END :)
-                      
+
 <forum>
     <threads>
-        {
-           let $threadNodes := t:getThreadNodes()		   
-		   let $threads     := zf:getThreads($threadNodes)
-		   
-		   let $threads := zf:checkUrlListForDuplicates($threads)
-		   
-		   let $threads := zf:validateThreads($threads)
-		   
-		   return
-		       $threads
-		} 
+     {
+       let $threadNodes := t:getThreadNodes()
+       let $threads     := zf:getThreads($threadNodes)
+
+       let $threads := zf:checkUrlListForDuplicates($threads)
+
+       let $threads := zf:validateThreads($threads)
+
+       return
+           $threads
+           
+    }
     </threads>
     <pages>
-		{   
-		    let $pages := zf:generatePageUrls()
-		    
-		    let $pages := zf:checkUrlListForDuplicates($pages) 
-		    
-		    return $pages
-		}
-			      
-	</pages>
+    {
+        let $pages := zf:generatePageUrls()
+
+        let $pages := zf:checkUrlListForDuplicates($pages)
+
+        return $pages
+    }
+
+  </pages>
 </forum>

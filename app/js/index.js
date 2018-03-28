@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2017-11-23 18:09:20
  * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-26 18:00:04
+ * @Last Modified time: 2018-03-28 10:47:17
  */
 const electron = require('electron')
 const fs = require('fs')
@@ -68,6 +68,8 @@ window.addEventListener('contextmenu', (e) => {
     menu.popup(remote.getCurrentWindow())
 }, false)
 
+const pids = []
+
 judge_settings()
 $(document).ready(function() {
     //初始化
@@ -101,9 +103,11 @@ $(document).ready(function() {
                     console.log(judge_blog_type(filePaths[0]));
                     $('#source_type').text(judge_blog_type(filePaths[0]))
                     $('ul.tabs').tabs('select_tab', 'blog-wrap')
+                    $('#shell_info').empty()
                 } else {
                     $('#source_type').text('FORUM')
                     $('ul.tabs').tabs('select_tab', 'forum-wrap')
+                    $('#shell_info').empty()
                 }
                 $('#source_name').text(path.basename(filePaths[0]))
                 $('#source_path').text(filePaths[0])
@@ -176,11 +180,18 @@ $(document).ready(function() {
         event.preventDefault();
         /* Act on the event */
         if ($('#source_path').text()) {
-            let source_save_path = $('#source_path').text()
-            link_blog_file(source_save_path)
-            blog_run(function() {
-                $('#blog_shell_info').append("<p>Blog 测试完毕</p>");
-            })
+            const source_save_path = $('#source_path').text()
+            if (fs.existsSync(path.join(source_save_path, 'globalConfig.xml'))) {
+                $('#source_type').text(judge_blog_type(source_save_path))
+                $('#source_name').text(path.basename(source_save_path))
+                $('#source_path').text(source_save_path)
+                link_blog_file(source_save_path)
+                blog_run(function() {
+                    console.log('________________________');
+                })
+            } else {
+                alert('请选择一个Blog Source！');
+            }
         } else {
             dialog.showOpenDialog({
                 title: '选择Source',
@@ -237,12 +248,17 @@ $(document).ready(function() {
     $('#url_run_button').on('click', function(event) {
         event.preventDefault();
         /* Act on the event */
+        $('#shell_info').empty()
         if ($('#source_path').text()) {
             $('#shell_info').append('<p>=================start===================</p>')
-            forum.Url.run(path.join($('#source_path').text(), 'SubSourceCrawlerConfig.xml'),(msg) => {
-                // console.log(msg);
-                $('#shell_info').append('<p>' + msg + '</p>')
-            })
+            if (fs.existsSync(path.join($('#source_path').text(), 'SubSourceCrawlerConfig.xml'))) {
+                forum.Url.run(path.join($('#source_path').text(), 'SubSourceCrawlerConfig.xml'), (msg) => {
+                    // console.log(msg);
+                    $('#shell_info').append('<p>' + msg + '</p>')
+                })
+            } else {
+                alert('请选择一个FORUM Source!');
+            }
         } else {
             dialog.showOpenDialog({
                 title: '选择Source',
@@ -254,12 +270,12 @@ $(document).ready(function() {
                         $('#source_name').text(path.basename(filePaths[0]))
                         $('#source_path').text(filePaths[0])
                         $('#shell_info').append('<p>=================start===================</p>')
-                        forum.Url.run(path.join(filePaths[0], 'SubSourceCrawlerConfig.xml'),(msg) => {
+                        forum.Url.run(path.join(filePaths[0], 'SubSourceCrawlerConfig.xml'), (msg) => {
                             // console.log(msg);
                             $('#shell_info').append('<p>' + msg + '</p>')
                         })
                     } else {
-                        alert('SubSourceCrawlerConfig.xml 不存在！');
+                        alert('SubSourceCrawlerConfig.xml 不存在！')
                     }
                 }
             })
@@ -268,26 +284,83 @@ $(document).ready(function() {
     $('#forum_run_button').on('click', function(event) {
         event.preventDefault();
         /* Act on the event */
+        $('#shell_info').empty()
+        $('#forum_check_result').css('display', 'none')
+        $('#forum_check_error').css('display', 'none')
+        const temp_source_dir = path.join(root_path,'environment/temp')
+        if (!fs.existsSync(temp_source_dir)) fs.mkdirSync(temp_source_dir)
+        const fs_watch = fs.watch(temp_source_dir, { recursive: true }, (eventType, filename) => {
+            if (eventType == 'rename') {
+                if (/transformed\.log$/g.test(filename)) {
+                    if (fs.existsSync(path.join(temp_source_dir,filename))) {
+                        $('#forum_check_result').css('display', 'inline-block')
+                    }
+                } else if (/errors\.log$/g.test(filename)) {
+                    if (fs.existsSync(path.join(temp_source_dir,filename))) {
+                        $('#forum_check_error').css('display', 'inline-block')
+                    }
+                }
+            }else if (filename) {
+            } else {
+                console.log('未提供文件名')
+            }
+        })
+        console.log(pids)
         if ($('#source_path').text()) {
-            let source_save_path = $('#source_path').text()
-            forum_run(source_save_path, function(source_name) {
-                console.log(source_name)
-            })
+            const source_save_path = $('#source_path').text()
+            if (fs.existsSync(path.join(source_save_path, 'SubSourceCrawlerConfig.xml'))) {
+                $('#source_type').text('FORUM')
+                $('#source_name').text(path.basename(source_save_path))
+                $('#source_path').text(source_save_path)
+                forum.Subforum.run(source_save_path, pids, (msg) => {
+                    // console.log(msg);
+                    $('#shell_info').append('<p>' + msg + '</p>')
+                })
+                console.log(pids)
+                $('#forum_stop_button').css("display", "inline-block")
+                $('#forum_stop_button').on('click', function(event) {
+                    event.preventDefault()
+                    /* Act on the event */
+                    $('#forum_stop_button').css("display", "none")
+                    while(pids.length > 0){
+                        process.kill(pids.shift())
+                    }
+                    fs_watch.close()
+                    $('#shell_info').append('<p>===================================</p>')
+                    $('#shell_info').append('<p>SubForum 停止测试！</p>')
+                })
+            } else {
+                alert('SubSourceCrawlerConfig.xml 不存在！')
+            }
         } else {
             dialog.showOpenDialog({
                 title: '选择Source',
                 properties: ['openDirectory']
             }, function(filePaths) {
                 if (filePaths) {
-                    if (fs.existsSync(path.join(filePaths[0], 'globalConfig.xml'))) {
-                        alert('请选择一个Forum Source！');
-                    } else {
+                    if (fs.existsSync(path.join(filePaths[0], 'SubSourceCrawlerConfig.xml'))) {
                         $('#source_type').text('FORUM')
                         $('#source_name').text(path.basename(filePaths[0]))
                         $('#source_path').text(filePaths[0])
-                        forum_run(filePaths[0], function(source_name) {
-                            console.log(source_name)
+                        forum.Subforum.run(filePaths[0], pids, (msg) => {
+                            // console.log(msg);
+                            $('#shell_info').append('<p>' + msg + '</p>')
                         })
+                        console.log(pids)
+                        $('#forum_stop_button').css("display", "inline-block")
+                        $('#forum_stop_button').on('click', function(event) {
+                            event.preventDefault()
+                            /* Act on the event */
+                            $('#forum_stop_button').css("display", "none")
+                            while(pids.length > 0){
+                                process.kill(pids.shift())
+                            }
+                            fs_watch.close()
+                            $('#shell_info').append('<p>===================================</p>')
+                            $('#shell_info').append('<p>SubForum 停止测试！</p>')
+                        })
+                    } else {
+                        alert('SubSourceCrawlerConfig.xml 不存在！')
                     }
                 }
             })

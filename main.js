@@ -59,7 +59,7 @@ function createWindow() {
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
 
-        const baseUrl = path.join(__dirname, '/app/environment/forumtest/temp')
+        const baseUrl = path.join(__dirname, '/app/environment/temp')
         const filedirs = fs.readdirSync(baseUrl)
         for (let i = 0; i < filedirs.length; i++) {
             let stats = fs.statSync(path.join(baseUrl, filedirs[i]))
@@ -243,9 +243,9 @@ const tray_menu_template = [{
 
 function deleteAll(dir_path) {
     if (fs.existsSync(dir_path)) {
-        let files = fs.readdirSync(dir_path);
-        files.forEach(function(file, index) {
-            let curPath = path.join(dir_path,file);
+        let dirs = fs.readdirSync(dir_path)
+        dirs.forEach(function(file, index) {
+            let curPath = path.join(dir_path, file);
             if (fs.statSync(curPath).isDirectory()) { // recurse
                 deleteAll(curPath);
             } else { // delete file

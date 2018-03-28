@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-03-22 10:53:41
  * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-26 17:59:14
+ * @Last Modified time: 2018-03-28 11:04:53
  */
 const fs = require('fs')
 const path = require('path')
@@ -11,6 +11,7 @@ const xml2js = require('xml2js')
 const cheerio = require('cheerio')
 const { URL, URLSearchParams } = require('url')
 const { exec, spawn, spawnSync } = require('child_process')
+const readline = require('readline')
 
 const root_path = path.join(__dirname, '../')
 
@@ -26,27 +27,31 @@ const jsonBuilder = new xml2js.Builder({
     }
 }) // jons -> xml
 
+const SubSourceJsonBuilder = new xml2js.Builder({
+    rootName: 'no.integrasco.immensus.storage.domain.source.SubSource',
+    renderOpts: {
+        pretty: true,
+        indent: '    '
+    },
+    xmldec: {
+        'version': '1.0',
+        'encoding': 'UTF-8'
+    }
+}) // jons -> xml
+
 const jsonParser = new xml2js.Parser({
     explicitArray: false //一个子节点直接访问不生成数组
 })
 
-/*ES6数组去重*/
-// const unique = (array) => {
-//    return Array.from(new Set(array));
-// }
-const unique = (array) => {
-    let res = []
-    array.forEach((item) => {
-        if (!res.some((elem) => {
-                return (item.link === elem.link)
-            })) {
-            res.push(item)
-        }
-    })
-    /*去除链接中以.xml结尾的链接*/
-    return res.filter(function(item, index) {
-        return !/\.xml\/?$/g.test(item.link);
-    });
+/*生成打印信息*/
+const print_msg = (msg) => {
+    const date = new Date()
+    const month = (date.getMonth() < 9) ? '0' + (date.getMonth() + 1) : (date.getMonth() + 1).toString()
+    const day = (date.getDate() < 10) ? '0' + date.getDate() : date.getDate().toString()
+    const hour = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours().toString()
+    const minute = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes().toString()
+    const second = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds().toString()
+    return util.format('INFO: %d-%s-%s %s:%s:%s %s', date.getFullYear(), month, day, hour, minute, second, msg)
 }
 
 /*url_run*/
@@ -75,9 +80,9 @@ const url_run = () => {
         url_process(config, config_path, show_msg)
     }
     /*链接处理函数*/
-    const url_process = (config, config_path,show_msg) => {
+    const url_process = (config, config_path, show_msg) => {
         if (visit_queue.length != 0) {
-        	/*选取并去除数组中的第一个*/
+            /*选取并去除数组中的第一个*/
             const url = visit_queue.shift()
             const link = url.link
             const description = url.description
@@ -149,16 +154,13 @@ const url_run = () => {
                 })
                 return config_obj
             } else {
-                callback(2) //传入参数表示SubSourceCrawlerConfig.xml是空的
+                callback('文件为空') //传入参数表示SubSourceCrawlerConfig.xml是空的
+                return
             }
         } else {
-            callback(1) //传入参数表示SubSourceCrawlerConfig.xml不存在
+            callback('文件不存在') //传入参数表示SubSourceCrawlerConfig.xml不存在
+            return
         }
-    }
-    /*生成打印信息*/
-    const print_msg = (msg) => {
-        const date = new Date()
-        return util.format('INFO: %d-%d-%d %d:%d:%d %s', date.getFullYear(), date.getMonth() + 1, date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds(), msg)
     }
     /*添加访问链接*/
     const add_to_visit_queue = (urls) => {
@@ -290,7 +292,7 @@ const url_run = () => {
     }
     /*判断链接是否能被URL-XQ检查*/
     const is_subsource_valid = (xq_path_file, xml_root, document_uri, gmt = 0) => {
-        const SAXON9HE_JAR_PATH = path.join(root_path, 'environment/Tmonkey/dm_tmonkey_sandbox/libs/saxon9he.jar')
+        const SAXON9HE_JAR_PATH = path.join(root_path, 'environment/saxon9he.jar')
         const java = spawnSync('java', ['-cp', SAXON9HE_JAR_PATH, 'net.sf.saxon.Query', '-s:' + xml_root, '-q:' + xq_path_file, 'documentUri="' + document_uri + '"', 'gmtOffset="' + gmt + '"'], {
             shell: true
         });
@@ -314,7 +316,7 @@ const url_run = () => {
         }
         return info
     }
-    /**/
+    /*建立sourceurJSON*/
     const build_sourceurl = (url, source_name, description) => {
         return {
             url: url,
@@ -323,10 +325,200 @@ const url_run = () => {
             }
         }
     }
+    /*数组去重*/
+    const unique = (array) => {
+        let res = []
+        array.forEach((item) => {
+            if (!res.some((elem) => {
+                    return (item.link === elem.link)
+                })) {
+                res.push(item)
+            }
+        })
+        /*去除链接中以.xml结尾的链接*/
+        return res.filter(function(item, index) {
+            return !/\.xml\/?$/g.test(item.link);
+        });
+    }
+    return {
+        run
+    }
+}
+
+/*Subforum Run*/
+const subforum_run = () => {
+    const temp_dir = path.join(root_path, 'environment/temp')
+    const ingentia_path = path.join(root_path, 'environment/ingentia-run')
+    const SubSourceJson = {
+        subsourceid: 1,
+        name: '',
+        uri: ''
+    }
+    const WebForumObj = {
+        url: 5,
+        thread: 6
+    }
+    const run = (source_dir, pids, show_msg, thread_number = 5) => {
+        const urls = read_finished_xml(source_dir)
+        prepare(source_dir)
+        show_msg('Clearing all temp directories and result directories')
+        // console.log(urls)
+        if (urls.length != 0) {
+            show_msg(util.format('There are %d subforums in this source.', urls.length))
+            for (let i = 0; i < thread_number; i++) {
+                const pid = thread_run(i, source_dir, pids, urls, show_msg)
+                pids.push(pid)
+            }
+        } else {
+            show_msg('Threre are no subforum in finished.xml, may be there are some wrong with the SubSourceCrawlerConfig.xml')
+        }
+    }
+    /*准备工作*/
+    const prepare = (source_dir) => {
+        const temp_source_dir = path.join(temp_dir, path.basename(source_dir))
+        if (!fs.existsSync(temp_dir)) fs.mkdirSync(temp_dir)
+        if (fs.existsSync(temp_source_dir)) {
+            fs.readdirSync(temp_source_dir).forEach((file) => {
+                delete_dir(path.join(temp_source_dir, file))
+            })
+        } else fs.mkdirSync(temp_source_dir)
+        // const fs_watch = fs.watch(temp_source_dir, { recursive: true }, (eventType, filename) => {
+        //     if (eventType == 'rename') {
+        //     	if (/transformed\.log$/g.test(filename)) {
+        //     		console.log(path.join(temp_source_dir,filename))
+        //     		if (fs.existsSync(path.join(temp_source_dir,filename))) {
+        //     			console.log('transformed show result button')
+        //     		}
+        //     	} else if (/errors\.log$/g.test(filename)) {
+        //     		console.log(path.join(temp_source_dir,filename))
+        //     		if (fs.existsSync(path.join(temp_source_dir,filename))) {
+        //     			console.log('errors show error button')
+        //     		}
+        //     	}
+        //     }else if (filename) {
+        //     	console.log(`事件类型是: ${eventType}`)
+        //         console.log(`提供的文件名: ${filename}`)
+        //     } else {
+        //         console.log('未提供文件名')
+        //     }
+        // })
+    }
+    /*复制ingentia文件夹*/
+    const copy_ingentia_resource = (source_dir, url) => {
+        if (!fs.existsSync(temp_dir)) fs.mkdirSync(temp_dir)
+        const source_name = path.basename(source_dir)
+        if (!fs.existsSync(path.join(temp_dir, source_name))) fs.mkdirSync(path.join(temp_dir, source_name))
+        const ingentia_temp = fs.mkdtempSync(path.join(temp_dir, source_name, 'ingentia-'))
+        /*复制文件*/
+        copy_dir(ingentia_path, ingentia_temp)
+        SubSourceJson.name = source_name
+        SubSourceJson.uri = url
+        fs.writeFileSync(path.join(ingentia_temp, 'conf/configuration/subSourceConfig.xml'), SubSourceJsonBuilder.buildObject(SubSourceJson))
+        copy_file(path.join(source_dir, 'webForumConfiguration.xml'), path.join(ingentia_temp, 'conf/configuration/webForumConfiguration.xml'))
+        jsonParser.parseString(fs.readFileSync(path.join(source_dir, 'webForumConfiguration.xml')), function(err, result) {
+            WebForumObj.url = result.configuration.UrlTransformation
+            WebForumObj.thread = result.configuration.ThreadTransformation
+        })
+        copy_file(path.join(source_dir, source_name + '-url.xq'), path.join(ingentia_temp, 'conf/transformation', WebForumObj.url + '.xq'))
+        copy_file(path.join(source_dir, source_name + '-thread.xq'), path.join(ingentia_temp, 'conf/transformation', WebForumObj.thread + '.xq'))
+        return ingentia_temp
+    }
+    /*单个线程运行*/
+    const thread_run = (thread_index, source_dir, pids, urls, show_msg) => {
+        const url = urls.shift()
+        const ingentia_path = copy_ingentia_resource(source_dir, url)
+        show_msg(print_msg(util.format('thread-%d running: %s', thread_index, url)))
+        show_msg(print_msg('Start to run Ingentia.'))
+        // console.log('thread_run')
+        const java = spawn("java", ["-jar", "ingentia-test-crawler-3.0.1-SNAPSHOT-jar-with-dependencies.jar", "-c", "legacythread"], {
+            cwd: ingentia_path
+        })
+        java.stdout.setEncoding("ASCII")
+        const stderrRl = readline.createInterface({
+            input: java.stderr,
+            crlfDelay: Infinity
+        })
+        stderrRl.on('line', (line) => {
+            if (/Caused by:/.test(line)) {
+                show_msg(line)
+            }
+        })
+        java.on('error', (err) => {
+            console.error(`错误 ${err} 发生`)
+        })
+        java.on('exit', (code, signal) => {
+            console.log(`子进程收到信号 ${signal} 而终止`)
+            if (code == 0) {
+                show_msg(util.format('Url: %s 测试完毕', url))
+                pids.splice(thread_index, 1, thread_run(thread_index, source_dir, pids, urls, show_msg))
+                console.log(`子进程退出码：${code}`)
+            } else {
+                console.log(`子进程退出码：${code}`)
+                console.log("------------------------------")
+            }
+        })
+        return java.pid
+    }
+    /*同步遍历拷贝文件目录*/
+    const copy_dir = (src, dir) => {
+        fs.readdirSync(src).forEach((file) => {
+            if (file != 'script' && file != 'subSourceConfig.xml') {
+                const _src = path.join(src, file)
+                const _dir = path.join(dir, file)
+                if (fs.statSync(_src).isDirectory()) {
+                    fs.mkdirSync(_dir)
+                    copy_dir(_src, _dir)
+                } else {
+                    copy_file(_src, _dir)
+                }
+            }
+        })
+    }
+    /*复制文件*/
+    const copy_file = (src, dir) => {
+        // fs.createReadStream(src).pipe(fs.createWriteStream(dir)) //异步
+        fs.writeFileSync(dir, fs.readFileSync(src)); //同步
+    }
+    /*删除目录*/
+    const delete_dir = (dir_path) => {
+        if (fs.existsSync(dir_path)) {
+            const dirs = fs.readdirSync(dir_path)
+            dirs.forEach((file, index) => {
+                const curPath = path.join(dir_path, file)
+                if (fs.statSync(curPath).isDirectory()) { // recurse
+                    delete_dir(curPath)
+                } else { // delete file
+                    fs.unlinkSync(curPath)
+                }
+            });
+            fs.rmdirSync(dir_path)
+        }
+    };
+    /*检查文件完整性*/
+    const check_config_file = (source_dir, name = '') => {
+        if (name) {
+            if (!fs.existsSync(path.join(source_dir, name))) {
+                show_msg(util.format('配置文件 [%s] 不存在，请检查！', name))
+            }
+        } else {
+            show_msg('文件夹不存在，请谨慎选择！')
+        }
+    }
+    /*读取finished.xml*/
+    const read_finished_xml = (source_dir) => {
+        const file = path.join(source_dir, 'finished.xml')
+        let urls = []
+        jsonParser.parseString(fs.readFileSync(file), function(err, result) {
+            urls = result.sourceurls.sourceurl.map(function(elem, index) {
+                return elem.url
+            })
+        })
+        return urls
+    }
     return {
         run
     }
 }
 
 exports.Url = url_run();
-exports.unique = unique;
+exports.Subforum = subforum_run();

@@ -1,8 +1,8 @@
 /*
  * @Author: guoyu19961004
  * @Date:   2018-03-03 18:20:32
- * @Last Modified by:   Administrator
- * @Last Modified time: 2018-03-22 12:52:24
+ * @Last Modified by:   guoyu19961004
+ * @Last Modified time: 2018-03-28 10:59:28
  */
 const fs = require('fs')
 const xml2js = require('xml2js')
@@ -67,7 +67,6 @@ function judge_settings() {
         if (conf) {
             jsonParser.parseString(conf, function(err, result) {
                 saveConf(result.norway)
-                change_env_path()
                 get_source_info(result.norway)
             })
         } else {
@@ -115,6 +114,9 @@ function get_source_info(argument) {
             username: argument.username,
             password: argument.password,
             login: 'Login'
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            Materialize.toast(textStatus, 2000)
         },
         success: function(msg) {
             $.ajax({
@@ -278,28 +280,6 @@ function link_file(existingPath, newPath) {
     fs.linkSync(existingPath, newPath)
 }
 
-/*cmd封装*/
-function exe(command, options) {
-    // windows下
-    let cmd = spawn("cmd.exe", command, options);
-
-    cmd.stdout.setEncoding("ASCII");
-    cmd.stdout.on('data', (data) => {
-        console.log("------------------------------");
-        console.log("exec", command);
-        console.log("stdout:" + data);
-    });
-    cmd.stderr.on('data', (data) => {
-        console.log("------------------------------");
-        console.log("stderr:" + data);
-        console.log("------------------------------");
-    });
-    cmd.on('exit', (code) => {
-        console.log(`子进程退出码：${code}`);
-        console.log("------------------------------");
-    });
-}
-
 /*调用JAVA下载网页*/
 function download_url(url, encoding, callback) {
     $('#shell_info').empty();
@@ -406,13 +386,7 @@ function blog_run(callback) {
         $("#blog_stop_button").off("click", "**")
         $('#blog_stop_button').css("display", "none")
     });
-    $('#blog_stop_button').css("display", "inline-block");
-    $('#blog_stop_button').on('click', function(event) {
-        event.preventDefault();
-        /* Act on the event */
-        java.kill()
-    });
-    fs.watch(path.join(ingentia_path, "logs"), (eventType, filename) => {
+    const fs_watch = fs.watch(path.join(ingentia_path, "logs"), (eventType, filename) => {
         console.log(`事件类型是: ${eventType}`);
         if (filename == 'transformed.log') {
             if (eventType == 'rename') {
@@ -430,6 +404,13 @@ function blog_run(callback) {
                 }
             }
         } else if (filename) {} else console.log('文件名不存在');
+    });
+    $('#blog_stop_button').css("display", "inline-block");
+    $('#blog_stop_button').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        java.kill()
+        fs_watch.close()
     });
 }
 
@@ -488,47 +469,6 @@ function forum_run(source_path, callback) {
     console.log('runForum');
     $('#shell_info').empty();
     $('#shell_info').append('<p>正在运行<strong>' + path.basename(source_path) + '</strong>，请稍等，日志延迟显示！</p>');
-    // let py = spawn("python", [path.join(forumtest_path, 'bin/runsource.py'), source_path]);
-    // py.stdout.setEncoding("ASCII");
-    // const stdoutRl = readline.createInterface({
-    //     input: py.stdout,
-    //     crlfDelay: Infinity
-    // });
-    // stdoutRl.on('line', (line) => {
-    //     $('#shell_info').append('<p>' + line + '</p>');
-    // });
-    // const stderrRl = readline.createInterface({
-    //     input: py.stderr,
-    //     crlfDelay: Infinity
-    // });
-    // stderrRl.on('line', (line) => {
-    //     if (/Caused by:/.test(line)) {
-    //         $('#shell_info').append('<p style="color: red;">' + line + '<p>');
-    //     }
-    // });
-    // py.on('error', (err) => {
-    //     console.error(`错误 ${err} 发生`);
-    // });
-    // py.on('exit', (code, signal) => {
-    //     console.log(`子进程收到信号 ${signal} 而终止`);
-    //     $('#shell_info').append("<p>------------------------------</p>");
-    //     if (code == 0) {
-    //         callback(path.basename(source_path))
-    //         console.log(`子进程退出码：${code}`);
-    //     } else {
-    //         $('#shell_info').append('<p>Forum 测试中止！</p>')
-    //         console.log(`子进程退出码：${code}`);
-    //         console.log("------------------------------");
-    //     }
-    //     $("#forum_stop_button").off("click", "**")
-    //     $('#forum_stop_button').css("display", "none")
-    // });
-    // $('#forum_stop_button').css("display", "inline-block");
-    // $('#forum_stop_button').on('click', function(event) {
-    //     event.preventDefault();
-    //     /* Act on the event */
-    //     py.kill()
-    // });
     fs.watch(path.join(forumtest_path, "temp", path.basename(source_path)), (eventType, filename) => {
         console.log(`事件类型是: ${eventType}`);
         if (filename == 'transformed.log') {
@@ -554,7 +494,7 @@ function forum_run(source_path, callback) {
 
 /*查看Forum 结果*/
 function collect_forum(source_name, log_type) {
-    let baseUrl = path.join(forumtest_path, 'temp', source_name);
+    let baseUrl = path.join(root_path, 'environment/temp', source_name);
     let log_path = path.join(confData.source, "../", "temp", log_type + '.log')
     //读取文件目录
     fs.readdir(baseUrl, function(err, files) {

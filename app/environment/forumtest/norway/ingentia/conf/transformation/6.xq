@@ -1,4 +1,4 @@
-(:TEMPLATE-THREAD-v1.6:)
+(:TEMPLATE-THREAD-v1.7:)
 xquery version "1.0";
 declare namespace h = "http://www.w3.org/1999/xhtml";
 declare namespace xs = "http://www.w3.org/2001/XMLSchema";
@@ -15,12 +15,12 @@ declare variable $gmtOffset as xs:string external;
 declare variable $rootNode := //h:html;
 
 (: Global variables :)
-declare variable $validateUri := "stackoverflow.com";
+declare variable $validateUri := "omlet.co.uk";
 declare variable $anonymousAuthorName := "guest";
-declare variable $validateSequentialTimestamps := false();
-declare variable $validateFromFutureTimestamps := false();
+declare variable $validateSequentialTimestamps := true();
+declare variable $validateFromFutureTimestamps := true();
 declare variable $forumUsesPaginationMultiplyer := false();
-declare variable $useTimeLimitationOnPost := false();
+declare variable $useTimeLimitationOnPost := true();
 
 
 (:
@@ -121,8 +121,8 @@ declare function ig:getParamValueFromQuery( $query as xs:string, $param as xs:st
    let $q := replace( $query, "#.*$", "" )
     let $r := if( matches( $q, concat("\W", $param, "=", ".+$" ) ) )
               then let $r := if( matches( $q, concat( "\?", $param, "=" )))
-                then	ig:subBefore( substring-after( $q, concat( "?", $param, "=") ), "&amp;" )
-                else	ig:subBefore( substring-after( $q, concat( "&amp;", $param, "=") ), "&amp;" )
+                then    ig:subBefore( substring-after( $q, concat( "?", $param, "=") ), "&amp;" )
+                else    ig:subBefore( substring-after( $q, concat( "&amp;", $param, "=") ), "&amp;" )
                 return $r
               else $default
     return $r
@@ -240,16 +240,16 @@ declare function ig:extract( $input as xs:string, $regex as xs:string )
 
 declare function ig:convertToMMddyyyy( $timestamp as xs:string*, $datePattern as xs:string* ) as xs:string* {
 
-  let $dayExp			:=	"(dd|d)"
-  let $monthExp		:=	"(MM|M)"
-  let $yearExp		:=	"(yyyy|yy)"
-  let $hourExp		:=	"(HH|hh|H|h)"
-  let $minuteExp		:=	"(mm|m)"
-  let $secondExp		:=	"(ss|s)"
+  let $dayExp           :=  "(dd|d)"
+  let $monthExp     :=  "(MM|M)"
+  let $yearExp      :=  "(yyyy|yy)"
+  let $hourExp      :=  "(HH|hh|H|h)"
+  let $minuteExp        :=  "(mm|m)"
+  let $secondExp        :=  "(ss|s)"
 
-  let	$stampList		:=	tokenize( normalize-space( replace( $timestamp, "\D", " " ) ), "\D" )
-  let $dpList			:=	tokenize( $datePattern, "\W")
-  let $indexList		:=	for $dp in $dpList
+  let   $stampList      :=  tokenize( normalize-space( replace( $timestamp, "\D", " " ) ), "\D" )
+  let $dpList           :=  tokenize( $datePattern, "\W")
+  let $indexList        :=  for $dp in $dpList
                 return
                   if( matches( $dp, $monthExp ) ) then
                     1
@@ -280,29 +280,29 @@ declare function ig:convertToMMddyyyy( $timestamp as xs:string*, $datePattern as
 declare function ig:covertFromAmPmTo24HourTime( $time as xs:string*, $amPm as xs:string* ) as xs:string* {
 
   (: strip input timestamp for nonvalid chars and tokenize it to a list :)
-    let $tl 			:= 	tokenize( normalize-space(replace($time, "\D", " ")), " " )
+    let $tl             :=  tokenize( normalize-space(replace($time, "\D", " ")), " " )
 
     (: extraxt all datetime param. :)
-    let $year			:= 	$tl[3]
-    let $month    		:= 	$tl[1]
-    let $day	  		:= 	$tl[2]
-    let $hours    		:= 	$tl[4]
-    let $mins     		:= 	$tl[5]
-    let $sec     		:= 	$tl[6]
+    let $year           :=  $tl[3]
+    let $month          :=  $tl[1]
+    let $day            :=  $tl[2]
+    let $hours          :=  $tl[4]
+    let $mins           :=  $tl[5]
+    let $sec            :=  $tl[6]
 
     (: check if valid:)
     return if( ( string-length( $amPm ) > 0 ) and ( string-length( $year ) > 0 ) and ( string-length( $month ) > 0 ) and ( string-length( $day ) > 0 ) and ( string-length( $hours ) > 0 ) ) then
 
-      let $year			:= 	$year cast as xs:integer
-      let $month    		:= 	$month cast as xs:integer
-      let $day	  		:= 	$day cast as xs:integer
-      let $hours	  		:= 	$hours cast as xs:integer
+      let $year         :=  $year cast as xs:integer
+      let $month            :=  $month cast as xs:integer
+      let $day          :=  $day cast as xs:integer
+      let $hours            :=  $hours cast as xs:integer
 
       (: Check if timestamp is pm  pm :)
-      let $isPm			:=	if( matches( $amPm, "pm" ) ) then true() else false()
-      let $isAm			:=	if( matches( $amPm, "am" ) ) then true() else false()
+      let $isPm         :=  if( matches( $amPm, "pm" ) ) then true() else false()
+      let $isAm         :=  if( matches( $amPm, "am" ) ) then true() else false()
 
-      let $hours    		:=	if( $isPm and not($hours = 12 ) ) then
+      let $hours            :=  if( $isPm and not($hours = 12 ) ) then
                               $hours + 12
                             else if( $isAm and ($hours = 12 ) ) then
                               0
@@ -310,7 +310,7 @@ declare function ig:covertFromAmPmTo24HourTime( $time as xs:string*, $amPm as xs
 
 
       (: Increments the date if hour is 12 pm  and creates a new timestamp :)
-      let $newStamp 		:=	concat(
+      let $newStamp         :=  concat(
                      if(string-length($month cast as xs:string)=1) then concat("0", $month )else $month cast as xs:string, " ",
                      if(string-length($day cast as xs:string)=1) then concat("0", $day )else $day cast as xs:string, " ",
                      if(string-length($year cast as xs:string)=2) then concat("20", $year )else $year cast as xs:string, " ",
@@ -572,7 +572,7 @@ declare function t:translateRelativeTime( $timestamp as xs:string, $timePattern 
                                                     + xs:integer(ig:extract($durationD[2],"\d+"))),"D")
                           else $durationD
     let $durationOfYM := string-join(distinct-values($durationYM),"")
-    let $durationOfYM := if (string-length($durationYM) > 0)
+    let $durationOfYM := if (string-length($durationOfYM) > 0)
                              then concat("P",replace($durationOfYM,"P",""))
                              else ""
     let $durationOfDHMS := concat($durationD,string-join(distinct-values($durationHMS),""))
@@ -585,7 +585,7 @@ declare function t:translateRelativeTime( $timestamp as xs:string, $timePattern 
                                                else $durationOfDHMS
                                        else concat("PT",replace($durationOfDHMS,"PT",""))
                                else ""
-    let $TempmodTs := if (string-length($durationYM) > 0)
+    let $TempmodTs := if (string-length($durationOfYM) > 0)
                       then ig:current-dateTime-adjusted() - xs:yearMonthDuration($durationOfYM)
                       else ig:current-dateTime-adjusted()
     let $modTs := if (string-length($durationOfDHMS) > 0)
@@ -1033,77 +1033,88 @@ declare function zf:parsePostsInGlobal($posts as node()*, $postRootNodes as node
   language node on the wiki as well.:)
 declare function t:getLanguage() as node() {
 
-        <language>
+    <language>
         <!--        Durations...          -->
-        <duration>
-            <key>(\d+)\s+years?(\s+ago)?</key>
-            <value>P $1 Y</value>
-        </duration>
-        <duration>
-            <key>(\d+)\s+months?(\s+ago)?</key>
-            <value>P $1 M</value>
-        </duration>
-        <duration>
-            <key>(\d+)\s+days?(\s+ago)?</key>
-            <value>P $1 D</value>
-        </duration>
-        <duration>
-            <key>(\d+)\s+weeks?(\s+ago)?</key>
-            <value>P $1 D</value>
-            <mul>7</mul>
-        </duration>
-        <duration>
-            <key>(\d+)\s+hours?(\s+ago)?</key>
-            <value>PT $1 H</value>
-        </duration>
-        <duration>
-            <key>(\d+)\s+mins?(\s+ago)?</key>
-            <key>(\d+)\s+minutes?(\s+ago)?</key>
-            <value>PT $1 M</value>
-        </duration>
         <duration>
             <key>(\d+)\s+secs?\s+ago</key>
             <key>(\d+)\s+seconds?\s+ago</key>
             <value>PT $1 S</value>
         </duration>
+        <duration>
+            <key>(\d+)\s+mins?\s+ago</key>
+            <key>(\d+)\s+minutes?\s+ago</key>
+            <value>PT $1 M</value>
+        </duration>
+        <duration>
+            <key>(\d+)\s+hours?\s+ago</key>
+            <value>PT $1 H</value>
+        </duration>
+        <duration>
+            <key>(\d+)\s+days?\s+ago</key>
+            <value>P $1 D</value>
+        </duration>
+        <duration>
+            <key>(\d+)\s+weeks?\s+</key>
+            <value>P $1 D</value>
+            <mul>7</mul>
+        </duration>
+        <duration>
+            <key>(\d+)\s+months?\s+ago</key>
+            <value>P $1 M</value>
+        </duration>
+        <duration>
+            <key>(\d+)\s+years?\s+ago</key>
+            <value>P $1 Y</value>
+        </duration>
 
         <!--        Yesterday today          -->
         <duration>
-            <key>today</key>
+            <key>oggi</key>
             <value>PT 1 S</value>
         </duration>
         <duration>
-            <key>yesterday</key>
+            <key>ieri</key>
             <value>P 1 D</value>
         </duration>
 
         <!--        Months          -->
         <!-- Remember that the text actually support regex.. -->
-        <month value="01">january</month>
-        <month value="02">february</month>
-        <month value="03">march</month>
-        <month value="04">april</month>
-        <month value="05">may</month>
-        <month value="06">june</month>
-        <month value="07">july</month>
-        <month value="08">august</month>
-        <month value="09">september</month>
-        <month value="10">october</month>
-        <month value="11">november</month>
-        <month value="12">december</month>
+        <month value="01">gennaio</month>
+        <month value="02">febbraio</month>
+       <month value="03">marzo</month>
+       <month value="04">aprile</month>
+       <month value="05">maggio</month>
+       <month value="06">giugno</month>
+       <month value="07">luglio</month>
+       <month value="08">agosto</month>
+       <month value="09">settembre</month>
+       <month value="10">ottobre</month>
+       <month value="11">novembre</month>
+       <month value="12">dicembre</month>
+       <month value="01">gen</month>
+       <month value="02">feb</month>
+       <month value="03">mar</month>
+       <month value="04">apr</month>
+       <month value="05">mag</month>
+       <month value="06">giu</month>
+       <month value="07">lug</month>
+       <month value="08">ago</month>
+       <month value="09">set</month>
+       <month value="10">ott</month>
+       <month value="11">nov</month>
+       <month value="12">dic</month>
 
-        <month value="01">jan</month>
-        <month value="02">feb</month>
-        <month value="03">mar</month>
-        <month value="04">apr</month>
-        <month value="05">may</month>
-        <month value="06">jun</month>
-        <month value="07">jul</month>
-        <month value="08">aug</month>
-        <month value="09">sep</month>
-        <month value="10">oct</month>
-        <month value="11">nov</month>
-        <month value="12">dec</month>
+
+        <nonNumeric value =" 1 " >((^\s*)|(\s+))en\s+</nonNumeric>
+        <nonNumeric value =" 2 " >((^\s*)|(\s+))to\s+</nonNumeric>
+        <nonNumeric value =" 3 " >((^\s*)|(\s+))tre\s+</nonNumeric>
+        <nonNumeric value =" 4 " >((^\s*)|(\s+))fire\s+</nonNumeric>
+        <nonNumeric value =" 5 " >((^\s*)|(\s+))fem\s+</nonNumeric>
+        <nonNumeric value =" 6 " >((^\s*)|(\s+))seks\s+</nonNumeric>
+        <nonNumeric value =" 7 " >((^\s*)|(\s+))syv\s+</nonNumeric>
+        <nonNumeric value =" 8 " >((^\s*)|(\s+))åtte\s+</nonNumeric>
+        <nonNumeric value =" 9 " >((^\s*)|(\s+))ni\s+</nonNumeric>
+        <nonNumeric value =" 10 ">((^\s*)|(\s+))ti\s+</nonNumeric>
 
         <nonNumeric value =" 1 " >one</nonNumeric>
         <nonNumeric value =" 2 " >two</nonNumeric>
@@ -1131,104 +1142,87 @@ declare function t:getSpecialCharacterRegex() as xs:string
 (: If you are not allowed to change the related global variables, please just let it empty :)
 declare function t:validPostTimePoint() as xs:string*
 {
-    ""
+    "2017-03-01 00:00:00"
 };
-
 (:3 -Fetch sign node that could exactly say no posts existing.:)
 declare function t:skipedSpecialPosts() as node()*
 {
     ()
 };
-
-(:4 -This integer should not be greater then posts per page. 
+(:4 -This integer should not be greater then posts per page.
   It is used in  zf:notAllAuthorsAreGuests to check if all
   authors are guests :)
 declare function t:getGuestThreshold()as xs:integer
 {
-    29
+    25
 };
-
 (:5 -  Fetch the nodes containing the post elements:)
 declare function t:getPostRootNodes() as node()*
 {
-    let $question := $rootNode//h:div[@id = "question"]
-    let $answer := $rootNode//h:div[matches(@id, "answer-\d+")]
-    let $postRootNodes := if (t:getCurrentPage() = 1)
-                          then $question union $answer
-                          else $answer
-    return
-        $postRootNodes
+    let $posts := $rootNode//h:article[matches(@id, "elComment_\d+")]
+    
+    return $posts
 };
 
 (:6 - Fetch thread id:)
 declare function t:getThreadId($post as node()*) as xs:string
 {
-    let $threadId := ig:extractEx($documentUri, "/questions/(\d+)/")
-    return
-        $threadId
+    ig:extractEx($documentUri,"topic/(\d+)-\S+")
 };
 
 (:7 - Fetch post id:)
 declare function t:getPostId($post as node()*, $page as xs:string, $index as xs:string) as xs:string
 {
-    let $postId := if ($page = "1" and $index = "1")
-                   then t:getThreadId(()) 
-                   else ig:extractEx($post/@id, "answer-(\d+)")
-    return
-        $postId
+    let $postId := ig:extract($post/@id, "\d+")
+    let $postId := if($postId)
+                    then $postId
+                    else t:getThreadId($post)
+    return $postId
 };
 
 (:8 - Fetch node with author information:)
 declare function t:getAuthorNode($post as node()*) as node()
 {
-    let $authorNode := if (exists(($post//h:td[contains(@class, "post-signature")])[1]//h:div[@class  = "user-details"]//h:a[matches(@href, "/users/\d+/")]))
-                       then ($post//h:td[contains(@class, "post-signature")])[1]//h:div[@class  = "user-details"]
-                       else (($post//h:td[contains(@class, "post-signature")])[2]//h:div[@class  = "user-details"])[last()]
-    return
-        $authorNode
+    let $authorNode := ($post//h:h3[contains(@class,"cAuthorPane_author")]/h:strong/h:a[@href])[1]
+    let $authorNode := if(exists($authorNode))
+                        then $authorNode
+                        else  ($post//h:h3[contains(@class,"cAuthorPane_author")]/h:strong)[1]
+    return $authorNode
 };
 
 (:9 - Fetch the author from author node:)
 declare function t:getAuthor($authorNode as node()*, $post as node(), $postId as xs:string) as xs:string
 {
-    let $author := if (exists($authorNode//h:a[matches(@href, "/users/\d+/")]))
-                   then ig:nsj($authorNode//h:a[matches(@href, "/users/\d+/")]//text())
-                   else let $text := ig:nsj($authorNode//text())
-                        let $author := replace($text, "\d+\s*revs,\s*\d+\s*users\s*\d+%", "") 
-                        return ig:nsj($author)
-                        
+    let $author := ig:nsj($authorNode//text())
     let $author := if(string-length($author) = 0)
-                   then
-                       $anonymousAuthorName
-                   else
-                       $author
-                       
+                       then $anonymousAuthorName
+                       else $author
     return $author
 };
 
 (:10 - Fetch author url, either from the author node, or somewhere in the post node.:)
 declare function t:getAuthorUrl($authorNode as node()*, $post as node()) as xs:string*
 {
-    let $authorUrl := ig:nsj(($authorNode//h:a[matches(@href, "/users/\d+/")])[1]/@href)
-    let $authorUrl := ig:resolveUri($authorUrl, "http://stackoverflow.com/")
-    
-    return
-        $authorUrl
+    let $authorUrl := ig:nsj($authorNode/@href)
+    return $authorUrl
 };
 
 (:11 - Fetch perm link to post:)
 declare function t:getPostUrl($post as node()*, $postId as xs:string, $threadId as xs:string, $page as xs:string) as xs:string
 {
-    let $postUrl := concat("http://stackoverflow.com/a/", $postId)
- 	return $postUrl
+    let $postUrl := ig:nsj(($post//h:a[matches(@id,"elSharePost_\d+")])[1]/@href)
+(:    let $postUrl := ig:resolveUri($postUrl,"http://my-symbian.com/forum/"):)
+    return $postUrl
 };
 
 (:12 - Fetch the thread subject:)
 declare function t:getThreadSubject() as xs:string
 {
-    let $subject := ig:nsj($rootNode//h:div[@id = "question-header"]//text())
-    return
-        $subject
+    let $subject := ig:nsj( $rootNode//h:h1[@class="ipsType_pageTitle ipsContained_container"]//text() )
+    let $subject := if ($subject != "")
+                    then $subject
+                    else ig:nsj(ig:subAfter(($rootNode//h:title)[1]//text(),"-"))
+    return $subject
 };
 
 (:13 - Fetch the current thread page.
@@ -1237,17 +1231,19 @@ declare function t:getThreadSubject() as xs:string
        If this is the case, remember to set the $forumUsesPaginationMultiplyer := true().:)
 declare function t:getCurrentPage() as xs:integer
 {
-     let $page := ig:getParamValueFromQuery($documentUri, "page", "1")
-     
-     return xs:integer($page)
+    let $currentPage := ig:getParamValueFromQuery($documentUri,"page","1")
+    return if(string-length($currentPage)>0) 
+            then xs:integer($currentPage)
+            else 1
 };
 
 (:14 - Enter the raw timestamp From the post. Try to avoid extra text, especially extra numbers.:)
 declare function t:getRawTimestamp($post as node()*, $authorNode as node(), $index as xs:integer ) as xs:string
 {
-    let $rawTimestamp := ig:nsj(($post//h:td[contains(@class, "post-signature")])[1]//h:span[@class = "relativetime"]/@title)
-
-    return $rawTimestamp
+    let $time := ($post//h:time[@datetime])[1]
+    let $time := ig:nsj( $time/@datetime )
+    (:let $time := ig:nsj(ig:subBefore(ig:subAfter($time,","),"Post subject")):)
+    return ig:nsj($time)
 };
 
 (:15 - regex expression describing the current timestamp sequence.
@@ -1257,22 +1253,24 @@ declare function t:getTimestampRegex() as xs:string
     "yyyy MM dd HH mm ss"
 };
 
-(:16 - Fetch the post message:)
+(:15 - Fetch the post message:)
 declare function t:getMessage($post as node()*) as node()*
 {
-    let $messageNode:= ($post//h:div[@class = "post-text"])[1]
+    let $message := ($post//h:div[@data-role = "commentContent"])[1]
+    let $message := ig:removeTagByAttribute( $message, "class", "edit" )
+    let $message := ig:removeTagByAttribute( $message, "class", "gensmall" )
     
-    return $messageNode/node()
+    return $message/node()
 };
 
 (:THREAD - END:)
 
 (: CODE TO UPDATE - END :)
 <thread>
-	{	
-	    let $posts := zf:getPosts()
-	    let $posts := zf:validatePosts($posts)
-	    return $posts
-        	
-	}
+  {
+      let $posts := zf:getPosts()
+      let $posts := zf:validatePosts($posts)
+      
+      return $posts
+  }
 </thread>
