@@ -2,14 +2,13 @@
  * @Author: Administrator
  * @Date:   2018-03-09 19:40:26
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-03-21 14:17:16
+ * @Last Modified time: 2018-03-30 14:32:45
  */
 const fs = require('fs')
 const path = require('path')
 const readline = require('readline')
 
 const root_path = path.join(__dirname, '../')
-
 /*生成BLOG transformed Post节点*/
 function generatePostList(prev_content, arg, $parent) {
     $('<div class="collapsible-header"></div').insertBefore($parent).text(prev_content +': '+ arg.timestamp)
@@ -104,7 +103,7 @@ function generateErrors(type) {
     let log_path;
     if (type == 'blog') {
         log_path = path.join(root_path, 'environment/ingentia-run/logs/errors.log');
-    } else log_path = path.join(confData.source, '../','temp/errors.log')
+    } else log_path = path.join(window.localStorage.source, '../','temp/errors.log')
     const rl = readline.createInterface({
       input: fs.createReadStream(log_path),
       crlfDelay: Infinity
@@ -134,7 +133,7 @@ function generateErrors(type) {
 
 /*生成Forum transformed内容*/
 function generateForumTransformed() {
-    const log_path = path.join(confData.source, '../','temp/transformed.log')
+    const log_path = path.join(window.localStorage.source, '../','temp/transformed.log')
     const rs = fs.createReadStream(log_path)
     rs.setEncoding('utf8')
     let body = '<root>'

@@ -16,10 +16,6 @@ const url = require('url')
 const fs = require('fs')
 const xml2js = require('xml2js')
 
-const jsonParser = new xml2js.Parser({
-    explicitArray: false //一个子节点直接访问不生成数组
-})
-
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -70,6 +66,7 @@ function createWindow() {
             }
         }
         mainWindow = null
+        app.quit()
     })
 }
 
@@ -113,6 +110,7 @@ const program_menuIteam = new MenuItem({
                     height: 400,
                     resizable: false
                 })
+                newwindow.setMenu(null)
                 newwindow.loadURL(url.format({
                     pathname: path.join(__dirname, 'app/settings.html'),
                     protocol: 'file:',

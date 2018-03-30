@@ -5,25 +5,34 @@
 const electron = require('electron')
 const fs = require('fs')
 const path = require('path')
+const xml2js = require('xml2js')
+const { remote } = require('electron')
+const { dialog } = remote
 
 const resource_path = path.join(__dirname, '../resources')
 const root_path = path.join(__dirname, '../')
 
+//创建builder的时候参数说明：
+//rootName (default root or the root key name)
+//renderOpts (default { 'pretty': true, 'indent': ' ', 'newline': '\n' })
+//xmldec (default { 'version': '1.0', 'encoding': 'UTF-8', 'standalone': true }
+//headless (default: false)
+//cdata (default: false): wrap text nodes in <![CDATA[ ... ]]>
+const jsonBuilder = new xml2js.Builder({
+    rootName: 'norway',
+    renderOpts: {
+        pretty: true,
+        indent: '    '
+    },
+    xmldec: {
+        'version': '1.0',
+        'encoding': 'UTF-8',
+        'standalone': true
+    }
+}) // jons -> xml
 
 $(document).ready(function() {
-    if (fs.existsSync(path.join(resource_path, 'settings.xml'))) {
-        //读取settings.xml
-        let conf = fs.readFileSync(path.join(resource_path, 'settings.xml'));
-        if (conf) {
-            jsonParser.parseString(conf, function(err, result) {
-                updateConf(result.norway)
-            });
-        } else {
-            alert('settings.xml为空!');
-        }
-    } else {
-        fs.writeFileSync(path.join(resource_path, 'settings.xml'), jsonBuilder.buildObject(confData));
-    }
+    updateConf(window.localStorage)
     $('#source_choose_button').on('click', function(event) {
         event.preventDefault();
         /* Act on the event */
@@ -80,9 +89,8 @@ $(document).ready(function() {
             finish_path: "请选择或输入Finish存放目录"
         },
         submitHandler: function(form) {
-            saveConfByForm()
-            console.log(remote.getCurrentWindow())
-            fs.writeFileSync(path.join(resource_path, 'settings.xml'), jsonBuilder.buildObject(confData));
+            saveConf()
+            fs.writeFileSync(path.join(resource_path, 'settings.xml'), jsonBuilder.buildObject(window.localStorage));
             alert('设置已保存');
             remote.getCurrentWindow().close()
         },
@@ -104,10 +112,10 @@ function updateConf(conf) {
 
 
 //保存设置参数
-function saveConfByForm() {
-    confData.username = $('#username').val()
-    confData.password = $('#password').val()
-    confData.source = $('#source').val()
-    confData.host = $('#host').val()
-    confData.finish = $('#finish').val()
+function saveConf() {
+    window.localStorage.username = $('#username').val()
+    window.localStorage.password = $('#password').val()
+    window.localStorage.source = $('#source').val()
+    window.localStorage.host = $('#host').val()
+    window.localStorage.finish = $('#finish').val()
 }

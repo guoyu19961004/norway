@@ -1,8 +1,8 @@
 /*
  * @Author: guoyu19961004
  * @Date:   2018-03-03 18:20:32
- * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-28 10:59:28
+ * @Last Modified by:   Administrator
+ * @Last Modified time: 2018-03-30 13:42:55
  */
 const fs = require('fs')
 const xml2js = require('xml2js')
@@ -79,6 +79,11 @@ function judge_settings() {
 
 //保存settings
 function saveConf(argument) {
+    window.localStorage.setItem('username',argument.username)
+    window.localStorage.setItem('password',argument.password)
+    window.localStorage.setItem('source',argument.source)
+    window.localStorage.setItem('host',argument.host)
+    window.localStorage.setItem('finish',argument.finish)
     confData.username = argument.username
     confData.password = argument.password
     confData.source = argument.source
@@ -272,14 +277,6 @@ function checkDirExist(path) {
     }
 }
 
-/*链接source文件*/
-function link_file(existingPath, newPath) {
-    if (fs.existsSync(newPath)) {
-        fs.unlinkSync(newPath)
-    }
-    fs.linkSync(existingPath, newPath)
-}
-
 /*调用JAVA下载网页*/
 function download_url(url, encoding, callback) {
     $('#shell_info').empty();
@@ -387,7 +384,6 @@ function blog_run(callback) {
         $('#blog_stop_button').css("display", "none")
     });
     const fs_watch = fs.watch(path.join(ingentia_path, "logs"), (eventType, filename) => {
-        console.log(`事件类型是: ${eventType}`);
         if (filename == 'transformed.log') {
             if (eventType == 'rename') {
                 if (fs.existsSync(path.join(ingentia_path, "logs", filename))) {
@@ -395,7 +391,6 @@ function blog_run(callback) {
                     $('#blog_check_result').css('display', 'inline-block');
                 }
             }
-            console.log(`提供的文件名: ${filename}`);
         } else if (filename == 'errors.log') {
             if (eventType == 'rename') {
                 if (fs.existsSync(path.join(ingentia_path, "logs", filename))) {
@@ -559,3 +554,9 @@ function readDirSync(path) {
         }
     })
 }
+
+// exports.openSettings = openSettings()
+// // exports.openSettings = openSettings()
+// exports.download_url = download_url()
+// exports.blog_run = blog_run()
+// exports.confData = confData

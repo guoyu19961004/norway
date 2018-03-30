@@ -1,8 +1,8 @@
 /*
  * @Author: Administrator
  * @Date:   2018-03-22 10:53:41
- * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-28 11:16:09
+ * @Last Modified by:   Administrator
+ * @Last Modified time: 2018-03-28 15:50:37
  */
 const fs = require('fs')
 const path = require('path')
@@ -100,7 +100,7 @@ const url_run = () => {
                     add_to_visit_queue(get_urls_from_dump(config))
                     if (match_filter(visit_link, convert_to_common_regular(config['SubsourceUriPattern']))) {
                         show_msg(print_msg(util.format('Transforming %s', visit_link)))
-                        const url_info = is_subsource_valid(config['UrlTransformation'], link_dump_path, visit_link, 0)
+                        const url_info = is_subsource_valid(path.join(config_path, '..', config['SourceName'] + '-url.xq'), link_dump_path, visit_link, 0)
                         if (url_info.status) {
                             url.link = append_parameters_to_url(url.link, config['UrlAddon'])
                             const sourceurl = build_sourceurl(url.link, config['SourceName'], url.description)
@@ -113,7 +113,8 @@ const url_run = () => {
                     }
                     url_process(config, config_path, show_msg)
                 } else {
-                	console.log('page download error!')
+                    show_msg(print_msg('page download error!'))
+                    url_process(config, config_path, show_msg)
                 }
             });
         } else if (failed_subsources.length != 0) {
@@ -127,7 +128,7 @@ const url_run = () => {
             download_obj.on('close', (code) => {
                 if (code == 0) {
                     show_msg(print_msg(util.format('Transforming %s', visit_link)))
-                    const url_info = is_subsource_valid(config['UrlTransformation'], link_dump_path, visit_link, 0)
+                    const url_info = is_subsource_valid(path.join(config_path, '..', config['SourceName'] + '-url.xq'), link_dump_path, visit_link, 0)
                     if (url_info.status) {
                         url.link = append_parameters_to_url(url.link, config['UrlAddon'])
                         const sourceurl = build_sourceurl(url.link, config['SourceName'], url.description)
@@ -365,11 +366,18 @@ const subforum_run = () => {
         prepare(source_dir)
         show_msg('Clearing all temp directories and result directories')
         // console.log(urls)
-        if (urls.length != 0) {
+        if (urls.length > 0) {
             show_msg(util.format('There are %d subforums in this source.', urls.length))
-            for (let i = 0; i < thread_number; i++) {
-                const pid = thread_run(i, source_dir, pids, urls, show_msg)
-                pids.push(pid)
+            if (urls.length >= thread_number) {
+                for (let i = 0; i < thread_number; i++) {
+                    const pid = thread_run(i, source_dir, pids, urls, show_msg)
+                    pids.push(pid)
+                }
+            } else {
+                for (let i = 0; i < urls.length; i++) {
+                    const pid = thread_run(i, source_dir, pids, urls, show_msg)
+                    pids.push(pid)
+                }
             }
         } else {
             show_msg('Threre are no subforum in finished.xml, may be there are some wrong with the SubSourceCrawlerConfig.xml')
@@ -431,8 +439,18 @@ const subforum_run = () => {
         java.on('exit', (code, signal) => {
             console.log(`子进程收到信号 ${signal} 而终止`)
             if (code == 0) {
-                show_msg(util.format('Url: %s 测试完毕', url))
-                pids.splice(thread_index, 1, thread_run(thread_index, source_dir, pids, urls, show_msg))
+                show_msg(print_msg(util.format('Url: %s 测试完毕', url)))
+                if (urls.length > 0) {
+                    pids.splice(thread_index, 1, thread_run(thread_index, source_dir, pids, urls, show_msg))
+                } else if (pids.length > 0) {
+                    const pid_index = pids.findIndex((val) => {
+                        return val == java.pid
+                    })
+                    pids.splice(pid_index, 1)
+                } else {
+                    show_msg('=============================================')
+                    show_msg(print_msg('SubForum Run finished !'))
+                }
                 // console.log(`子进程退出码：${code}`)
             } else {
                 // console.log(`子进程退出码：${code}`)

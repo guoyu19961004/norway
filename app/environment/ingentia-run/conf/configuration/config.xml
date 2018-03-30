@@ -5,19 +5,19 @@
         <zoneId>POST_REQUEST</zoneId>
         <urlFilters>
             <no.integrasco.ingentia.news.config.entity.UrlFilter>
-                <customExpressionString>https://www.nevillehobson.com/2010/07/04/ted-the-ultimate-forum-for-blue-sky-thinking/</customExpressionString>
-                <rule>DENY</rule>
-                <highPriorityFilter>false</highPriorityFilter>
-            </no.integrasco.ingentia.news.config.entity.UrlFilter>
-            <no.integrasco.ingentia.news.config.entity.UrlFilter>
-                <customExpressionString>https://www.nevillehobson.com/2008/01/14/pluck-on-demand/</customExpressionString>
-                <rule>DENY</rule>
-                <highPriorityFilter>false</highPriorityFilter>
-            </no.integrasco.ingentia.news.config.entity.UrlFilter>
-            <no.integrasco.ingentia.news.config.entity.UrlFilter>
-                <customExpressionString>https://www.nevillehobson.com/${integer}/${integer}/${integer}/${string}/</customExpressionString>
+                <customExpressionString>http://gizmodo.uol.com.br/${string}/</customExpressionString>
                 <rule>ALLOW</rule>
                 <highPriorityFilter>false</highPriorityFilter>
+            </no.integrasco.ingentia.news.config.entity.UrlFilter>
+            <no.integrasco.ingentia.news.config.entity.UrlFilter>
+                <customExpressionString>http://${string}:8097/ingentia-services-rest/rest/crawled-content?id=${all}</customExpressionString>
+                <rule>ALLOW</rule>
+                <highPriorityFilter>true</highPriorityFilter>
+            </no.integrasco.ingentia.news.config.entity.UrlFilter>
+            <no.integrasco.ingentia.news.config.entity.UrlFilter>
+                <customExpressionString>http://localhost${all}</customExpressionString>
+                <rule>ALLOW</rule>
+                <highPriorityFilter>true</highPriorityFilter>
             </no.integrasco.ingentia.news.config.entity.UrlFilter>
             <no.integrasco.ingentia.news.config.entity.UrlFilter>
                 <customExpressionString>${all}</customExpressionString>
@@ -27,7 +27,7 @@
         </urlFilters>
         <baseUrl/>
         <transformation>
-            <transformationId>1476</transformationId>
+            <transformationId>6206</transformationId>
             <transformation/>
             <transformationType>
                 <transformationTypeId>2</transformationTypeId>
@@ -35,24 +35,29 @@
         </transformation>
         <cleanerType>tagsoup</cleanerType>
         <xQueryBaseUri/>
-        <gmtOffset>1</gmtOffset>
+        <gmtOffset>-3</gmtOffset>
         <dateFormat>MM dd yyyy HH mm ss</dateFormat>
         <dateLocale>en</dateLocale>
-        <uriValidatePattern>blog://nevillehobson.com/${integer}</uriValidatePattern>
-        <authorUriValidatePattern>user://nevillehobson.com/${string}</authorUriValidatePattern>
-        <commentUriValidatePattern>blog://nevillehobson.com/comment/${integer}</commentUriValidatePattern>
+        <uriValidatePattern>blog://gizmodo.uol.com.br/${integer}</uriValidatePattern>
+        <authorUriValidatePattern>user://gizmodo.uol.com.br/${string}</authorUriValidatePattern>
+        <commentUriValidatePattern>blog://gizmodo.uol.com.br/comment/${integer}</commentUriValidatePattern>
     </blogTransformationBehaviourConfig>
     <customUrlBehaviourConfig>
         <behaviourId>customUrlBehaviour</behaviourId>
         <zoneId>POST_REQUEST</zoneId>
         <urlFilters>
             <no.integrasco.ingentia.news.config.entity.UrlFilter>
-                <customExpressionString>https://www.nevillehobson.com/${integer}/${integer}/${integer}/${string}/</customExpressionString>
+                <customExpressionString>http://gizmodo.uol.com.br/mande-sua-dica/</customExpressionString>
+                <rule>DENY</rule>
+                <highPriorityFilter>false</highPriorityFilter>
+            </no.integrasco.ingentia.news.config.entity.UrlFilter>
+            <no.integrasco.ingentia.news.config.entity.UrlFilter>
+                <customExpressionString>http://gizmodo.uol.com.br/${string}/</customExpressionString>
                 <rule>ALLOW</rule>
                 <highPriorityFilter>false</highPriorityFilter>
             </no.integrasco.ingentia.news.config.entity.UrlFilter>
             <no.integrasco.ingentia.news.config.entity.UrlFilter>
-                <customExpressionString>https://www.nevillehobson.com/page/${integer}/</customExpressionString>
+                <customExpressionString>http://gizmodo.uol.com.br/page/${integer}/</customExpressionString>
                 <rule>ALLOW</rule>
                 <highPriorityFilter>false</highPriorityFilter>
             </no.integrasco.ingentia.news.config.entity.UrlFilter>

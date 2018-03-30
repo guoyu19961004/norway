@@ -1,14 +1,21 @@
 /*
  * @Author: Administrator
  * @Date:   2017-11-23 18:09:20
- * @Last Modified by:   guoyu19961004
- * @Last Modified time: 2018-03-28 10:47:17
+ * @Last Modified by:   Administrator
+ * @Last Modified time: 2018-03-30 15:26:50
  */
 const electron = require('electron')
 const fs = require('fs')
+const xml2js = require('xml2js')
 const path = require('path')
 const url = require('url')
+const { remote } = require('electron')
+const { Menu, MenuItem, dialog } = remote
+const BrowserWindow = remote.BrowserWindow
+const { exec, spawn } = require('child_process')
+const readline = require('readline')
 const forum = require('./forum.js')
+
 
 const menu = new Menu()
 const window_menuIteam = new MenuItem({
@@ -68,9 +75,37 @@ window.addEventListener('contextmenu', (e) => {
     menu.popup(remote.getCurrentWindow())
 }, false)
 
-const pids = []
+//创建builder的时候参数说明：
+//rootName (default root or the root key name)
+//renderOpts (default { 'pretty': true, 'indent': ' ', 'newline': '\n' })
+//xmldec (default { 'version': '1.0', 'encoding': 'UTF-8', 'standalone': true }
+//headless (default: false)
+//cdata (default: false): wrap text nodes in <![CDATA[ ... ]]>
 
+const jsonBuilder = new xml2js.Builder({
+    rootName: 'norway',
+    renderOpts: {
+        pretty: true,
+        indent: '    '
+    },
+    xmldec: {
+        'version': '1.0',
+        'encoding': 'UTF-8',
+        'standalone': true
+    }
+}) // jons -> xml
+
+const jsonParser = new xml2js.Parser({
+    explicitArray: false //一个子节点直接访问不生成数组
+})
+
+const ingentia_path = path.join(__dirname, '../environment/ingentia-run')
+const resource_path = path.join(__dirname, '../resources')
+const root_path = path.join(__dirname, '../')
+
+const pids = []
 judge_settings()
+
 $(document).ready(function() {
     //初始化
     $('ul.tabs').tabs();
@@ -87,7 +122,8 @@ $(document).ready(function() {
         /* Act on the event */
         let source_id = $('#source_id').val()
         if (/^\d+$/.test(source_id)) {
-            get_source_content(confData, source_id)
+            $('#shell_info').empty()
+            get_source_content(window.localStorage, source_id)
         } else alert('请输入正确的Source ID！')
     });
     /*访问目录获取source路劲按钮事件*/
@@ -145,12 +181,12 @@ $(document).ready(function() {
                     } else source_save_path = path.join($('#source_path').text(), '../..', 'url-download.xml')
                     $('#download_save_path').text(source_save_path)
                     link_file(path.join(ingentia_path, 'logs/cleanedump.log'), source_save_path)
-                } else if (confData.source != '') {
+                } else if (window.localStorage.source != '') {
                     if (type == 'blog') {
-                        source_save_path = path.join(confData.source, '../..', 'download.xml')
+                        source_save_path = path.join(window.localStorage.source, '../..', 'download.xml')
                     } else if (type == 'thread') {
-                        source_save_path = path.join(confData.source, '../..', 'thread-download.xml')
-                    } else source_save_path = path.join(confData.source, '../..', 'url-download.xml')
+                        source_save_path = path.join(window.localStorage.source, '../..', 'thread-download.xml')
+                    } else source_save_path = path.join(window.localStorage.source, '../..', 'url-download.xml')
                     $('#download_save_path').text(source_save_path)
                     link_file(path.join(ingentia_path, 'logs/cleanedump.log'), source_save_path)
                 } else {
@@ -287,21 +323,20 @@ $(document).ready(function() {
         $('#shell_info').empty()
         $('#forum_check_result').css('display', 'none')
         $('#forum_check_error').css('display', 'none')
-        const temp_source_dir = path.join(root_path,'environment/temp')
+        const temp_source_dir = path.join(root_path, 'environment/temp')
         if (!fs.existsSync(temp_source_dir)) fs.mkdirSync(temp_source_dir)
         const fs_watch = fs.watch(temp_source_dir, { recursive: true }, (eventType, filename) => {
             if (eventType == 'rename') {
                 if (/transformed\.log$/g.test(filename)) {
-                    if (fs.existsSync(path.join(temp_source_dir,filename))) {
+                    if (fs.existsSync(path.join(temp_source_dir, filename))) {
                         $('#forum_check_result').css('display', 'inline-block')
                     }
                 } else if (/errors\.log$/g.test(filename)) {
-                    if (fs.existsSync(path.join(temp_source_dir,filename))) {
+                    if (fs.existsSync(path.join(temp_source_dir, filename))) {
                         $('#forum_check_error').css('display', 'inline-block')
                     }
                 }
-            }else if (filename) {
-            } else {
+            } else if (filename) {} else {
                 console.log('未提供文件名')
             }
         })
@@ -322,7 +357,7 @@ $(document).ready(function() {
                     event.preventDefault()
                     /* Act on the event */
                     $('#forum_stop_button').css("display", "none")
-                    while(pids.length > 0){
+                    while (pids.length > 0) {
                         process.kill(pids.shift())
                     }
                     fs_watch.close()
@@ -352,7 +387,7 @@ $(document).ready(function() {
                             event.preventDefault()
                             /* Act on the event */
                             $('#forum_stop_button').css("display", "none")
-                            while(pids.length > 0){
+                            while (pids.length > 0) {
                                 process.kill(pids.shift())
                             }
                             fs_watch.close()
@@ -416,25 +451,121 @@ $(document).ready(function() {
     });
 });
 
+//判断设置的配置文件是否存在
+function judge_settings() {
+    console.log(resource_path)
+    if (judge_local_storage()) {
+        get_source_info(window.localStorage)
+    } else {
+        openSettings()
+    }
+}
+
+function judge_local_storage() {
+    if ($.isEmptyObject(window.localStorage)) return false
+    else if (!window.localStorage.length) return false
+    else if (!window.localStorage.username) return false
+    else if (!window.localStorage.password) return false
+    else if (!window.localStorage.source) return false
+    else if (!window.localStorage.host) return false
+    else return true
+
+}
+//保存settings
+function saveConf(argument) {
+    window.localStorage.username = argument.username
+    window.localStorage.password = argument.password
+    window.localStorage.source = argument.source
+    window.localStorage.host = argument.host
+    window.localStorage.finish = argument.finish
+}
+
+//打开设置页
+function openSettings() {
+    let newwindow = new BrowserWindow({
+        width: 500,
+        height: 600,
+        resizable: false
+    })
+    newwindow.loadURL(url.format({
+        pathname: path.join(root_path, 'settings.html'),
+        protocol: 'file:',
+        slashes: true
+    }))
+    // newwindow.setMenu(null)
+    newwindow.on("closed", function() {
+        if (judge_local_storage()) {
+            get_source_info(window.localStorage)
+        } else {
+            openSettings()
+        }
+        newwindow = null
+    })
+}
+
+//获取Tmonkey web中source信息存放到resources/sources.xml
+function get_source_info(argument) {
+    $.ajax({
+        type: "POST",
+        url: argument.host,
+        data: {
+            username: argument.username,
+            password: argument.password,
+            login: 'Login'
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            Materialize.toast(textStatus, 2000)
+        },
+        success: function(msg) {
+            $.ajax({
+                type: "GET",
+                url: path.join(argument.host, 'api/outsource/source/'),
+                dataType: 'json',
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    Materialize.toast('登录失败！请确定账号密码！', 2000)
+                    openSettings()
+                },
+                success: function(sources) {
+                    Materialize.toast('登录成功！', 2000)
+                    let xml = ''
+                    let source = {
+                        source: sources
+                    }
+                    if (!checkDirExist(resource_path)) fs.mkdirSync(resource_path)
+                    xml = jsonBuilder.buildObject(source)
+                    fs.writeFileSync(path.join(resource_path, 'sources.xml'), xml)
+                    Materialize.toast('Sources 数量更新完毕！', 3000)
+                }
+            })
+        }
+    })
+}
+
 
 //根据sourceid拿到对应source的JSON对象
-function get_source_by_id(argument, source_id, source) {
+function get_source_by_id(argument, source_id) {
     console.log('get_source_by_id')
+    const source = {
+        source_id: '',
+        source_name: '',
+        type: ''
+    }
     $.each(argument, function(index, val) {
         /* iterate through array or object */
         if (val.source_id == source_id) {
             source.source_id = val.source_id
-            global_souce_data.source_id = val.source_id
+            window.localStorage.source_id = val.source_id
             source.source_name = val.source_name
-            global_souce_data.source_name = val.source_name
+            window.localStorage.source_name = val.source_name
             $('#source_name').text(val.source_name)
             source.type = val.type
-            global_souce_data.type = val.type
+            window.localStorage.type = val.type
             $('#source_type').text(val.type)
             if (val.type == 'BLOG') $('ul.tabs').tabs('select_tab', 'blog-wrap')
             else $('ul.tabs').tabs('select_tab', 'forum-wrap')
         }
-    });
+    })
+    return source
 }
 
 /*获取sources.xml*/
@@ -446,8 +577,7 @@ function get_source_content(argument, source_id) {
         let conf = fs.readFileSync(path.join(resource_path, 'sources.xml'));
         if (conf) {
             jsonParser.parseString(conf, function(err, result) {
-                let source_obj = {}
-                get_source_by_id(result.norway.source, source_id, source_obj)
+                let source_obj = get_source_by_id(result.norway.source, source_id)
                 $.ajax({
                     type: "POST",
                     url: argument.host,
@@ -459,13 +589,12 @@ function get_source_content(argument, source_id) {
                     success: function(msg) {
                         if ($.isEmptyObject(source_obj)) {
                             $.get(path.join(argument.host, 'api/outsource/source/'), function(sources) {
-                                get_source_by_id(sources, source_id, source_obj)
-                                let xml = ''
-                                let source = {
+                                source_obj = get_source_by_id(sources, source_id)
+                                const source = {
                                     source: sources
                                 }
                                 if (!checkDirExist(resource_path)) fs.mkdirSync(resource_path)
-                                xml = jsonBuilder.buildObject(source)
+                                const xml = jsonBuilder.buildObject(source)
                                 fs.writeFileSync(path.join(resource_path, 'sources.xml'), xml)
                                 console.log('xml done')
                             }, 'json')
@@ -477,11 +606,12 @@ function get_source_content(argument, source_id) {
                 })
             })
         } else {
-            alert('sources.xml为空!')
+            alert('sources.xml为空! 开始更新！')
+            get_source_info(window.localStorage)
         }
     } else {
         alert('更新sources数量中，请稍后重新下载！')
-        get_source_info(confData)
+        get_source_info(window.localStorage)
     }
 }
 
@@ -491,14 +621,14 @@ function download_source(source_obj, host_url) {
         alert('source id 不存在！')
     } else {
         console.log('download_source')
-        if (!checkDirExist(confData.source)) {
-            fs.mkdirSync(confData.source)
+        if (!checkDirExist(window.localStorage.source)) {
+            fs.mkdirSync(window.localStorage.source)
         }
         if (source_obj.type == "FORUM") {
             /*论坛*/
-            download_forum_file(path.join(host_url, 'api/source/submit/file/'), source_obj, confData.source)
+            download_forum_file(path.join(host_url, 'api/source/submit/file/'), source_obj, window.localStorage.source)
         } else {
-            download_blog_file(path.join(host_url, 'api/source/submit/file/'), source_obj, confData.source)
+            download_blog_file(path.join(host_url, 'api/source/submit/file/'), source_obj, window.localStorage.source)
         }
     }
 }
@@ -586,6 +716,14 @@ function link_blog_file(source_save_path) {
     link_file(path.join(source_save_path, "TestTransformation.xq"), path.join(ingentia_path, "conf/transformation/TestTransformation.xq"))
 }
 
+/*链接source文件*/
+function link_file(existingPath, newPath) {
+    if (fs.existsSync(newPath)) {
+        fs.unlinkSync(newPath)
+    }
+    fs.linkSync(existingPath, newPath)
+}
+
 /*判断是否JS BLOG*/
 function judge_blog_type(source_path) {
     let global_config = fs.readFileSync(path.join(source_path, 'globalConfig.xml'))
@@ -601,4 +739,173 @@ function judge_blog_type(source_path) {
         alert('globalConfig.xml为空!');
     }
     return type
+}
+
+//判断目录是否存在
+function checkDirExist(path) {
+    try {
+        return fs.existsSync(path);
+    } catch (e) {
+        if (e.code == 'ENOENT') { // no such file or directory. File really does not exist
+            console.log("File does not exist.");
+            return false;
+        }
+        console.log("Exception fs.statSync (" + path + "): " + e);
+        throw e;
+        // something else went wrong, we don't have rights, ...
+    }
+}
+
+/*调用JAVA下载网页*/
+function download_url(url, encoding, callback) {
+    $('#shell_info').empty();
+    let java = spawn("java", ["-jar", "ingentia-test-crawler-3.0.1-SNAPSHOT-jar-with-dependencies.jar", "-c", "clean", "tagsoup", url, encoding], { cwd: ingentia_path });
+    java.stdout.setEncoding("ASCII");
+    const stdoutRl = readline.createInterface({
+        input: java.stdout,
+        crlfDelay: Infinity
+    });
+    stdoutRl.on('line', (line) => {
+        if (/Caused by:/.test(line)) {
+            $('#shell_info').append('<p style="color: red;">' + line + '<p>');
+        } else $('#shell_info').append('<p>' + line + '</p>');
+    });
+    const stderrRl = readline.createInterface({
+        input: java.stderr,
+        crlfDelay: Infinity
+    });
+    stderrRl.on('line', (line) => {
+        if (/Caused by:/.test(line)) {
+            $('#shell_info').append('<p style="color: red;">' + line + '<p>');
+        }
+    });
+    java.on('exit', (code) => {
+        if (code == 0) {
+            callback()
+        } else {
+            console.log(`子进程退出码：${code}`);
+            console.log("------------------------------");
+        }
+    });
+}
+/*测试博客*/
+function blog_run(callback) {
+    $('#shell_info').empty();
+    $('#blog_check_result').css('display', 'none');
+    $('#blog_check_error').css('display', 'none');
+    let java = spawn("java", ["-jar", "ingentia-test-crawler-3.0.1-SNAPSHOT-jar-with-dependencies.jar", "-c", "blogthread"], { cwd: ingentia_path });
+    java.stdout.setEncoding("ASCII");
+    const stdoutRl = readline.createInterface({
+        input: java.stdout,
+        crlfDelay: Infinity
+    });
+    stdoutRl.on('line', (line) => {
+        if (/Caused by:/.test(line)) {
+            $('#shell_info').append('<p style="color: red;">' + line + '<p>');
+        } else $('#shell_info').append('<p>' + line + '</p>');
+    });
+    const stderrRl = readline.createInterface({
+        input: java.stderr,
+        crlfDelay: Infinity
+    });
+    stderrRl.on('line', (line) => {
+        if (/Caused by:/.test(line)) {
+            $('#shell_info').append('<p style="color: red;">' + line + '<p>');
+        }
+    });
+    java.on('error', (err) => {
+        console.error(`错误 ${err} 发生`);
+    });
+    java.on('exit', (code, signal) => {
+        console.log(`子进程收到信号 ${signal} 而终止`);
+        $('#shell_info').append("<p>------------------------------</p>");
+        if (code == 0) {
+            callback()
+            console.log(`子进程退出码：${code}`);
+        } else {
+            console.log(`子进程退出码：${code}`);
+            console.log("------------------------------");
+            $('#shell_info').append("<p>Blog 测试中止</p>");
+        }
+        $("#blog_stop_button").off("click", "**")
+        $('#blog_stop_button').css("display", "none")
+    });
+    const fs_watch = fs.watch(path.join(ingentia_path, "logs"), (eventType, filename) => {
+        if (filename == 'transformed.log') {
+            if (eventType == 'rename') {
+                if (fs.existsSync(path.join(ingentia_path, "logs", filename))) {
+                    //生成HTML
+                    $('#blog_check_result').css('display', 'inline-block');
+                }
+            }
+        } else if (filename == 'errors.log') {
+            if (eventType == 'rename') {
+                if (fs.existsSync(path.join(ingentia_path, "logs", filename))) {
+                    //查看错误信息
+                    $('#blog_check_error').css('display', 'inline-block');
+                }
+            }
+        } else if (filename) {} else console.log('文件名不存在');
+    });
+    $('#blog_stop_button').css("display", "inline-block");
+    $('#blog_stop_button').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        java.kill()
+        fs_watch.close()
+    });
+}
+
+/*查看Forum 结果*/
+function collect_forum(source_name, log_type) {
+    let baseUrl = path.join(root_path, 'environment/temp', source_name);
+    let log_path = path.join(window.localStorage.source, "../", "temp", log_type + '.log')
+    //读取文件目录
+    fs.readdir(baseUrl, function(err, files) {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        if (!fs.existsSync(path.join(log_path, '../'))) {
+            fs.mkdirSync(path.join(log_path, '../'));
+        }
+        if (fs.existsSync(log_path)) { fs.unlinkSync(log_path); }
+        files.forEach(function(filename, index, array) {
+            let currentfile = path.join(baseUrl, filename, 'logs', log_type + '.log');
+            if (fs.existsSync(currentfile)) {
+                fs.stat(currentfile, function(err, stats) {
+                    if (err) throw err;
+                    if (stats.isFile()) {
+                        // console.log(index,currentfile);
+                        fs.readFile(currentfile, (err, data) => {
+                            if (err) throw err;
+                            fs.appendFileSync(log_path, data)
+                        });
+                    } else if (stats.isDirectory()) {
+                        return false;
+                    }
+                });
+            }
+        });
+        let newwindow = new BrowserWindow({
+            width: 800,
+            height: 600
+        })
+        if (log_type == 'transformed') {
+            newwindow.loadURL(url.format({
+                pathname: path.join(root_path, 'forum_transformed.html'),
+                protocol: 'file:',
+                slashes: true
+            }))
+        } else {
+            newwindow.loadURL(url.format({
+                pathname: path.join(root_path, 'forum_error.html'),
+                protocol: 'file:',
+                slashes: true
+            }))
+        }
+        newwindow.on("closed", function() {
+            newwindow = null
+        })
+    });
 }

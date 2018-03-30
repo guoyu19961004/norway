@@ -2,20 +2,20 @@
 <no.integrasco.ingentia.news.config.BlogNewsGlobalCustomCrawlerConfig>
     <globalOutputEncoding>UTF-8</globalOutputEncoding>
     <globalInputEncoding>UTF-8</globalInputEncoding>
-    <userAgent>Opera/9.80 (X11; Linux i686; U; en) Presto/2.2.15 Version/10.10</userAgent>
+    <userAgent>Opera/9.64 (X11 Linux i686 U en) Presto/2.1.1</userAgent>
     <maximumJobRetries>25</maximumJobRetries>
     <maximumRequestLimit>5</maximumRequestLimit>
-    <minimumRequestLimit>1</minimumRequestLimit>
+    <minimumRequestLimit>2</minimumRequestLimit>
     <maxJobQueueSize>100000</maxJobQueueSize>
-    <siteLevelsToCrawl>5</siteLevelsToCrawl>
+    <siteLevelsToCrawl>20</siteLevelsToCrawl>
     <cookiePolicy>ignoreCookies</cookiePolicy>
     <followRedirectsUsingHttpStandard>false</followRedirectsUsingHttpStandard>
-    <javaScriptTransform>false</javaScriptTransform>
-    <maxLookBehindInSecondsForJavaScriptCrawling>2592000000</maxLookBehindInSecondsForJavaScriptCrawling>
-    <dbJSCrawlScriptId>-1</dbJSCrawlScriptId>
+    <javaScriptTransform>true</javaScriptTransform>
+    <maxLookBehindInSecondsForJavaScriptCrawling>5356800000</maxLookBehindInSecondsForJavaScriptCrawling>
+    <dbJSCrawlScriptId>25</dbJSCrawlScriptId>
     <connectTimeoutInSeconds>10</connectTimeoutInSeconds>
     <skipUriCacheChecking>false</skipUriCacheChecking>
-    <harvestLevelsToCrawl>100</harvestLevelsToCrawl>
+    <harvestLevelsToCrawl>300</harvestLevelsToCrawl>
     <maxRetriesPerSourceToSendError>25</maxRetriesPerSourceToSendError>
     <regularExpressionClasses>
         <no.integrasco.ingentia.news.config.entity.RegularExpressionClass>
@@ -33,10 +33,10 @@
     </regularExpressionClasses>
     <httpTransLocation>http://transformation.integrasco.no/</httpTransLocation>
     <fastCrawlEnabled>true</fastCrawlEnabled>
-    <lastFullCrawl>2018-03-04 09:00:40.463</lastFullCrawl>
-    <daysBetweenFullCrawl>5</daysBetweenFullCrawl>
-    <fastCrawlLevel>5</fastCrawlLevel>
-    <estimatedAveragePostsPerDay>0</estimatedAveragePostsPerDay>
-    <harvestDaysBack>0</harvestDaysBack>
-    <harvestMarginInPercent>0.0</harvestMarginInPercent>
+    <lastFullCrawl>2018-03-30 01:14:09.129</lastFullCrawl>
+    <daysBetweenFullCrawl>2</daysBetweenFullCrawl>
+    <fastCrawlLevel>2</fastCrawlLevel>
+    <estimatedAveragePostsPerDay>10</estimatedAveragePostsPerDay>
+    <harvestDaysBack>365</harvestDaysBack>
+    <harvestMarginInPercent>20.0</harvestMarginInPercent>
 </no.integrasco.ingentia.news.config.BlogNewsGlobalCustomCrawlerConfig>
