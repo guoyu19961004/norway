@@ -2,11 +2,15 @@
  * @Author: Administrator
  * @Date:   2018-03-09 19:40:26
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-03-30 14:32:45
+ * @Last Modified time: 2018-03-30 15:32:34
  */
 const fs = require('fs')
 const path = require('path')
 const readline = require('readline')
+const xml2js = require('xml2js')
+const jsonParser = new xml2js.Parser({
+    explicitArray: false //一个子节点直接访问不生成数组
+})
 
 const root_path = path.join(__dirname, '../')
 /*生成BLOG transformed Post节点*/
